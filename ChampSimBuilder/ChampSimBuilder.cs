@@ -8,12 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ChampSimBuilder
 {
     public partial class ChampSimBuilder : Form
     {
         Parameters defaults = new Parameters();
+
+        public string new_branch_predictor;
+        public string new_l1d_prefetcher;
+        public string new_l2c_prefetcher;
+        public string new_llc_replacement;
+        public string solution = Directory.GetCurrentDirectory();//@"C:\Users\Aristodemos\Desktop\Github\ChampSim\";
+        public string name = "ChampSim";
 
         public ChampSimBuilder()
         {
@@ -254,6 +262,11 @@ namespace ChampSimBuilder
 
         private void btn_defaults_Click(object sender, EventArgs e)
         {
+            reset_to_defaults();
+        }
+
+        private void reset_to_defaults()
+        {
             cmb_num_cpu.SelectedIndex = 0;
 
             lbl_cpu_2.Hide();
@@ -353,6 +366,14 @@ namespace ChampSimBuilder
             txt_mshr_size_l1ic.Text = defaults.L1I_MSHR_SIZE.ToString();
             txt_latency_l1ic.Text = defaults.L1I_LATENCY.ToString();
 
+            txt_set_l1dc.Text = defaults.L1D_SET.ToString();
+            txt_way_l1dc.Text = defaults.L1D_WAY.ToString();
+            txt_rq_size_l1dc.Text = defaults.L1D_RQ_SIZE.ToString();
+            txt_wq_size_l1dc.Text = defaults.L1D_WQ_SIZE.ToString();
+            txt_pq_size_l1dc.Text = defaults.L1D_PQ_SIZE.ToString();
+            txt_mshr_size_l1dc.Text = defaults.L1D_MSHR_SIZE.ToString();
+            txt_latency_l1dc.Text = defaults.L1D_LATENCY.ToString();
+
             txt_set_l2c.Text = defaults.L2C_SET.ToString();
             txt_way_l2c.Text = defaults.L2C_WAY.ToString();
             txt_rq_size_l2c.Text = defaults.L2C_RQ_SIZE.ToString();
@@ -441,22 +462,14 @@ namespace ChampSimBuilder
                 case "cmb_branch_predictor":
                     if (cmb_branch_predictor.SelectedIndex == 3)
                     {
-                        var fileContent = string.Empty;
-                        var filePath = string.Empty;
-
                         using (OpenFileDialog openFileDialog = new OpenFileDialog())
                         {
                             openFileDialog.Filter = "C# Source File (*.cs)|*.cs";
 
                             if (openFileDialog.ShowDialog() == DialogResult.OK)
                             {
-                                filePath = openFileDialog.FileName;
-                                var fileStream = openFileDialog.OpenFile();
-                                using (StreamReader reader = new StreamReader(fileStream))
-                                {
-                                    fileContent = reader.ReadToEnd();
-                                }
-                                cmb_branch_predictor.Items[3] = filePath.Substring(filePath.LastIndexOf('\\') + 1, filePath.IndexOf(".") - filePath.LastIndexOf("\\") - 1);
+                                new_branch_predictor = openFileDialog.FileName;
+                                cmb_branch_predictor.Items[3] = new_branch_predictor.Substring(new_branch_predictor.LastIndexOf('\\') + 1, new_branch_predictor.IndexOf(".") - new_branch_predictor.LastIndexOf("\\") - 1);
                             }
                         }
                     }
@@ -464,22 +477,14 @@ namespace ChampSimBuilder
                 case "cmb_l1d_prefetcher":
                     if (cmb_l1d_prefetcher.SelectedIndex == 2)
                     {
-                        var fileContent = string.Empty;
-                        var filePath = string.Empty;
-
                         using (OpenFileDialog openFileDialog = new OpenFileDialog())
                         {
                             openFileDialog.Filter = "C# Source File (*.cs)|*.cs";
 
                             if (openFileDialog.ShowDialog() == DialogResult.OK)
                             {
-                                filePath = openFileDialog.FileName;
-                                var fileStream = openFileDialog.OpenFile();
-                                using (StreamReader reader = new StreamReader(fileStream))
-                                {
-                                    fileContent = reader.ReadToEnd();
-                                }
-                                cmb_l1d_prefetcher.Items[2] = filePath.Substring(filePath.LastIndexOf('\\') + 1, filePath.IndexOf(".") - filePath.LastIndexOf("\\") - 1);
+                                new_l1d_prefetcher = openFileDialog.FileName;
+                                cmb_l1d_prefetcher.Items[2] = new_l1d_prefetcher.Substring(new_l1d_prefetcher.LastIndexOf('\\') + 1, new_l1d_prefetcher.IndexOf(".") - new_l1d_prefetcher.LastIndexOf("\\") - 1);
                             }
                         }
                     }
@@ -487,22 +492,14 @@ namespace ChampSimBuilder
                 case "cmb_l2c_prefetcher":
                     if (cmb_l2c_prefetcher.SelectedIndex == 5)
                     {
-                        var fileContent = string.Empty;
-                        var filePath = string.Empty;
-
                         using (OpenFileDialog openFileDialog = new OpenFileDialog())
                         {
                             openFileDialog.Filter = "C# Source File (*.cs)|*.cs";
 
                             if (openFileDialog.ShowDialog() == DialogResult.OK)
                             {
-                                filePath = openFileDialog.FileName;
-                                var fileStream = openFileDialog.OpenFile();
-                                using (StreamReader reader = new StreamReader(fileStream))
-                                {
-                                    fileContent = reader.ReadToEnd();
-                                }
-                                cmb_l2c_prefetcher.Items[5] = filePath.Substring(filePath.LastIndexOf('\\') + 1, filePath.IndexOf(".") - filePath.LastIndexOf("\\") - 1);
+                                new_l2c_prefetcher = openFileDialog.FileName;
+                                cmb_l2c_prefetcher.Items[5] = new_l2c_prefetcher.Substring(new_l2c_prefetcher.LastIndexOf('\\') + 1, new_l2c_prefetcher.IndexOf(".") - new_l2c_prefetcher.LastIndexOf("\\") - 1);
                             }
                         }
                     }
@@ -510,22 +507,14 @@ namespace ChampSimBuilder
                 case "cmb_llc_replacement":
                     if (cmb_llc_replacement.SelectedIndex == 5)
                     {
-                        var fileContent = string.Empty;
-                        var filePath = string.Empty;
-
                         using (OpenFileDialog openFileDialog = new OpenFileDialog())
                         {
                             openFileDialog.Filter = "C# Source File (*.cs)|*.cs";
 
                             if (openFileDialog.ShowDialog() == DialogResult.OK)
                             {
-                                filePath = openFileDialog.FileName;
-                                var fileStream = openFileDialog.OpenFile();
-                                using (StreamReader reader = new StreamReader(fileStream))
-                                {
-                                    fileContent = reader.ReadToEnd();
-                                }
-                                cmb_llc_replacement.Items[5] = filePath.Substring(filePath.LastIndexOf('\\') + 1, filePath.IndexOf(".") - filePath.LastIndexOf("\\") - 1);
+                                new_llc_replacement = openFileDialog.FileName;
+                                cmb_llc_replacement.Items[5] = new_llc_replacement.Substring(new_llc_replacement.LastIndexOf('\\') + 1, new_llc_replacement.IndexOf(".") - new_llc_replacement.LastIndexOf("\\") - 1);
                             }
                         }
                     }
@@ -543,13 +532,65 @@ namespace ChampSimBuilder
 
         private void btn_compile_Click(object sender, EventArgs e)
         {
-            string branch_predictor = @"C:\Users\chris\source\repos\ChampSim\Branch Predictors\";
+            if (cmb_num_cpu.SelectedIndex == 0)
+            {
+                if (String.IsNullOrEmpty(txt_cpu_1.Text))
+                {
+                    MessageBox.Show("Please select a trace file!", "Error");
+                    return;
+                }
+            }
+            else if (cmb_num_cpu.SelectedIndex == 1)
+            {
+                if (String.IsNullOrEmpty(txt_cpu_1.Text) || String.IsNullOrEmpty(txt_cpu_2.Text) || String.IsNullOrEmpty(txt_cpu_3.Text) || String.IsNullOrEmpty(txt_cpu_4.Text))
+                {
+                    MessageBox.Show("Please select a trace file!", "Error");
+                    return;
+                }
+            }
+            else if (cmb_num_cpu.SelectedIndex == 2)
+            {
+                if (String.IsNullOrEmpty(txt_cpu_1.Text) || String.IsNullOrEmpty(txt_cpu_2.Text) || String.IsNullOrEmpty(txt_cpu_3.Text) || String.IsNullOrEmpty(txt_cpu_4.Text) || String.IsNullOrEmpty(txt_cpu_5.Text) || String.IsNullOrEmpty(txt_cpu_6.Text) || String.IsNullOrEmpty(txt_cpu_7.Text) || String.IsNullOrEmpty(txt_cpu_8.Text))
+                {
+                    MessageBox.Show("Please select a trace file!", "Error");
+                    return;
+                }
+            }
+
+            foreach (Control x in tlp_cpu2.Controls)
+            {
+                if (x is TextBox & String.IsNullOrEmpty(x.Text))
+                {
+                    MessageBox.Show("Please fill all parameters!", "Error");
+                    return;
+                }
+            }
+
+            foreach (Control x in tlp_tlb_cache.Controls)
+            {
+                if (x is TextBox & String.IsNullOrEmpty(x.Text))
+                {
+                    MessageBox.Show("Please fill all parameters!", "Error");
+                    return;
+                }
+            }
+
+            foreach (Control x in tlp_dram.Controls)
+            {
+                if (x is TextBox & String.IsNullOrEmpty(x.Text))
+                {
+                    MessageBox.Show("Please fill all parameters!", "Error");
+                    return;
+                }
+            }
+
+            string branch_predictor = Directory.GetCurrentDirectory() + "\\Branch Predictors\\"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\Branch Predictors\";
+            string l1d_prefetcher = Directory.GetCurrentDirectory() + "\\L1D Prefetchers\\"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\L1D Prefetchers\";
+            string l2c_prefetcher = Directory.GetCurrentDirectory() + "\\L2C Prefetchers\\"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\L2C Prefetchers\";
+            string llc_replacement = Directory.GetCurrentDirectory() + "\\LLC Replacements\\"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\LLC Replacements\";
 
             switch (cmb_branch_predictor.SelectedIndex)
             {
-                case 0:
-                    branch_predictor += "Bimodal.cs";
-                    break;
                 case 1:
                     branch_predictor += "Gshare.cs";
                     break;
@@ -557,19 +598,244 @@ namespace ChampSimBuilder
                     branch_predictor += "Perceptron.cs";
                     break;
                 case 3:
-                    branch_predictor += "Bimodal.cs";
+                    branch_predictor = new_branch_predictor;
                     break;
                 default:
-                    MessageBox.Show("Please select one Branch predictor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    branch_predictor += "Bimodal.cs";
                     break;
             }
 
-            var fileContent = string.Empty;
-
-            using (StreamReader reader = new StreamReader(branch_predictor))
+            switch (cmb_l1d_prefetcher.SelectedIndex)
             {
-                fileContent = reader.ReadToEnd();
+                case 1:
+                    l1d_prefetcher += "New line.cs";
+                    break;
+                case 2:
+                    l1d_prefetcher = new_l1d_prefetcher;
+                    break;
+                default:
+                    l1d_prefetcher += "Empty.cs";
+                    break;
             }
+
+            switch (cmb_l2c_prefetcher.SelectedIndex)
+            {
+                case 1:
+                    l2c_prefetcher += "Ip stride.cs";
+                    break;
+                case 2:
+                    l2c_prefetcher += "Kpcp.cs";
+                    break;
+                case 3:
+                    l2c_prefetcher += "Next line.cs";
+                    break;
+                case 4:
+                    l2c_prefetcher += "Spp dev.cs";
+                    break;
+                case 5:
+                    l2c_prefetcher = new_l2c_prefetcher;
+                    break;
+                default:
+                    l2c_prefetcher += "Empty.cs";
+                    break;
+            }
+
+            switch (cmb_llc_replacement.SelectedIndex)
+            {
+                case 0:
+                    llc_replacement += "Drrip.cs";
+                    break;
+                case 2:
+                    llc_replacement += "Ship.cs";
+                    break;
+                case 3:
+                    l2c_prefetcher += "Srrip.cs";
+                    break;
+                case 4:
+                    l2c_prefetcher = new_l2c_prefetcher;
+                    break;
+                default:
+                    l2c_prefetcher += "Lru.cs";
+                    break;
+            }
+
+            try
+            {
+                string OriginalBranch = branch_predictor;
+                string OriginalL1D = l1d_prefetcher;
+                string OriginalL2C = l2c_prefetcher;
+                string OriginalLLC = llc_replacement;
+
+
+                string OriginalMain = Directory.GetCurrentDirectory() + "\\MainPr.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\MainPr.cs";
+                string OriginalGlobals = Directory.GetCurrentDirectory() + "\\Globals.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\Globals.cs";
+
+                string BacMain = Directory.GetCurrentDirectory() + "\\MainPr.cs.bac"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\MainPr.cs.bac";
+                string BacGlobals = Directory.GetCurrentDirectory() + "\\Globals.cs.bac"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\Globals.cs.bac";
+
+                string ReplaceBranch = Directory.GetCurrentDirectory() + "\\Branch_Predictor.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\Branch_Predictor.cs";
+                string ReplaceL1D = Directory.GetCurrentDirectory() + "\\L1d_prefetcher.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\L1d_prefetcher.cs";
+                string ReplaceL2C = Directory.GetCurrentDirectory() + "\\L2c_prefetcher.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\L2c_prefetcher.cs";
+                string ReplaceLLC = Directory.GetCurrentDirectory() + "\\llc_replacement.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\llc_replacement.cs";
+
+                File.Copy(OriginalBranch, ReplaceBranch, true);
+                File.Copy(OriginalL1D, ReplaceL1D, true);
+                File.Copy(OriginalL2C, ReplaceL2C, true);
+                File.Copy(OriginalLLC, ReplaceLLC, true);
+
+                File.Copy(OriginalMain, BacMain, true);
+                string text = File.ReadAllText(OriginalMain);
+
+                if (cmb_num_cpu.SelectedIndex == 0)
+                {
+                    text = text.Replace("Globals.ooo_cpu[0].filePath = @\"\";", "Globals.ooo_cpu[0].filePath = @\"" + txt_cpu_1.Text + "\"" + ";");
+                    File.WriteAllText(OriginalMain, text);
+                }
+                else if (cmb_num_cpu.SelectedIndex == 1)
+                {
+                    text = text.Replace("Globals.ooo_cpu[0].filePath = @\"\";", "Globals.ooo_cpu[0].filePath = @\"" + txt_cpu_1.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[1].filePath = @\"\";", "Globals.ooo_cpu[1].filePath = @\"" + txt_cpu_2.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[2].filePath = @\"\";", "Globals.ooo_cpu[2].filePath = @\"" + txt_cpu_3.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[3].filePath = @\"\";", "Globals.ooo_cpu[3].filePath = @\"" + txt_cpu_4.Text + "\"" + ";");
+                    File.WriteAllText(OriginalMain, text);
+                }
+                else if (cmb_num_cpu.SelectedIndex == 2)
+                {
+                    text = text.Replace("Globals.ooo_cpu[0].filePath = @\"\";", "Globals.ooo_cpu[0].filePath = @\"" + txt_cpu_1.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[1].filePath = @\"\";", "Globals.ooo_cpu[1].filePath = @\"" + txt_cpu_2.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[2].filePath = @\"\";", "Globals.ooo_cpu[2].filePath = @\"" + txt_cpu_3.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[3].filePath = @\"\";", "Globals.ooo_cpu[3].filePath = @\"" + txt_cpu_4.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[4].filePath = @\"\";", "Globals.ooo_cpu[4].filePath = @\"" + txt_cpu_5.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[5].filePath = @\"\";", "Globals.ooo_cpu[5].filePath = @\"" + txt_cpu_6.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[6].filePath = @\"\";", "Globals.ooo_cpu[6].filePath = @\"" + txt_cpu_7.Text + "\"" + ";");
+                    text = text.Replace("Globals.ooo_cpu[7].filePath = @\"\";", "Globals.ooo_cpu[7].filePath = @\"" + txt_cpu_8.Text + "\"" + ";");
+                    File.WriteAllText(OriginalMain, text);
+                }
+
+                File.Copy(OriginalGlobals, BacGlobals, true);
+                text = File.ReadAllText(OriginalGlobals);
+                text = text.Replace("public const int CPU_FREQ = 4000;", "public const int CPU_FREQ = " + txt_cpu_frequency.Text + ";");
+                text = text.Replace("public const int DRAM_IO_FREQ = 800;", "public const int DRAM_IO_FREQ = " + txt_dram_io_frequency.Text + ";");
+
+                text = text.Replace("public const int ROB_SIZE = 256;", "public const int ROB_SIZE = " + txt_rob_size.Text + ";");
+                text = text.Replace("public const int PAGE_SIZE = 4096;", "public const int PAGE_SIZE = " + txt_page_size.Text + ";");
+
+                text = text.Replace("public const int LQ_SIZE = 56;", "public const int LQ_SIZE = " + txt_lq_size.Text + ";");
+                text = text.Replace("public const int SQ_SIZE = 56;", "public const int SQ_SIZE = " + txt_sq_size.Text + ";");
+
+                text = text.Replace("public const int LQ_WIDTH = 2;", "public const int LQ_WIDTH = " + txt_lq_width.Text + ";");
+                text = text.Replace("public const int SQ_WIDTH = 1;", "public const int SQ_WIDTH = " + txt_sq_width.Text + ";");
+
+                text = text.Replace("public const int FETCH_WIDTH = 4;", "public const int FETCH_WIDTH = " + txt_fetch_width.Text + ";");
+                text = text.Replace("public const int DECODE_WIDTH = 4;", "public const int DECODE_WIDTH = " + txt_decode_width.Text + ";");
+
+                text = text.Replace("public const int EXEC_WIDTH = 6;", "public const int EXEC_WIDTH = " + txt_execude_width.Text + ";");
+                text = text.Replace("public const int RETIRE_WIDTH = 4;", "public const int RETIRE_WIDTH = " + txt_retire_width.Text + ";");
+
+                text = text.Replace("public const int BLOCK_SIZE = 64;", "public const int BLOCK_SIZE = " + txt_block_size.Text + ";");
+                text = text.Replace("public const int MAX_READ_PER_CYCLE = 4;", "public const int MAX_READ_PER_CYCLE = " + txt_max_read_per_cycle.Text + ";");
+
+                text = text.Replace("public const int ITLB_SET = 16;", "public const int ITLB_SET = " + txt_set_itlb.Text + ";");
+                text = text.Replace("public const int ITLB_WAY = 4;", "public const int ITLB_WAY = " + txt_way_itlb.Text + ";");
+                text = text.Replace("public const int ITLB_RQ_SIZE = 16;", "public const int ITLB_RQ_SIZE = " + txt_rq_size_itlb.Text + ";");
+                text = text.Replace("public const int ITLB_WQ_SIZE = 16;", "public const int ITLB_WQ_SIZE = " + txt_wq_size_itlb.Text + ";");
+                text = text.Replace("public const int ITLB_MSHR_SIZE = 8;", "public const int ITLB_MSHR_SIZE = " + txt_mshr_size_itlb.Text + ";");
+                text = text.Replace("public const int ITLB_LATENCY = 1;", "public const int ITLB_LATENCY = " + txt_latency_itlb.Text + ";");
+
+                text = text.Replace("public const int DTLB_SET = 16;", "public const int DTLB_SET = " + txt_set_dtlb.Text + ";");
+                text = text.Replace("public const int DTLB_WAY = 4;", "public const int DTLB_WAY = " + txt_way_dtlb.Text + ";");
+                text = text.Replace("public const int DTLB_RQ_SIZE = 16;", "public const int DTLB_RQ_SIZE = " + txt_rq_size_dtlb.Text + ";");
+                text = text.Replace("public const int DTLB_WQ_SIZE = 16;", "public const int DTLB_WQ_SIZE = " + txt_wq_size_dtlb.Text + ";");
+                text = text.Replace("public const int DTLB_MSHR_SIZE = 8;", "public const int DTLB_MSHR_SIZE = " + txt_mshr_size_dtlb.Text + ";");
+                text = text.Replace("public const int DTLB_LATENCY = 1;", "public const int DTLB_LATENCY = " + txt_latency_dtlb.Text + ";");
+
+                text = text.Replace("public const int STLB_SET = 128;", "public const int STLB_SET = " + txt_set_stlb.Text + ";");
+                text = text.Replace("public const int STLB_WAY = 12;", "public const int STLB_WAY = " + txt_way_stlb.Text + ";");
+                text = text.Replace("public const int STLB_RQ_SIZE = 32;", "public const int STLB_RQ_SIZE = " + txt_rq_size_stlb.Text + ";");
+                text = text.Replace("public const int STLB_WQ_SIZE = 32;", "public const int STLB_WQ_SIZE = " + txt_wq_size_stlb.Text + ";");
+                text = text.Replace("public const int STLB_MSHR_SIZE = 16;", "public const int STLB_MSHR_SIZE = " + txt_mshr_size_stlb.Text + ";");
+                text = text.Replace("public const int STLB_LATENCY = 8;", "public const int STLB_LATENCY = " + txt_latency_stlb.Text + ";");
+
+                text = text.Replace("public const int L1I_SET = 64;", "public const int L1I_SET = " + txt_set_l1ic.Text + ";");
+                text = text.Replace("public const int L1I_WAY = 8;", "public const int L1I_WAY = " + txt_way_l1ic.Text + ";");
+                text = text.Replace("public const int L1I_RQ_SIZE = 64;", "public const int L1I_RQ_SIZE = " + txt_rq_size_l1ic.Text + ";");
+                text = text.Replace("public const int L1I_WQ_SIZE = 64;", "public const int L1I_WQ_SIZE = " + txt_wq_size_l1ic.Text + ";");
+                text = text.Replace("public const int L1I_PQ_SIZE = 64;", "public const int L1I_PQ_SIZE = " + txt_pq_size_l1ic.Text + ";");
+                text = text.Replace("public const int L1I_MSHR_SIZE = 8;", "public const int L1I_MSHR_SIZE = " + txt_mshr_size_l1ic.Text + ";");
+                text = text.Replace("public const int L1I_LATENCY = 1;", "public const int L1I_LATENCY = " + txt_latency_l1ic.Text + ";");
+
+                text = text.Replace("public const int L1D_SET = 64;", "public const int L1D_SET = " + txt_set_l1dc.Text + ";");
+                text = text.Replace("public const int L1D_WAY = 8;", "public const int L1D_WAY = " + txt_way_l1dc.Text + ";");
+                text = text.Replace("public const int L1D_RQ_SIZE = 64;", "public const int L1D_RQ_SIZE = " + txt_rq_size_l1dc.Text + ";");
+                text = text.Replace("public const int L1D_WQ_SIZE = 64;", "public const int L1D_WQ_SIZE = " + txt_wq_size_l1dc.Text + ";");
+                text = text.Replace("public const int L1D_PQ_SIZE = 64;", "public const int L1D_PQ_SIZE = " + txt_pq_size_l1dc.Text + ";");
+                text = text.Replace("public const int L1D_MSHR_SIZE = 8;", "public const int L1D_MSHR_SIZE = " + txt_mshr_size_l1dc.Text + ";");
+                text = text.Replace("public const int L1D_LATENCY = 1;", "public const int L1D_LATENCY = " + txt_latency_l1dc.Text + ";");
+
+                text = text.Replace("public const int L2C_SET = 512;", "public const int L2C_SET = " + txt_set_l2c.Text + ";");
+                text = text.Replace("public const int L2C_WAY = 8;", "public const int L2C_WAY = " + txt_way_l2c.Text + ";");
+                text = text.Replace("public const int L2C_RQ_SIZE = 32;", "public const int L2C_RQ_SIZE = " + txt_rq_size_l2c.Text + ";");
+                text = text.Replace("public const int L2C_WQ_SIZE = 32;", "public const int L2C_WQ_SIZE = " + txt_wq_size_l2c.Text + ";");
+                text = text.Replace("public const int L2C_PQ_SIZE = 32;", "public const int L2C_PQ_SIZE = " + txt_pq_size_l2c.Text + ";");
+                text = text.Replace("public const int L2C_MSHR_SIZE = 16;", "public const int L2C_MSHR_SIZE = " + txt_mshr_size_l2c.Text + ";");
+                text = text.Replace("public const int L2C_LATENCY = 8;", "public const int L2C_LATENCY = " + txt_latency_l2c.Text + ";");
+
+                text = text.Replace("public const int LLC_WAY = 16;", "public const int LLC_WAY = " + txt_way_llc.Text + ";");
+                text = text.Replace("public const int LLC_MSHR_SIZE = 32;", "public const int LLC_MSHR_SIZE = " + txt_mshr_size_llc.Text + ";");
+                text = text.Replace("public const int LLC_LATENCY = 20;", "public const int LLC_LATENCY = " + txt_latency_llc.Text + ";");
+
+                text = text.Replace("public const int DRAM_CHANNELS = 1;", "public const int DRAM_CHANNELS = " + txt_channels.Text + ";");
+                text = text.Replace("public const int DRAM_BANKS = 8;", "public const int DRAM_BANKS = " + txt_banks.Text + ";");
+
+                text = text.Replace("public const int DRAM_RANKS = 8;", "public const int DRAM_RANKS = " + txt_ranks.Text + ";");
+                text = text.Replace("public const int DRAM_ROWS = 32768;", "public const int DRAM_ROWS = " + txt_rows.Text + ";");
+
+                text = text.Replace("public const int DRAM_COLUMNS = 32;", "public const int DRAM_COLUMNS = " + txt_columns.Text + ";");
+                text = text.Replace("public const int DRAM_CHANNEL_WIDTH = 8;", "public const int DRAM_CHANNEL_WIDTH = " + txt_channel_width.Text + ";");
+
+                text = text.Replace("public const int DRAM_RQ_SIZE = 48;", "public const int DRAM_RQ_SIZE = " + txt_dram_rq_size.Text + ";");
+                text = text.Replace("public const int DRAM_WQ_SIZE = 48;", "public const int DRAM_WQ_SIZE = " + txt_dram_wq_size.Text + ";");
+
+                text = text.Replace("public const int tRP_DRAM_CYCLE = 11;", "public const int tRP_DRAM_CYCLE = " + txt_trp.Text + ";");
+                text = text.Replace("public const int tRCD_DRAM_CYCLE = 11;", "public const int tRCD_DRAM_CYCLE = " + txt_trcd.Text + ";");
+                text = text.Replace("public const int tCAS_DRAM_CYCLE = 11;", "public const int tCAS_DRAM_CYCLE = " + txt_tcas.Text + ";");
+
+                File.WriteAllText(OriginalGlobals, text);
+
+                var p = new Process();
+                p.StartInfo = new ProcessStartInfo(@"C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe");
+                p.StartInfo.Arguments = string.Format(@"{0}\{1}.csproj /t:Build /p:Configuration=Release", solution, name);
+                p.StartInfo.UseShellExecute = false;
+                p.StartInfo.CreateNoWindow = true;
+                p.Start();
+                p.WaitForExit();
+
+                if (p.ExitCode == 0)
+                {
+                    btn_run.Enabled = true;
+                }
+                else
+                {
+                    btn_run.Enabled = false;
+                    MessageBox.Show("Error on compile", "Error");
+                }
+                File.Copy(BacGlobals, OriginalGlobals, true);
+                File.Copy(BacMain, OriginalMain, true);
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ChampSimBuilder_Load(object sender, EventArgs e)
+        {
+          reset_to_defaults();
+        }
+
+        private void btn_run_Click(object sender, EventArgs e)
+        {
+            Process.Start(solution + @"\bin\Release\" + name + ".exe");
         }
     }
 }
