@@ -51,6 +51,9 @@
     <Compile Include="ChampSimBuilder.Designer.cs">
       <DependentUpon>ChampSimBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Parameters.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

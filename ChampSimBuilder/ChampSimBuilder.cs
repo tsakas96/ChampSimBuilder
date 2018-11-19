@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace ChampSimBuilder
 {
@@ -58,7 +59,6 @@ namespace ChampSimBuilder
             defaults.ITLB_WAY = 4;
             defaults.ITLB_RQ_SIZE = 16;
             defaults.ITLB_WQ_SIZE = 16;
-            defaults.ITLB_PQ_SIZE = 0;
             defaults.ITLB_MSHR_SIZE = 8;
             defaults.ITLB_LATENCY = 1;
 
@@ -67,7 +67,6 @@ namespace ChampSimBuilder
             defaults.DTLB_WAY = 4;
             defaults.DTLB_RQ_SIZE = 16;
             defaults.DTLB_WQ_SIZE = 16;
-            defaults.DTLB_PQ_SIZE = 0;
             defaults.DTLB_MSHR_SIZE = 8;
             defaults.DTLB_LATENCY = 1;
 
@@ -76,7 +75,6 @@ namespace ChampSimBuilder
             defaults.STLB_WAY = 12;
             defaults.STLB_RQ_SIZE = 32;
             defaults.STLB_WQ_SIZE = 32;
-            defaults.STLB_PQ_SIZE = 0;
             defaults.STLB_MSHR_SIZE = 16;
             defaults.STLB_LATENCY = 8;
 
@@ -166,14 +164,28 @@ namespace ChampSimBuilder
                 txt_cpu_8.Hide();
                 btn_cpu_8.Hide();
 
-                txt_cpu_1.Text = "";
-                txt_cpu_2.Text = "";
-                txt_cpu_3.Text = "";
-                txt_cpu_4.Text = "";
-                txt_cpu_5.Text = "";
-                txt_cpu_6.Text = "";
-                txt_cpu_7.Text = "";
-                txt_cpu_8.Text = "";
+                txt_cpu_1.Text = "Choose trace file";
+                txt_cpu_2.Text = "Choose trace file";
+                txt_cpu_3.Text = "Choose trace file";
+                txt_cpu_4.Text = "Choose trace file";
+                txt_cpu_5.Text = "Choose trace file";
+                txt_cpu_6.Text = "Choose trace file";
+                txt_cpu_7.Text = "Choose trace file";
+                txt_cpu_8.Text = "Choose trace file";
+
+                txt_set_llc.Text = (2048 * 1).ToString();
+                if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
+                {
+                    txt_rq_size_llc.Text = (1 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    txt_wq_size_llc.Text = (1 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    txt_pq_size_llc.Text = (1 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                }
+                else
+                {
+                    txt_rq_size_llc.Text = "0";
+                    txt_wq_size_llc.Text = "0";
+                    txt_pq_size_llc.Text = "0";
+                }
             }
             else if(cmb_num_cpu.SelectedIndex == 1)
             {
@@ -205,14 +217,28 @@ namespace ChampSimBuilder
                 txt_cpu_8.Hide();
                 btn_cpu_8.Hide();
 
-                txt_cpu_1.Text = "";
-                txt_cpu_2.Text = "";
-                txt_cpu_3.Text = "";
-                txt_cpu_4.Text = "";
-                txt_cpu_5.Text = "";
-                txt_cpu_6.Text = "";
-                txt_cpu_7.Text = "";
-                txt_cpu_8.Text = "";
+                txt_cpu_1.Text = "Choose trace file";
+                txt_cpu_2.Text = "Choose trace file";
+                txt_cpu_3.Text = "Choose trace file";
+                txt_cpu_4.Text = "Choose trace file";
+                txt_cpu_5.Text = "Choose trace file";
+                txt_cpu_6.Text = "Choose trace file";
+                txt_cpu_7.Text = "Choose trace file";
+                txt_cpu_8.Text = "Choose trace file";
+
+                txt_set_llc.Text = (2048 * 4).ToString();
+                if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
+                {
+                    txt_rq_size_llc.Text = (4 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    txt_wq_size_llc.Text = (4 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    txt_pq_size_llc.Text = (4 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                }
+                else
+                {
+                    txt_rq_size_llc.Text = "0";
+                    txt_wq_size_llc.Text = "0";
+                    txt_pq_size_llc.Text = "0";
+                }
             }
             else
             {
@@ -244,14 +270,28 @@ namespace ChampSimBuilder
                 txt_cpu_8.Show();
                 btn_cpu_8.Show();
 
-                txt_cpu_1.Text = "";
-                txt_cpu_2.Text = "";
-                txt_cpu_3.Text = "";
-                txt_cpu_4.Text = "";
-                txt_cpu_5.Text = "";
-                txt_cpu_6.Text = "";
-                txt_cpu_7.Text = "";
-                txt_cpu_8.Text = "";
+                txt_cpu_1.Text = "Choose trace file";
+                txt_cpu_2.Text = "Choose trace file";
+                txt_cpu_3.Text = "Choose trace file";
+                txt_cpu_4.Text = "Choose trace file";
+                txt_cpu_5.Text = "Choose trace file";
+                txt_cpu_6.Text = "Choose trace file";
+                txt_cpu_7.Text = "Choose trace file";
+                txt_cpu_8.Text = "Choose trace file";
+
+                txt_set_llc.Text = (2048 * 8).ToString();
+                if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
+                {
+                    txt_rq_size_llc.Text = (8 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    txt_wq_size_llc.Text = (8 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    txt_pq_size_llc.Text = (8 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                }
+                else
+                {
+                    txt_rq_size_llc.Text = "0";
+                    txt_wq_size_llc.Text = "0";
+                    txt_pq_size_llc.Text = "0";
+                }
             }
         }
 
@@ -297,14 +337,14 @@ namespace ChampSimBuilder
             txt_cpu_8.Hide();
             btn_cpu_8.Hide();
 
-            txt_cpu_1.Text = "";
-            txt_cpu_2.Text = "";
-            txt_cpu_3.Text = "";
-            txt_cpu_4.Text = "";
-            txt_cpu_5.Text = "";
-            txt_cpu_6.Text = "";
-            txt_cpu_7.Text = "";
-            txt_cpu_8.Text = "";
+            txt_cpu_1.Text = "Choose trace file";
+            txt_cpu_2.Text = "Choose trace file";
+            txt_cpu_3.Text = "Choose trace file";
+            txt_cpu_4.Text = "Choose trace file";
+            txt_cpu_5.Text = "Choose trace file";
+            txt_cpu_6.Text = "Choose trace file";
+            txt_cpu_7.Text = "Choose trace file";
+            txt_cpu_8.Text = "Choose trace file";
 
             cmb_branch_predictor.SelectedIndex = 0;
             cmb_l1d_prefetcher.SelectedIndex = 0;
@@ -338,7 +378,6 @@ namespace ChampSimBuilder
             txt_way_itlb.Text = defaults.ITLB_WAY.ToString();
             txt_rq_size_itlb.Text = defaults.ITLB_RQ_SIZE.ToString();
             txt_wq_size_itlb.Text = defaults.ITLB_WQ_SIZE.ToString();
-            txt_pq_size_itlb.Text = defaults.ITLB_PQ_SIZE.ToString();
             txt_mshr_size_itlb.Text = defaults.ITLB_MSHR_SIZE.ToString();
             txt_latency_itlb.Text = defaults.ITLB_LATENCY.ToString();
 
@@ -346,7 +385,6 @@ namespace ChampSimBuilder
             txt_way_dtlb.Text = defaults.DTLB_WAY.ToString();
             txt_rq_size_dtlb.Text = defaults.DTLB_RQ_SIZE.ToString();
             txt_wq_size_dtlb.Text = defaults.DTLB_WQ_SIZE.ToString();
-            txt_pq_size_dtlb.Text = defaults.DTLB_PQ_SIZE.ToString();
             txt_mshr_size_dtlb.Text = defaults.DTLB_MSHR_SIZE.ToString();
             txt_latency_dtlb.Text = defaults.DTLB_LATENCY.ToString();
 
@@ -354,7 +392,6 @@ namespace ChampSimBuilder
             txt_way_stlb.Text = defaults.STLB_WAY.ToString();
             txt_rq_size_stlb.Text = defaults.STLB_RQ_SIZE.ToString();
             txt_wq_size_stlb.Text = defaults.STLB_WQ_SIZE.ToString();
-            txt_pq_size_stlb.Text = defaults.STLB_PQ_SIZE.ToString();
             txt_mshr_size_stlb.Text = defaults.STLB_MSHR_SIZE.ToString();
             txt_latency_stlb.Text = defaults.STLB_LATENCY.ToString();
 
@@ -505,7 +542,7 @@ namespace ChampSimBuilder
                     }
                     break;
                 case "cmb_llc_replacement":
-                    if (cmb_llc_replacement.SelectedIndex == 5)
+                    if (cmb_llc_replacement.SelectedIndex == 4)
                     {
                         using (OpenFileDialog openFileDialog = new OpenFileDialog())
                         {
@@ -524,17 +561,17 @@ namespace ChampSimBuilder
 
         private void cmb_DropDown(object sender, EventArgs e)
         {
-            cmb_branch_predictor.Items[3] = "<New>";
-            cmb_l1d_prefetcher.Items[2] = "<New>";
-            cmb_l2c_prefetcher.Items[5] = "<New>";
-            cmb_llc_replacement.Items[5] = "<New>";
+            cmb_branch_predictor.Items[3] = "Custom";
+            cmb_l1d_prefetcher.Items[2] = "Custom";
+            cmb_l2c_prefetcher.Items[5] = "Custom";
+            cmb_llc_replacement.Items[4] = "Custom";
         }
 
         private void btn_compile_Click(object sender, EventArgs e)
         {
             if (cmb_num_cpu.SelectedIndex == 0)
             {
-                if (String.IsNullOrEmpty(txt_cpu_1.Text))
+                if (txt_cpu_1.Text.Equals("Choose trace file"))
                 {
                     MessageBox.Show("Please select a trace file!", "Error");
                     return;
@@ -542,7 +579,7 @@ namespace ChampSimBuilder
             }
             else if (cmb_num_cpu.SelectedIndex == 1)
             {
-                if (String.IsNullOrEmpty(txt_cpu_1.Text) || String.IsNullOrEmpty(txt_cpu_2.Text) || String.IsNullOrEmpty(txt_cpu_3.Text) || String.IsNullOrEmpty(txt_cpu_4.Text))
+                if (txt_cpu_1.Text.Equals("Choose trace file") || txt_cpu_2.Text.Equals("Choose trace file") || txt_cpu_3.Text.Equals("Choose trace file") || txt_cpu_4.Text.Equals("Choose trace file"))
                 {
                     MessageBox.Show("Please select a trace file!", "Error");
                     return;
@@ -550,7 +587,7 @@ namespace ChampSimBuilder
             }
             else if (cmb_num_cpu.SelectedIndex == 2)
             {
-                if (String.IsNullOrEmpty(txt_cpu_1.Text) || String.IsNullOrEmpty(txt_cpu_2.Text) || String.IsNullOrEmpty(txt_cpu_3.Text) || String.IsNullOrEmpty(txt_cpu_4.Text) || String.IsNullOrEmpty(txt_cpu_5.Text) || String.IsNullOrEmpty(txt_cpu_6.Text) || String.IsNullOrEmpty(txt_cpu_7.Text) || String.IsNullOrEmpty(txt_cpu_8.Text))
+                if (txt_cpu_1.Text.Equals("Choose trace file") || txt_cpu_2.Text.Equals("Choose trace file") || txt_cpu_3.Text.Equals("Choose trace file") || txt_cpu_4.Text.Equals("Choose trace file") || txt_cpu_5.Text.Equals("Choose trace file") || txt_cpu_6.Text.Equals("Choose trace file") || txt_cpu_7.Text.Equals("Choose trace file") || txt_cpu_8.Text.Equals("Choose trace file"))
                 {
                     MessageBox.Show("Please select a trace file!", "Error");
                     return;
@@ -836,6 +873,33 @@ namespace ChampSimBuilder
         private void btn_run_Click(object sender, EventArgs e)
         {
             Process.Start(solution + @"\bin\Release\" + name + ".exe");
+        }
+
+        private void txt_mshr_size_l2c_TextChanged(object sender, EventArgs e)
+        {
+            int cpu = 1;
+            switch (cmb_num_cpu.SelectedIndex)
+            {
+                case 1:
+                    cpu = 4;
+                    break;
+                case 2:
+                    cpu = 8;
+                    break;
+            }
+
+            if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
+            {
+                txt_rq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                txt_wq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                txt_pq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+            }
+            else
+            {
+                txt_rq_size_llc.Text = "0";
+                txt_wq_size_llc.Text = "0";
+                txt_pq_size_llc.Text = "0";
+            }
         }
     }
 }
