@@ -21,7 +21,7 @@ namespace ChampSimBuilder
         public string new_l1d_prefetcher;
         public string new_l2c_prefetcher;
         public string new_llc_replacement;
-        public string solution = Directory.GetCurrentDirectory();//@"C:\Users\Aristodemos\Desktop\Github\ChampSim\";
+        public string solution = Directory.GetCurrentDirectory();
         public string name = "ChampSim";
 
         public ChampSimBuilder()
@@ -130,6 +130,9 @@ namespace ChampSimBuilder
             defaults.tRP_DRAM_CYCLE = 11;
             defaults.tCAS_DRAM_CYCLE = 11;
             defaults.tRCD_DRAM_CYCLE = 11;
+
+            defaults.WARMUP_INST = 1000000;
+            defaults.SIM_INST = 10000000;
     }
 
         private void cmb_num_cpu_SelectionChangeCommitted(object sender, EventArgs e)
@@ -442,6 +445,9 @@ namespace ChampSimBuilder
             txt_trp.Text = defaults.tRP_DRAM_CYCLE.ToString();
             txt_tcas.Text = defaults.tCAS_DRAM_CYCLE.ToString();
             txt_trcd.Text = defaults.tRCD_DRAM_CYCLE.ToString();
+
+            txt_warmup_instr.Text = defaults.WARMUP_INST.ToString();
+            txt_sim_instr.Text = defaults.SIM_INST.ToString();
         }
 
         private void btn_cpu_Click(object sender, EventArgs e)
@@ -621,10 +627,10 @@ namespace ChampSimBuilder
                 }
             }
 
-            string branch_predictor = Directory.GetCurrentDirectory() + "\\Branch Predictors\\"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\Branch Predictors\";
-            string l1d_prefetcher = Directory.GetCurrentDirectory() + "\\L1D Prefetchers\\"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\L1D Prefetchers\";
-            string l2c_prefetcher = Directory.GetCurrentDirectory() + "\\L2C Prefetchers\\"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\L2C Prefetchers\";
-            string llc_replacement = Directory.GetCurrentDirectory() + "\\LLC Replacements\\"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\LLC Replacements\";
+            string branch_predictor = Directory.GetCurrentDirectory() + "\\Branch Predictors\\";
+            string l1d_prefetcher = Directory.GetCurrentDirectory() + "\\L1D Prefetchers\\";
+            string l2c_prefetcher = Directory.GetCurrentDirectory() + "\\L2C Prefetchers\\";
+            string llc_replacement = Directory.GetCurrentDirectory() + "\\LLC Replacements\\";
 
             switch (cmb_branch_predictor.SelectedIndex)
             {
@@ -704,16 +710,16 @@ namespace ChampSimBuilder
                 string OriginalLLC = llc_replacement;
 
 
-                string OriginalMain = Directory.GetCurrentDirectory() + "\\MainPr.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\MainPr.cs";
-                string OriginalGlobals = Directory.GetCurrentDirectory() + "\\Globals.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\Globals.cs";
+                string OriginalMain = Directory.GetCurrentDirectory() + "\\MainPr.cs";
+                string OriginalGlobals = Directory.GetCurrentDirectory() + "\\Globals.cs";
 
-                string BacMain = Directory.GetCurrentDirectory() + "\\MainPr.cs.bac"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\MainPr.cs.bac";
-                string BacGlobals = Directory.GetCurrentDirectory() + "\\Globals.cs.bac"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\Globals.cs.bac";
+                string BacMain = Directory.GetCurrentDirectory() + "\\MainPr.cs.bac";
+                string BacGlobals = Directory.GetCurrentDirectory() + "\\Globals.cs.bac";
 
-                string ReplaceBranch = Directory.GetCurrentDirectory() + "\\Branch_Predictor.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\Branch_Predictor.cs";
-                string ReplaceL1D = Directory.GetCurrentDirectory() + "\\L1d_prefetcher.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\L1d_prefetcher.cs";
-                string ReplaceL2C = Directory.GetCurrentDirectory() + "\\L2c_prefetcher.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\L2c_prefetcher.cs";
-                string ReplaceLLC = Directory.GetCurrentDirectory() + "\\llc_replacement.cs"; //@"C:\Users\Aristodemos\Desktop\Github\ChampSim\llc_replacement.cs";
+                string ReplaceBranch = Directory.GetCurrentDirectory() + "\\Branch_Predictor.cs";
+                string ReplaceL1D = Directory.GetCurrentDirectory() + "\\L1d_prefetcher.cs";
+                string ReplaceL2C = Directory.GetCurrentDirectory() + "\\L2c_prefetcher.cs";
+                string ReplaceLLC = Directory.GetCurrentDirectory() + "\\llc_replacement.cs";
 
                 File.Copy(OriginalBranch, ReplaceBranch, true);
                 File.Copy(OriginalL1D, ReplaceL1D, true);
@@ -751,6 +757,11 @@ namespace ChampSimBuilder
 
                 File.Copy(OriginalGlobals, BacGlobals, true);
                 text = File.ReadAllText(OriginalGlobals);
+
+                text = text.Replace("public const int NUM_CPUS = 1;", "public const int NUM_CPUS = " + cmb_num_cpu.SelectedValue + ";");
+
+                text = text.Replace("public static ulong warmup_instructions = 1000000, simulation_instructions = 10000000;", "public static ulong warmup_instructions = " + txt_warmup_instr.Text + ", simulation_instructions = " + txt_sim_instr.Text + ";");
+
                 text = text.Replace("public const int CPU_FREQ = 4000;", "public const int CPU_FREQ = " + txt_cpu_frequency.Text + ";");
                 text = text.Replace("public const int DRAM_IO_FREQ = 800;", "public const int DRAM_IO_FREQ = " + txt_dram_io_frequency.Text + ";");
 

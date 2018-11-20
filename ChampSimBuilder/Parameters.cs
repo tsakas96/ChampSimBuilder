@@ -114,5 +114,11 @@ namespace ChampSimBuilder
         public int tRP_DRAM_CYCLE;
         public int tCAS_DRAM_CYCLE;
         public int tRCD_DRAM_CYCLE;
+
+        //Warmpup Instructions
+        public int WARMUP_INST;
+
+        //Simulation Instructions
+        public int SIM_INST;
     }
 }

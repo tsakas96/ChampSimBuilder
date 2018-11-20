@@ -58,6 +58,11 @@
             this.lbl_cpu_5 = new System.Windows.Forms.Label();
             this.lbl_title = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_warmup_instr = new TextBoxBorderColor.MyTextBox();
+            this.txt_sim_instr = new TextBoxBorderColor.MyTextBox();
             this.lbl_branch_predictor = new System.Windows.Forms.Label();
             this.cmb_branch_predictor = new System.Windows.Forms.ComboBox();
             this.lbl_l1d_prefetcher = new System.Windows.Forms.Label();
@@ -200,6 +205,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tlp_cpu.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.tlp_replacement.SuspendLayout();
             this.tlp_cpu2.SuspendLayout();
             this.tlp_dram.SuspendLayout();
@@ -377,10 +383,11 @@
             this.tlp_cpu.Controls.Add(this.lbl_cpu_5, 2, 8);
             this.tlp_cpu.Controls.Add(this.lbl_title, 0, 0);
             this.tlp_cpu.Controls.Add(this.label8, 0, 3);
+            this.tlp_cpu.Controls.Add(this.tableLayoutPanel1, 0, 10);
             this.tlp_cpu.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlp_cpu.Location = new System.Drawing.Point(0, 0);
             this.tlp_cpu.Name = "tlp_cpu";
-            this.tlp_cpu.RowCount = 10;
+            this.tlp_cpu.RowCount = 12;
             this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -391,7 +398,10 @@
             this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp_cpu.Size = new System.Drawing.Size(1298, 218);
+            this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlp_cpu.Size = new System.Drawing.Size(1298, 270);
             this.tlp_cpu.TabIndex = 14;
             // 
             // lbl_cpu
@@ -576,6 +586,65 @@
             this.label8.Text = "Simulation Parameters";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tlp_cpu.SetColumnSpan(this.tableLayoutPanel1, 14);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label14, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txt_warmup_instr, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txt_sim_instr, 3, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 221);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1292, 26);
+            this.tableLayoutPanel1.TabIndex = 34;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Location = new System.Drawing.Point(3, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 26);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Warmup Instructions:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label14.Location = new System.Drawing.Point(222, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(115, 26);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Simulation Instructions:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_warmup_instr
+            // 
+            this.txt_warmup_instr.BorderColor = System.Drawing.Color.Green;
+            this.txt_warmup_instr.Location = new System.Drawing.Point(116, 3);
+            this.txt_warmup_instr.Name = "txt_warmup_instr";
+            this.txt_warmup_instr.Size = new System.Drawing.Size(100, 20);
+            this.txt_warmup_instr.TabIndex = 2;
+            // 
+            // txt_sim_instr
+            // 
+            this.txt_sim_instr.BorderColor = System.Drawing.Color.Green;
+            this.txt_sim_instr.Location = new System.Drawing.Point(343, 3);
+            this.txt_sim_instr.Name = "txt_sim_instr";
+            this.txt_sim_instr.Size = new System.Drawing.Size(100, 20);
+            this.txt_sim_instr.TabIndex = 3;
+            // 
             // lbl_branch_predictor
             // 
             this.lbl_branch_predictor.AutoSize = true;
@@ -707,7 +776,7 @@
             this.tlp_replacement.Controls.Add(this.cmb_l2c_prefetcher, 5, 0);
             this.tlp_replacement.Controls.Add(this.lbl_l2c_prefetcher, 4, 0);
             this.tlp_replacement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlp_replacement.Location = new System.Drawing.Point(0, 218);
+            this.tlp_replacement.Location = new System.Drawing.Point(0, 270);
             this.tlp_replacement.Name = "tlp_replacement";
             this.tlp_replacement.RowCount = 2;
             this.tlp_replacement.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -766,7 +835,7 @@
             this.tlp_cpu2.Controls.Add(this.lbl_decode_width, 12, 1);
             this.tlp_cpu2.Controls.Add(this.lbl_retire_width, 15, 1);
             this.tlp_cpu2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlp_cpu2.Location = new System.Drawing.Point(0, 265);
+            this.tlp_cpu2.Location = new System.Drawing.Point(0, 317);
             this.tlp_cpu2.Name = "tlp_cpu2";
             this.tlp_cpu2.RowCount = 3;
             this.tlp_cpu2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1073,7 +1142,7 @@
             this.tlp_dram.Controls.Add(this.txt_dram_wq_size, 7, 2);
             this.tlp_dram.Controls.Add(this.txt_tcas, 9, 2);
             this.tlp_dram.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlp_dram.Location = new System.Drawing.Point(0, 701);
+            this.tlp_dram.Location = new System.Drawing.Point(0, 753);
             this.tlp_dram.Name = "tlp_dram";
             this.tlp_dram.RowCount = 4;
             this.tlp_dram.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -1334,7 +1403,7 @@
             // btn_compile
             // 
             this.btn_compile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_compile.Location = new System.Drawing.Point(1130, 3);
+            this.btn_compile.Location = new System.Drawing.Point(1152, 3);
             this.btn_compile.Name = "btn_compile";
             this.btn_compile.Size = new System.Drawing.Size(75, 23);
             this.btn_compile.TabIndex = 29;
@@ -1359,13 +1428,13 @@
             this.tlp_actions.AutoSize = true;
             this.tlp_actions.ColumnCount = 3;
             this.tlp_actions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.32032F));
-            this.tlp_actions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.85174F));
-            this.tlp_actions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.827936F));
+            this.tlp_actions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.55624F));
+            this.tlp_actions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.161788F));
             this.tlp_actions.Controls.Add(this.btn_defaults, 0, 0);
             this.tlp_actions.Controls.Add(this.btn_run, 2, 0);
             this.tlp_actions.Controls.Add(this.btn_compile, 1, 0);
             this.tlp_actions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tlp_actions.Location = new System.Drawing.Point(0, 801);
+            this.tlp_actions.Location = new System.Drawing.Point(0, 853);
             this.tlp_actions.Margin = new System.Windows.Forms.Padding(2);
             this.tlp_actions.Name = "tlp_actions";
             this.tlp_actions.RowCount = 1;
@@ -1830,7 +1899,7 @@
             this.lbl_way.Name = "lbl_way";
             this.lbl_way.Size = new System.Drawing.Size(100, 13);
             this.lbl_way.TabIndex = 11;
-            this.lbl_way.Text = "Way";
+            this.lbl_way.Text = "Ways";
             this.lbl_way.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_set
@@ -1841,7 +1910,7 @@
             this.lbl_set.Name = "lbl_set";
             this.lbl_set.Size = new System.Drawing.Size(100, 13);
             this.lbl_set.TabIndex = 10;
-            this.lbl_set.Text = "Set";
+            this.lbl_set.Text = "Sets";
             this.lbl_set.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_2c
@@ -1991,7 +2060,7 @@
             this.tlp_tlb_cache.Controls.Add(this.label11, 4, 17);
             this.tlp_tlb_cache.Controls.Add(this.label12, 5, 17);
             this.tlp_tlb_cache.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlp_tlb_cache.Location = new System.Drawing.Point(0, 337);
+            this.tlp_tlb_cache.Location = new System.Drawing.Point(0, 389);
             this.tlp_tlb_cache.Name = "tlp_tlb_cache";
             this.tlp_tlb_cache.RowCount = 21;
             this.tlp_tlb_cache.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -2047,7 +2116,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 78;
-            this.label1.Text = "Set";
+            this.label1.Text = "Sets";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -2058,7 +2127,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 13);
             this.label2.TabIndex = 79;
-            this.label2.Text = "Way";
+            this.label2.Text = "Ways";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -2194,7 +2263,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 20);
             this.label9.TabIndex = 88;
-            this.label9.Text = "CPU X 2048";
+            this.label9.Text = "CPU x 2048";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -2205,7 +2274,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 20);
             this.label10.TabIndex = 89;
-            this.label10.Text = "CPU X L2 MSHR";
+            this.label10.Text = "CPU x L2 MSHR";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -2216,7 +2285,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(100, 20);
             this.label11.TabIndex = 90;
-            this.label11.Text = "CPU X L2 MSHR";
+            this.label11.Text = "CPU x L2 MSHR";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -2227,7 +2296,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(101, 20);
             this.label12.TabIndex = 91;
-            this.label12.Text = "CPU X L2 MSHR";
+            this.label12.Text = "CPU x L2 MSHR";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ChampSimBuilder
@@ -2247,6 +2316,8 @@
             this.Load += new System.EventHandler(this.ChampSimBuilder_Load);
             this.tlp_cpu.ResumeLayout(false);
             this.tlp_cpu.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tlp_replacement.ResumeLayout(false);
             this.tlp_replacement.PerformLayout();
             this.tlp_cpu2.ResumeLayout(false);
@@ -2435,6 +2506,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private TextBoxBorderColor.MyTextBox txt_warmup_instr;
+        private TextBoxBorderColor.MyTextBox txt_sim_instr;
     }
 }
 
