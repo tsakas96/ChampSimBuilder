@@ -120,5 +120,14 @@ namespace ChampSimBuilder
 
         //Simulation Instructions
         public int SIM_INST;
+
+        //Total sizes
+        public int SIZE_ITLB;
+        public int SIZE_DTLB;
+        public int SIZE_STLB;
+        public int SIZE_L1IC;
+        public int SIZE_L1DC;
+        public int SIZE_L2C;
+        public int SIZE_LLC;
     }
 }

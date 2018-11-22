@@ -30,26 +30,18 @@
         {
             this.lbl_number_cpu = new System.Windows.Forms.Label();
             this.cmb_num_cpu = new System.Windows.Forms.ComboBox();
-            this.txt_cpu_1 = new System.Windows.Forms.TextBox();
             this.btn_cpu_1 = new System.Windows.Forms.Button();
             this.btn_cpu_2 = new System.Windows.Forms.Button();
-            this.txt_cpu_2 = new System.Windows.Forms.TextBox();
             this.btn_cpu_3 = new System.Windows.Forms.Button();
-            this.txt_cpu_3 = new System.Windows.Forms.TextBox();
             this.lbl_cpu_3 = new System.Windows.Forms.Label();
             this.lbl_cpu_4 = new System.Windows.Forms.Label();
             this.btn_cpu_4 = new System.Windows.Forms.Button();
-            this.txt_cpu_4 = new System.Windows.Forms.TextBox();
             this.tlp_cpu = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_cpu = new System.Windows.Forms.Label();
             this.lbl_cpu_2 = new System.Windows.Forms.Label();
             this.lbl_cpu_6 = new System.Windows.Forms.Label();
             this.lbl_cpu_7 = new System.Windows.Forms.Label();
             this.lbl_cpu_8 = new System.Windows.Forms.Label();
-            this.txt_cpu_5 = new System.Windows.Forms.TextBox();
-            this.txt_cpu_6 = new System.Windows.Forms.TextBox();
-            this.txt_cpu_7 = new System.Windows.Forms.TextBox();
-            this.txt_cpu_8 = new System.Windows.Forms.TextBox();
             this.btn_cpu_5 = new System.Windows.Forms.Button();
             this.btn_cpu_6 = new System.Windows.Forms.Button();
             this.btn_cpu_7 = new System.Windows.Forms.Button();
@@ -61,8 +53,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.txt_warmup_instr = new TextBoxBorderColor.MyTextBox();
-            this.txt_sim_instr = new TextBoxBorderColor.MyTextBox();
             this.lbl_branch_predictor = new System.Windows.Forms.Label();
             this.cmb_branch_predictor = new System.Windows.Forms.ComboBox();
             this.lbl_l1d_prefetcher = new System.Windows.Forms.Label();
@@ -73,26 +63,13 @@
             this.lbl_llc_replacement = new System.Windows.Forms.Label();
             this.tlp_replacement = new System.Windows.Forms.TableLayoutPanel();
             this.tlp_cpu2 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_retire_width = new System.Windows.Forms.TextBox();
-            this.txt_scheduler_size = new System.Windows.Forms.TextBox();
-            this.txt_decode_width = new System.Windows.Forms.TextBox();
             this.lbl_scheduler_size = new System.Windows.Forms.Label();
             this.lbl_page_size = new System.Windows.Forms.Label();
             this.lbl_fetch_width = new System.Windows.Forms.Label();
             this.lbl_sq_size = new System.Windows.Forms.Label();
             this.lbl_lq_size = new System.Windows.Forms.Label();
             this.lbl_cpu_frequency = new System.Windows.Forms.Label();
-            this.txt_sq_width = new System.Windows.Forms.TextBox();
-            this.txt_sq_size = new System.Windows.Forms.TextBox();
-            this.txt_page_size = new System.Windows.Forms.TextBox();
-            this.txt_dram_io_frequency = new System.Windows.Forms.TextBox();
             this.lbl_execude_width = new System.Windows.Forms.Label();
-            this.txt_cpu_frequency = new System.Windows.Forms.TextBox();
-            this.txt_rob_size = new System.Windows.Forms.TextBox();
-            this.txt_lq_size = new System.Windows.Forms.TextBox();
-            this.txt_lq_width = new System.Windows.Forms.TextBox();
-            this.txt_fetch_width = new System.Windows.Forms.TextBox();
-            this.txt_execude_width = new System.Windows.Forms.TextBox();
             this.lbl_dram_io_frequency = new System.Windows.Forms.Label();
             this.lbl_rob_size = new System.Windows.Forms.Label();
             this.lbl_lq_width = new System.Windows.Forms.Label();
@@ -112,65 +89,10 @@
             this.lbl_channel_width = new System.Windows.Forms.Label();
             this.lbl_dram_wq_size = new System.Windows.Forms.Label();
             this.lbl_tcas = new System.Windows.Forms.Label();
-            this.txt_channels = new System.Windows.Forms.TextBox();
-            this.txt_ranks = new System.Windows.Forms.TextBox();
-            this.txt_columns = new System.Windows.Forms.TextBox();
-            this.txt_dram_rq_size = new System.Windows.Forms.TextBox();
-            this.txt_trp = new System.Windows.Forms.TextBox();
-            this.txt_trcd = new System.Windows.Forms.TextBox();
-            this.txt_banks = new System.Windows.Forms.TextBox();
-            this.txt_rows = new System.Windows.Forms.TextBox();
-            this.txt_channel_width = new System.Windows.Forms.TextBox();
-            this.txt_dram_wq_size = new System.Windows.Forms.TextBox();
-            this.txt_tcas = new System.Windows.Forms.TextBox();
             this.btn_defaults = new System.Windows.Forms.Button();
             this.btn_compile = new System.Windows.Forms.Button();
             this.btn_run = new System.Windows.Forms.Button();
             this.tlp_actions = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_latency_llc = new System.Windows.Forms.TextBox();
-            this.txt_mshr_size_llc = new System.Windows.Forms.TextBox();
-            this.txt_pq_size_llc = new System.Windows.Forms.TextBox();
-            this.txt_wq_size_llc = new System.Windows.Forms.TextBox();
-            this.txt_rq_size_llc = new System.Windows.Forms.TextBox();
-            this.txt_way_llc = new System.Windows.Forms.TextBox();
-            this.txt_set_llc = new System.Windows.Forms.TextBox();
-            this.txt_latency_l2c = new System.Windows.Forms.TextBox();
-            this.txt_latency_l1dc = new System.Windows.Forms.TextBox();
-            this.txt_latency_l1ic = new System.Windows.Forms.TextBox();
-            this.txt_latency_stlb = new System.Windows.Forms.TextBox();
-            this.txt_latency_dtlb = new System.Windows.Forms.TextBox();
-            this.txt_mshr_size_l2c = new System.Windows.Forms.TextBox();
-            this.txt_mshr_size_l1dc = new System.Windows.Forms.TextBox();
-            this.txt_mshr_size_l1ic = new System.Windows.Forms.TextBox();
-            this.txt_mshr_size_stlb = new System.Windows.Forms.TextBox();
-            this.txt_mshr_size_dtlb = new System.Windows.Forms.TextBox();
-            this.txt_pq_size_l2c = new System.Windows.Forms.TextBox();
-            this.txt_pq_size_l1dc = new System.Windows.Forms.TextBox();
-            this.txt_pq_size_l1ic = new System.Windows.Forms.TextBox();
-            this.txt_wq_size_l2c = new System.Windows.Forms.TextBox();
-            this.txt_wq_size_l1dc = new System.Windows.Forms.TextBox();
-            this.txt_wq_size_l1ic = new System.Windows.Forms.TextBox();
-            this.txt_wq_size_stlb = new System.Windows.Forms.TextBox();
-            this.txt_wq_size_dtlb = new System.Windows.Forms.TextBox();
-            this.txt_rq_size_l2c = new System.Windows.Forms.TextBox();
-            this.txt_rq_size_l1dc = new System.Windows.Forms.TextBox();
-            this.txt_rq_size_l1ic = new System.Windows.Forms.TextBox();
-            this.txt_rq_size_stlb = new System.Windows.Forms.TextBox();
-            this.txt_rq_size_dtlb = new System.Windows.Forms.TextBox();
-            this.txt_way_l2c = new System.Windows.Forms.TextBox();
-            this.txt_way_l1dc = new System.Windows.Forms.TextBox();
-            this.txt_way_l1ic = new System.Windows.Forms.TextBox();
-            this.txt_way_stlb = new System.Windows.Forms.TextBox();
-            this.txt_way_dtlb = new System.Windows.Forms.TextBox();
-            this.txt_set_l2c = new System.Windows.Forms.TextBox();
-            this.txt_set_l1dc = new System.Windows.Forms.TextBox();
-            this.txt_set_l1ic = new System.Windows.Forms.TextBox();
-            this.txt_set_stlb = new System.Windows.Forms.TextBox();
-            this.txt_set_dtlb = new System.Windows.Forms.TextBox();
-            this.txt_latency_itlb = new System.Windows.Forms.TextBox();
-            this.txt_mshr_size_itlb = new System.Windows.Forms.TextBox();
-            this.txt_wq_size_itlb = new System.Windows.Forms.TextBox();
-            this.txt_rq_size_itlb = new System.Windows.Forms.TextBox();
             this.lbl_latency = new System.Windows.Forms.Label();
             this.lbl_mshr_size = new System.Windows.Forms.Label();
             this.lbl_pq_size = new System.Windows.Forms.Label();
@@ -185,7 +107,6 @@
             this.lbl_llc = new System.Windows.Forms.Label();
             this.tlp_tlb_cache = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_set_itlb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -197,13 +118,101 @@
             this.lbl_stlb = new System.Windows.Forms.Label();
             this.lbl_block_size = new System.Windows.Forms.Label();
             this.lbl_max_read_per_cycle = new System.Windows.Forms.Label();
-            this.txt_block_size = new System.Windows.Forms.TextBox();
-            this.txt_max_read_per_cycle = new System.Windows.Forms.TextBox();
-            this.txt_way_itlb = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txt_channels = new TextBoxBorderColor.MyTextBox();
+            this.txt_ranks = new TextBoxBorderColor.MyTextBox();
+            this.txt_columns = new TextBoxBorderColor.MyTextBox();
+            this.txt_dram_rq_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_trp = new TextBoxBorderColor.MyTextBox();
+            this.txt_trcd = new TextBoxBorderColor.MyTextBox();
+            this.txt_banks = new TextBoxBorderColor.MyTextBox();
+            this.txt_rows = new TextBoxBorderColor.MyTextBox();
+            this.txt_channel_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_dram_wq_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_tcas = new TextBoxBorderColor.MyTextBox();
+            this.txt_set_itlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_block_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_max_read_per_cycle = new TextBoxBorderColor.MyTextBox();
+            this.txt_set_l1ic = new TextBoxBorderColor.MyTextBox();
+            this.txt_set_l1dc = new TextBoxBorderColor.MyTextBox();
+            this.txt_set_l2c = new TextBoxBorderColor.MyTextBox();
+            this.txt_way_l1ic = new TextBoxBorderColor.MyTextBox();
+            this.txt_way_l1dc = new TextBoxBorderColor.MyTextBox();
+            this.txt_way_l2c = new TextBoxBorderColor.MyTextBox();
+            this.txt_rq_size_l1ic = new TextBoxBorderColor.MyTextBox();
+            this.txt_rq_size_l1dc = new TextBoxBorderColor.MyTextBox();
+            this.txt_rq_size_l2c = new TextBoxBorderColor.MyTextBox();
+            this.txt_wq_size_l1ic = new TextBoxBorderColor.MyTextBox();
+            this.txt_wq_size_l1dc = new TextBoxBorderColor.MyTextBox();
+            this.txt_wq_size_l2c = new TextBoxBorderColor.MyTextBox();
+            this.txt_pq_size_l1ic = new TextBoxBorderColor.MyTextBox();
+            this.txt_pq_size_l1dc = new TextBoxBorderColor.MyTextBox();
+            this.txt_pq_size_l2c = new TextBoxBorderColor.MyTextBox();
+            this.txt_mshr_size_l1ic = new TextBoxBorderColor.MyTextBox();
+            this.txt_mshr_size_l1dc = new TextBoxBorderColor.MyTextBox();
+            this.txt_mshr_size_l2c = new TextBoxBorderColor.MyTextBox();
+            this.txt_latency_l1ic = new TextBoxBorderColor.MyTextBox();
+            this.txt_latency_l1dc = new TextBoxBorderColor.MyTextBox();
+            this.txt_latency_l2c = new TextBoxBorderColor.MyTextBox();
+            this.txt_set_llc = new TextBoxBorderColor.MyTextBox();
+            this.txt_way_llc = new TextBoxBorderColor.MyTextBox();
+            this.txt_rq_size_llc = new TextBoxBorderColor.MyTextBox();
+            this.txt_wq_size_llc = new TextBoxBorderColor.MyTextBox();
+            this.txt_pq_size_llc = new TextBoxBorderColor.MyTextBox();
+            this.txt_mshr_size_llc = new TextBoxBorderColor.MyTextBox();
+            this.txt_latency_llc = new TextBoxBorderColor.MyTextBox();
+            this.txt_way_itlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_rq_size_itlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_wq_size_itlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_mshr_size_itlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_latency_itlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_set_dtlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_way_dtlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_rq_size_dtlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_wq_size_dtlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_mshr_size_dtlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_latency_dtlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_set_stlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_way_stlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_rq_size_stlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_wq_size_stlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_mshr_size_stlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_latency_stlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_size_itlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_size_dtlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_size_stlb = new TextBoxBorderColor.MyTextBox();
+            this.txt_size_l1i = new TextBoxBorderColor.MyTextBox();
+            this.txt_size_l1d = new TextBoxBorderColor.MyTextBox();
+            this.txt_size_l2c = new TextBoxBorderColor.MyTextBox();
+            this.txt_size_llc = new TextBoxBorderColor.MyTextBox();
+            this.txt_retire_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_scheduler_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_decode_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_sq_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_sq_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_page_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_dram_io_frequency = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_frequency = new TextBoxBorderColor.MyTextBox();
+            this.txt_rob_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_lq_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_lq_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_fetch_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_execude_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_4 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_1 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_3 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_2 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_5 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_6 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_7 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_8 = new TextBoxBorderColor.MyTextBox();
+            this.txt_warmup_instr = new TextBoxBorderColor.MyTextBox();
+            this.txt_sim_instr = new TextBoxBorderColor.MyTextBox();
             this.tlp_cpu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tlp_replacement.SuspendLayout();
@@ -238,18 +247,9 @@
             this.cmb_num_cpu.TabIndex = 1;
             this.cmb_num_cpu.SelectionChangeCommitted += new System.EventHandler(this.cmb_num_cpu_SelectionChangeCommitted);
             // 
-            // txt_cpu_1
-            // 
-            this.txt_cpu_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_1.Location = new System.Drawing.Point(172, 143);
-            this.txt_cpu_1.Name = "txt_cpu_1";
-            this.txt_cpu_1.ReadOnly = true;
-            this.txt_cpu_1.Size = new System.Drawing.Size(162, 20);
-            this.txt_cpu_1.TabIndex = 3;
-            // 
             // btn_cpu_1
             // 
-            this.btn_cpu_1.Location = new System.Drawing.Point(340, 143);
+            this.btn_cpu_1.Location = new System.Drawing.Point(404, 143);
             this.btn_cpu_1.Name = "btn_cpu_1";
             this.btn_cpu_1.Size = new System.Drawing.Size(75, 23);
             this.btn_cpu_1.TabIndex = 4;
@@ -259,7 +259,7 @@
             // 
             // btn_cpu_2
             // 
-            this.btn_cpu_2.Location = new System.Drawing.Point(633, 143);
+            this.btn_cpu_2.Location = new System.Drawing.Point(761, 143);
             this.btn_cpu_2.Name = "btn_cpu_2";
             this.btn_cpu_2.Size = new System.Drawing.Size(75, 23);
             this.btn_cpu_2.TabIndex = 7;
@@ -267,18 +267,9 @@
             this.btn_cpu_2.UseVisualStyleBackColor = true;
             this.btn_cpu_2.Click += new System.EventHandler(this.btn_cpu_Click);
             // 
-            // txt_cpu_2
-            // 
-            this.txt_cpu_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_2.Location = new System.Drawing.Point(465, 143);
-            this.txt_cpu_2.Name = "txt_cpu_2";
-            this.txt_cpu_2.ReadOnly = true;
-            this.txt_cpu_2.Size = new System.Drawing.Size(162, 20);
-            this.txt_cpu_2.TabIndex = 6;
-            // 
             // btn_cpu_3
             // 
-            this.btn_cpu_3.Location = new System.Drawing.Point(926, 143);
+            this.btn_cpu_3.Location = new System.Drawing.Point(1118, 143);
             this.btn_cpu_3.Name = "btn_cpu_3";
             this.btn_cpu_3.Size = new System.Drawing.Size(75, 23);
             this.btn_cpu_3.TabIndex = 10;
@@ -286,20 +277,11 @@
             this.btn_cpu_3.UseVisualStyleBackColor = true;
             this.btn_cpu_3.Click += new System.EventHandler(this.btn_cpu_Click);
             // 
-            // txt_cpu_3
-            // 
-            this.txt_cpu_3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_3.Location = new System.Drawing.Point(758, 143);
-            this.txt_cpu_3.Name = "txt_cpu_3";
-            this.txt_cpu_3.ReadOnly = true;
-            this.txt_cpu_3.Size = new System.Drawing.Size(162, 20);
-            this.txt_cpu_3.TabIndex = 9;
-            // 
             // lbl_cpu_3
             // 
             this.lbl_cpu_3.AutoSize = true;
             this.lbl_cpu_3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_cpu_3.Location = new System.Drawing.Point(714, 140);
+            this.lbl_cpu_3.Location = new System.Drawing.Point(842, 140);
             this.lbl_cpu_3.Name = "lbl_cpu_3";
             this.lbl_cpu_3.Size = new System.Drawing.Size(38, 29);
             this.lbl_cpu_3.TabIndex = 8;
@@ -310,7 +292,7 @@
             // 
             this.lbl_cpu_4.AutoSize = true;
             this.lbl_cpu_4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_cpu_4.Location = new System.Drawing.Point(1007, 140);
+            this.lbl_cpu_4.Location = new System.Drawing.Point(1199, 140);
             this.lbl_cpu_4.Name = "lbl_cpu_4";
             this.lbl_cpu_4.Size = new System.Drawing.Size(38, 29);
             this.lbl_cpu_4.TabIndex = 11;
@@ -319,22 +301,13 @@
             // 
             // btn_cpu_4
             // 
-            this.btn_cpu_4.Location = new System.Drawing.Point(1219, 143);
+            this.btn_cpu_4.Location = new System.Drawing.Point(1475, 143);
             this.btn_cpu_4.Name = "btn_cpu_4";
             this.btn_cpu_4.Size = new System.Drawing.Size(75, 23);
             this.btn_cpu_4.TabIndex = 13;
             this.btn_cpu_4.Text = "Browse..";
             this.btn_cpu_4.UseVisualStyleBackColor = true;
             this.btn_cpu_4.Click += new System.EventHandler(this.btn_cpu_Click);
-            // 
-            // txt_cpu_4
-            // 
-            this.txt_cpu_4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_4.Location = new System.Drawing.Point(1051, 143);
-            this.txt_cpu_4.Name = "txt_cpu_4";
-            this.txt_cpu_4.ReadOnly = true;
-            this.txt_cpu_4.Size = new System.Drawing.Size(162, 20);
-            this.txt_cpu_4.TabIndex = 12;
             // 
             // tlp_cpu
             // 
@@ -401,7 +374,7 @@
             this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp_cpu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp_cpu.Size = new System.Drawing.Size(1298, 270);
+            this.tlp_cpu.Size = new System.Drawing.Size(1553, 270);
             this.tlp_cpu.TabIndex = 14;
             // 
             // lbl_cpu
@@ -420,7 +393,7 @@
             // 
             this.lbl_cpu_2.AutoSize = true;
             this.lbl_cpu_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_cpu_2.Location = new System.Drawing.Point(421, 140);
+            this.lbl_cpu_2.Location = new System.Drawing.Point(485, 140);
             this.lbl_cpu_2.Name = "lbl_cpu_2";
             this.lbl_cpu_2.Size = new System.Drawing.Size(38, 29);
             this.lbl_cpu_2.TabIndex = 5;
@@ -431,7 +404,7 @@
             // 
             this.lbl_cpu_6.AutoSize = true;
             this.lbl_cpu_6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_cpu_6.Location = new System.Drawing.Point(421, 169);
+            this.lbl_cpu_6.Location = new System.Drawing.Point(485, 169);
             this.lbl_cpu_6.Name = "lbl_cpu_6";
             this.lbl_cpu_6.Size = new System.Drawing.Size(38, 29);
             this.lbl_cpu_6.TabIndex = 15;
@@ -442,7 +415,7 @@
             // 
             this.lbl_cpu_7.AutoSize = true;
             this.lbl_cpu_7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_cpu_7.Location = new System.Drawing.Point(714, 169);
+            this.lbl_cpu_7.Location = new System.Drawing.Point(842, 169);
             this.lbl_cpu_7.Name = "lbl_cpu_7";
             this.lbl_cpu_7.Size = new System.Drawing.Size(38, 29);
             this.lbl_cpu_7.TabIndex = 16;
@@ -453,52 +426,16 @@
             // 
             this.lbl_cpu_8.AutoSize = true;
             this.lbl_cpu_8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_cpu_8.Location = new System.Drawing.Point(1007, 169);
+            this.lbl_cpu_8.Location = new System.Drawing.Point(1199, 169);
             this.lbl_cpu_8.Name = "lbl_cpu_8";
             this.lbl_cpu_8.Size = new System.Drawing.Size(38, 29);
             this.lbl_cpu_8.TabIndex = 17;
             this.lbl_cpu_8.Text = "CPU8:";
             this.lbl_cpu_8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txt_cpu_5
-            // 
-            this.txt_cpu_5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_5.Location = new System.Drawing.Point(172, 172);
-            this.txt_cpu_5.Name = "txt_cpu_5";
-            this.txt_cpu_5.ReadOnly = true;
-            this.txt_cpu_5.Size = new System.Drawing.Size(162, 20);
-            this.txt_cpu_5.TabIndex = 18;
-            // 
-            // txt_cpu_6
-            // 
-            this.txt_cpu_6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_6.Location = new System.Drawing.Point(465, 172);
-            this.txt_cpu_6.Name = "txt_cpu_6";
-            this.txt_cpu_6.ReadOnly = true;
-            this.txt_cpu_6.Size = new System.Drawing.Size(162, 20);
-            this.txt_cpu_6.TabIndex = 19;
-            // 
-            // txt_cpu_7
-            // 
-            this.txt_cpu_7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_7.Location = new System.Drawing.Point(758, 172);
-            this.txt_cpu_7.Name = "txt_cpu_7";
-            this.txt_cpu_7.ReadOnly = true;
-            this.txt_cpu_7.Size = new System.Drawing.Size(162, 20);
-            this.txt_cpu_7.TabIndex = 20;
-            // 
-            // txt_cpu_8
-            // 
-            this.txt_cpu_8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_8.Location = new System.Drawing.Point(1051, 172);
-            this.txt_cpu_8.Name = "txt_cpu_8";
-            this.txt_cpu_8.ReadOnly = true;
-            this.txt_cpu_8.Size = new System.Drawing.Size(162, 20);
-            this.txt_cpu_8.TabIndex = 21;
-            // 
             // btn_cpu_5
             // 
-            this.btn_cpu_5.Location = new System.Drawing.Point(340, 172);
+            this.btn_cpu_5.Location = new System.Drawing.Point(404, 172);
             this.btn_cpu_5.Name = "btn_cpu_5";
             this.btn_cpu_5.Size = new System.Drawing.Size(75, 23);
             this.btn_cpu_5.TabIndex = 22;
@@ -508,7 +445,7 @@
             // 
             // btn_cpu_6
             // 
-            this.btn_cpu_6.Location = new System.Drawing.Point(633, 172);
+            this.btn_cpu_6.Location = new System.Drawing.Point(761, 172);
             this.btn_cpu_6.Name = "btn_cpu_6";
             this.btn_cpu_6.Size = new System.Drawing.Size(75, 23);
             this.btn_cpu_6.TabIndex = 23;
@@ -518,7 +455,7 @@
             // 
             // btn_cpu_7
             // 
-            this.btn_cpu_7.Location = new System.Drawing.Point(926, 172);
+            this.btn_cpu_7.Location = new System.Drawing.Point(1118, 172);
             this.btn_cpu_7.Name = "btn_cpu_7";
             this.btn_cpu_7.Size = new System.Drawing.Size(75, 23);
             this.btn_cpu_7.TabIndex = 24;
@@ -528,7 +465,7 @@
             // 
             // btn_cpu_8
             // 
-            this.btn_cpu_8.Location = new System.Drawing.Point(1219, 172);
+            this.btn_cpu_8.Location = new System.Drawing.Point(1475, 172);
             this.btn_cpu_8.Name = "btn_cpu_8";
             this.btn_cpu_8.Size = new System.Drawing.Size(75, 23);
             this.btn_cpu_8.TabIndex = 25;
@@ -567,7 +504,7 @@
             this.lbl_title.Location = new System.Drawing.Point(3, 0);
             this.lbl_title.Name = "lbl_title";
             this.tlp_cpu.SetRowSpan(this.lbl_title, 3);
-            this.lbl_title.Size = new System.Drawing.Size(1292, 60);
+            this.lbl_title.Size = new System.Drawing.Size(1547, 60);
             this.lbl_title.TabIndex = 28;
             this.lbl_title.Text = "ChampSim Builder";
             this.lbl_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -581,7 +518,7 @@
             this.label8.Location = new System.Drawing.Point(3, 60);
             this.label8.Name = "label8";
             this.tlp_cpu.SetRowSpan(this.label8, 2);
-            this.label8.Size = new System.Drawing.Size(1292, 40);
+            this.label8.Size = new System.Drawing.Size(1547, 40);
             this.label8.TabIndex = 30;
             this.label8.Text = "Simulation Parameters";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -604,7 +541,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1292, 26);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1547, 26);
             this.tableLayoutPanel1.TabIndex = 34;
             // 
             // label13
@@ -628,22 +565,6 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Simulation Instructions:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_warmup_instr
-            // 
-            this.txt_warmup_instr.BorderColor = System.Drawing.Color.Green;
-            this.txt_warmup_instr.Location = new System.Drawing.Point(116, 3);
-            this.txt_warmup_instr.Name = "txt_warmup_instr";
-            this.txt_warmup_instr.Size = new System.Drawing.Size(100, 20);
-            this.txt_warmup_instr.TabIndex = 2;
-            // 
-            // txt_sim_instr
-            // 
-            this.txt_sim_instr.BorderColor = System.Drawing.Color.Green;
-            this.txt_sim_instr.Location = new System.Drawing.Point(343, 3);
-            this.txt_sim_instr.Name = "txt_sim_instr";
-            this.txt_sim_instr.Size = new System.Drawing.Size(100, 20);
-            this.txt_sim_instr.TabIndex = 3;
             // 
             // lbl_branch_predictor
             // 
@@ -781,7 +702,7 @@
             this.tlp_replacement.RowCount = 2;
             this.tlp_replacement.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlp_replacement.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp_replacement.Size = new System.Drawing.Size(1298, 47);
+            this.tlp_replacement.Size = new System.Drawing.Size(1553, 47);
             this.tlp_replacement.TabIndex = 24;
             // 
             // tlp_cpu2
@@ -841,35 +762,8 @@
             this.tlp_cpu2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp_cpu2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlp_cpu2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp_cpu2.Size = new System.Drawing.Size(1298, 72);
+            this.tlp_cpu2.Size = new System.Drawing.Size(1553, 72);
             this.tlp_cpu2.TabIndex = 25;
-            // 
-            // txt_retire_width
-            // 
-            this.txt_retire_width.Location = new System.Drawing.Point(994, 29);
-            this.txt_retire_width.Name = "txt_retire_width";
-            this.txt_retire_width.ShortcutsEnabled = false;
-            this.txt_retire_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_retire_width.TabIndex = 36;
-            this.txt_retire_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_scheduler_size
-            // 
-            this.txt_scheduler_size.Location = new System.Drawing.Point(1155, 3);
-            this.txt_scheduler_size.Name = "txt_scheduler_size";
-            this.txt_scheduler_size.ShortcutsEnabled = false;
-            this.txt_scheduler_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_scheduler_size.TabIndex = 34;
-            this.txt_scheduler_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_decode_width
-            // 
-            this.txt_decode_width.Location = new System.Drawing.Point(800, 29);
-            this.txt_decode_width.Name = "txt_decode_width";
-            this.txt_decode_width.ShortcutsEnabled = false;
-            this.txt_decode_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_decode_width.TabIndex = 33;
-            this.txt_decode_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // lbl_scheduler_size
             // 
@@ -937,42 +831,6 @@
             this.lbl_cpu_frequency.Text = "CPU Frequency:";
             this.lbl_cpu_frequency.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txt_sq_width
-            // 
-            this.txt_sq_width.Location = new System.Drawing.Point(610, 29);
-            this.txt_sq_width.Name = "txt_sq_width";
-            this.txt_sq_width.ShortcutsEnabled = false;
-            this.txt_sq_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_sq_width.TabIndex = 31;
-            this.txt_sq_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_sq_size
-            // 
-            this.txt_sq_size.Location = new System.Drawing.Point(432, 29);
-            this.txt_sq_size.Name = "txt_sq_size";
-            this.txt_sq_size.ShortcutsEnabled = false;
-            this.txt_sq_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_sq_size.TabIndex = 29;
-            this.txt_sq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_page_size
-            // 
-            this.txt_page_size.Location = new System.Drawing.Point(261, 29);
-            this.txt_page_size.Name = "txt_page_size";
-            this.txt_page_size.ShortcutsEnabled = false;
-            this.txt_page_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_page_size.TabIndex = 27;
-            this.txt_page_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_dram_io_frequency
-            // 
-            this.txt_dram_io_frequency.Location = new System.Drawing.Point(123, 29);
-            this.txt_dram_io_frequency.Name = "txt_dram_io_frequency";
-            this.txt_dram_io_frequency.ShortcutsEnabled = false;
-            this.txt_dram_io_frequency.Size = new System.Drawing.Size(50, 20);
-            this.txt_dram_io_frequency.TabIndex = 25;
-            this.txt_dram_io_frequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
             // lbl_execude_width
             // 
             this.lbl_execude_width.AutoSize = true;
@@ -983,59 +841,6 @@
             this.lbl_execude_width.TabIndex = 5;
             this.lbl_execude_width.Text = "Execude width: (Instr.)";
             this.lbl_execude_width.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_cpu_frequency
-            // 
-            this.txt_cpu_frequency.Location = new System.Drawing.Point(123, 3);
-            this.txt_cpu_frequency.Name = "txt_cpu_frequency";
-            this.txt_cpu_frequency.ShortcutsEnabled = false;
-            this.txt_cpu_frequency.Size = new System.Drawing.Size(50, 20);
-            this.txt_cpu_frequency.TabIndex = 11;
-            this.txt_cpu_frequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rob_size
-            // 
-            this.txt_rob_size.Location = new System.Drawing.Point(261, 3);
-            this.txt_rob_size.Name = "txt_rob_size";
-            this.txt_rob_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_rob_size.TabIndex = 12;
-            this.txt_rob_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_lq_size
-            // 
-            this.txt_lq_size.Location = new System.Drawing.Point(432, 3);
-            this.txt_lq_size.Name = "txt_lq_size";
-            this.txt_lq_size.ShortcutsEnabled = false;
-            this.txt_lq_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_lq_size.TabIndex = 13;
-            this.txt_lq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_lq_width
-            // 
-            this.txt_lq_width.Location = new System.Drawing.Point(610, 3);
-            this.txt_lq_width.Name = "txt_lq_width";
-            this.txt_lq_width.ShortcutsEnabled = false;
-            this.txt_lq_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_lq_width.TabIndex = 14;
-            this.txt_lq_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_fetch_width
-            // 
-            this.txt_fetch_width.Location = new System.Drawing.Point(800, 3);
-            this.txt_fetch_width.Name = "txt_fetch_width";
-            this.txt_fetch_width.ShortcutsEnabled = false;
-            this.txt_fetch_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_fetch_width.TabIndex = 15;
-            this.txt_fetch_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_execude_width
-            // 
-            this.txt_execude_width.Location = new System.Drawing.Point(994, 3);
-            this.txt_execude_width.Name = "txt_execude_width";
-            this.txt_execude_width.ShortcutsEnabled = false;
-            this.txt_execude_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_execude_width.TabIndex = 16;
-            this.txt_execude_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // lbl_dram_io_frequency
             // 
@@ -1154,7 +959,7 @@
             this.tlp_dram.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp_dram.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp_dram.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp_dram.Size = new System.Drawing.Size(1298, 100);
+            this.tlp_dram.Size = new System.Drawing.Size(1553, 100);
             this.tlp_dram.TabIndex = 27;
             // 
             // lbl_dram
@@ -1164,18 +969,18 @@
             this.lbl_dram.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lbl_dram.Location = new System.Drawing.Point(3, 0);
             this.lbl_dram.Name = "lbl_dram";
-            this.lbl_dram.Size = new System.Drawing.Size(78, 25);
+            this.lbl_dram.Size = new System.Drawing.Size(521, 50);
             this.lbl_dram.TabIndex = 1;
-            this.lbl_dram.Text = "DRAM";
+            this.lbl_dram.Text = "DRAM NA KAMOYME TO SIZE DRAM KAI TA ::::\r\nAN patisi cancel i x => defult";
             this.lbl_dram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_channels
             // 
             this.lbl_channels.AutoSize = true;
             this.lbl_channels.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_channels.Location = new System.Drawing.Point(3, 25);
+            this.lbl_channels.Location = new System.Drawing.Point(3, 50);
             this.lbl_channels.Name = "lbl_channels";
-            this.lbl_channels.Size = new System.Drawing.Size(78, 26);
+            this.lbl_channels.Size = new System.Drawing.Size(521, 26);
             this.lbl_channels.TabIndex = 2;
             this.lbl_channels.Text = "No. channels:";
             this.lbl_channels.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1184,7 +989,7 @@
             // 
             this.lbl_ranks.AutoSize = true;
             this.lbl_ranks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_ranks.Location = new System.Drawing.Point(143, 25);
+            this.lbl_ranks.Location = new System.Drawing.Point(586, 50);
             this.lbl_ranks.Name = "lbl_ranks";
             this.lbl_ranks.Size = new System.Drawing.Size(56, 26);
             this.lbl_ranks.TabIndex = 3;
@@ -1195,7 +1000,7 @@
             // 
             this.lbl_columns.AutoSize = true;
             this.lbl_columns.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_columns.Location = new System.Drawing.Point(261, 25);
+            this.lbl_columns.Location = new System.Drawing.Point(704, 50);
             this.lbl_columns.Name = "lbl_columns";
             this.lbl_columns.Size = new System.Drawing.Size(77, 26);
             this.lbl_columns.TabIndex = 4;
@@ -1206,7 +1011,7 @@
             // 
             this.lbl_dram_rq_size.AutoSize = true;
             this.lbl_dram_rq_size.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_dram_rq_size.Location = new System.Drawing.Point(400, 25);
+            this.lbl_dram_rq_size.Location = new System.Drawing.Point(843, 50);
             this.lbl_dram_rq_size.Name = "lbl_dram_rq_size";
             this.lbl_dram_rq_size.Size = new System.Drawing.Size(90, 26);
             this.lbl_dram_rq_size.TabIndex = 5;
@@ -1217,7 +1022,7 @@
             // 
             this.lbl_trp.AutoSize = true;
             this.lbl_trp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_trp.Location = new System.Drawing.Point(552, 25);
+            this.lbl_trp.Location = new System.Drawing.Point(995, 50);
             this.lbl_trp.Name = "lbl_trp";
             this.lbl_trp.Size = new System.Drawing.Size(160, 26);
             this.lbl_trp.TabIndex = 6;
@@ -1228,7 +1033,7 @@
             // 
             this.lbl_trcd.AutoSize = true;
             this.lbl_trcd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_trcd.Location = new System.Drawing.Point(774, 25);
+            this.lbl_trcd.Location = new System.Drawing.Point(1217, 50);
             this.lbl_trcd.Name = "lbl_trcd";
             this.lbl_trcd.Size = new System.Drawing.Size(124, 26);
             this.lbl_trcd.TabIndex = 7;
@@ -1239,9 +1044,9 @@
             // 
             this.lbl_banks.AutoSize = true;
             this.lbl_banks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_banks.Location = new System.Drawing.Point(3, 51);
+            this.lbl_banks.Location = new System.Drawing.Point(3, 76);
             this.lbl_banks.Name = "lbl_banks";
-            this.lbl_banks.Size = new System.Drawing.Size(78, 26);
+            this.lbl_banks.Size = new System.Drawing.Size(521, 26);
             this.lbl_banks.TabIndex = 8;
             this.lbl_banks.Text = "No. banks:";
             this.lbl_banks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1250,7 +1055,7 @@
             // 
             this.lbl_rows.AutoSize = true;
             this.lbl_rows.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_rows.Location = new System.Drawing.Point(143, 51);
+            this.lbl_rows.Location = new System.Drawing.Point(586, 76);
             this.lbl_rows.Name = "lbl_rows";
             this.lbl_rows.Size = new System.Drawing.Size(56, 26);
             this.lbl_rows.TabIndex = 9;
@@ -1261,7 +1066,7 @@
             // 
             this.lbl_channel_width.AutoSize = true;
             this.lbl_channel_width.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_channel_width.Location = new System.Drawing.Point(261, 51);
+            this.lbl_channel_width.Location = new System.Drawing.Point(704, 76);
             this.lbl_channel_width.Name = "lbl_channel_width";
             this.lbl_channel_width.Size = new System.Drawing.Size(77, 26);
             this.lbl_channel_width.TabIndex = 10;
@@ -1272,7 +1077,7 @@
             // 
             this.lbl_dram_wq_size.AutoSize = true;
             this.lbl_dram_wq_size.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_dram_wq_size.Location = new System.Drawing.Point(400, 51);
+            this.lbl_dram_wq_size.Location = new System.Drawing.Point(843, 76);
             this.lbl_dram_wq_size.Name = "lbl_dram_wq_size";
             this.lbl_dram_wq_size.Size = new System.Drawing.Size(90, 26);
             this.lbl_dram_wq_size.TabIndex = 11;
@@ -1283,111 +1088,12 @@
             // 
             this.lbl_tcas.AutoSize = true;
             this.lbl_tcas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_tcas.Location = new System.Drawing.Point(552, 51);
+            this.lbl_tcas.Location = new System.Drawing.Point(995, 76);
             this.lbl_tcas.Name = "lbl_tcas";
             this.lbl_tcas.Size = new System.Drawing.Size(160, 26);
             this.lbl_tcas.TabIndex = 12;
             this.lbl_tcas.Text = "Column address\r\nstrobe latency: (Cycles)";
             this.lbl_tcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_channels
-            // 
-            this.txt_channels.Location = new System.Drawing.Point(87, 28);
-            this.txt_channels.Name = "txt_channels";
-            this.txt_channels.ShortcutsEnabled = false;
-            this.txt_channels.Size = new System.Drawing.Size(50, 20);
-            this.txt_channels.TabIndex = 13;
-            this.txt_channels.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_ranks
-            // 
-            this.txt_ranks.Location = new System.Drawing.Point(205, 28);
-            this.txt_ranks.Name = "txt_ranks";
-            this.txt_ranks.ShortcutsEnabled = false;
-            this.txt_ranks.Size = new System.Drawing.Size(50, 20);
-            this.txt_ranks.TabIndex = 14;
-            this.txt_ranks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_columns
-            // 
-            this.txt_columns.Location = new System.Drawing.Point(344, 28);
-            this.txt_columns.Name = "txt_columns";
-            this.txt_columns.ShortcutsEnabled = false;
-            this.txt_columns.Size = new System.Drawing.Size(50, 20);
-            this.txt_columns.TabIndex = 15;
-            this.txt_columns.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_dram_rq_size
-            // 
-            this.txt_dram_rq_size.Location = new System.Drawing.Point(496, 28);
-            this.txt_dram_rq_size.Name = "txt_dram_rq_size";
-            this.txt_dram_rq_size.ShortcutsEnabled = false;
-            this.txt_dram_rq_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_dram_rq_size.TabIndex = 16;
-            this.txt_dram_rq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_trp
-            // 
-            this.txt_trp.Location = new System.Drawing.Point(718, 28);
-            this.txt_trp.Name = "txt_trp";
-            this.txt_trp.ShortcutsEnabled = false;
-            this.txt_trp.Size = new System.Drawing.Size(50, 20);
-            this.txt_trp.TabIndex = 17;
-            this.txt_trp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_trcd
-            // 
-            this.txt_trcd.Location = new System.Drawing.Point(904, 28);
-            this.txt_trcd.Name = "txt_trcd";
-            this.txt_trcd.ShortcutsEnabled = false;
-            this.txt_trcd.Size = new System.Drawing.Size(50, 20);
-            this.txt_trcd.TabIndex = 18;
-            this.txt_trcd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_banks
-            // 
-            this.txt_banks.Location = new System.Drawing.Point(87, 54);
-            this.txt_banks.Name = "txt_banks";
-            this.txt_banks.ShortcutsEnabled = false;
-            this.txt_banks.Size = new System.Drawing.Size(50, 20);
-            this.txt_banks.TabIndex = 19;
-            this.txt_banks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rows
-            // 
-            this.txt_rows.Location = new System.Drawing.Point(205, 54);
-            this.txt_rows.Name = "txt_rows";
-            this.txt_rows.ShortcutsEnabled = false;
-            this.txt_rows.Size = new System.Drawing.Size(50, 20);
-            this.txt_rows.TabIndex = 20;
-            this.txt_rows.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_channel_width
-            // 
-            this.txt_channel_width.Location = new System.Drawing.Point(344, 54);
-            this.txt_channel_width.Name = "txt_channel_width";
-            this.txt_channel_width.ShortcutsEnabled = false;
-            this.txt_channel_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_channel_width.TabIndex = 21;
-            this.txt_channel_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_dram_wq_size
-            // 
-            this.txt_dram_wq_size.Location = new System.Drawing.Point(496, 54);
-            this.txt_dram_wq_size.Name = "txt_dram_wq_size";
-            this.txt_dram_wq_size.ShortcutsEnabled = false;
-            this.txt_dram_wq_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_dram_wq_size.TabIndex = 22;
-            this.txt_dram_wq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_tcas
-            // 
-            this.txt_tcas.Location = new System.Drawing.Point(718, 54);
-            this.txt_tcas.Name = "txt_tcas";
-            this.txt_tcas.ShortcutsEnabled = false;
-            this.txt_tcas.Size = new System.Drawing.Size(50, 20);
-            this.txt_tcas.TabIndex = 23;
-            this.txt_tcas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // btn_defaults
             // 
@@ -1403,7 +1109,7 @@
             // btn_compile
             // 
             this.btn_compile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_compile.Location = new System.Drawing.Point(1152, 3);
+            this.btn_compile.Location = new System.Drawing.Point(1394, 3);
             this.btn_compile.Name = "btn_compile";
             this.btn_compile.Size = new System.Drawing.Size(75, 23);
             this.btn_compile.TabIndex = 29;
@@ -1415,7 +1121,7 @@
             // 
             this.btn_run.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_run.Enabled = false;
-            this.btn_run.Location = new System.Drawing.Point(1235, 3);
+            this.btn_run.Location = new System.Drawing.Point(1490, 3);
             this.btn_run.Name = "btn_run";
             this.btn_run.Size = new System.Drawing.Size(60, 23);
             this.btn_run.TabIndex = 30;
@@ -1440,401 +1146,8 @@
             this.tlp_actions.RowCount = 1;
             this.tlp_actions.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlp_actions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tlp_actions.Size = new System.Drawing.Size(1298, 29);
+            this.tlp_actions.Size = new System.Drawing.Size(1553, 29);
             this.tlp_actions.TabIndex = 31;
-            // 
-            // txt_latency_llc
-            // 
-            this.txt_latency_llc.Location = new System.Drawing.Point(749, 321);
-            this.txt_latency_llc.Name = "txt_latency_llc";
-            this.txt_latency_llc.ShortcutsEnabled = false;
-            this.txt_latency_llc.Size = new System.Drawing.Size(100, 20);
-            this.txt_latency_llc.TabIndex = 74;
-            this.txt_latency_llc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_mshr_size_llc
-            // 
-            this.txt_mshr_size_llc.Location = new System.Drawing.Point(643, 321);
-            this.txt_mshr_size_llc.Name = "txt_mshr_size_llc";
-            this.txt_mshr_size_llc.ShortcutsEnabled = false;
-            this.txt_mshr_size_llc.Size = new System.Drawing.Size(100, 20);
-            this.txt_mshr_size_llc.TabIndex = 73;
-            this.txt_mshr_size_llc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_pq_size_llc
-            // 
-            this.txt_pq_size_llc.Enabled = false;
-            this.txt_pq_size_llc.Location = new System.Drawing.Point(536, 321);
-            this.txt_pq_size_llc.Name = "txt_pq_size_llc";
-            this.txt_pq_size_llc.Size = new System.Drawing.Size(100, 20);
-            this.txt_pq_size_llc.TabIndex = 72;
-            // 
-            // txt_wq_size_llc
-            // 
-            this.txt_wq_size_llc.Enabled = false;
-            this.txt_wq_size_llc.Location = new System.Drawing.Point(430, 321);
-            this.txt_wq_size_llc.Name = "txt_wq_size_llc";
-            this.txt_wq_size_llc.Size = new System.Drawing.Size(100, 20);
-            this.txt_wq_size_llc.TabIndex = 71;
-            // 
-            // txt_rq_size_llc
-            // 
-            this.txt_rq_size_llc.Enabled = false;
-            this.txt_rq_size_llc.Location = new System.Drawing.Point(324, 321);
-            this.txt_rq_size_llc.Name = "txt_rq_size_llc";
-            this.txt_rq_size_llc.Size = new System.Drawing.Size(100, 20);
-            this.txt_rq_size_llc.TabIndex = 70;
-            // 
-            // txt_way_llc
-            // 
-            this.txt_way_llc.Location = new System.Drawing.Point(218, 321);
-            this.txt_way_llc.Name = "txt_way_llc";
-            this.txt_way_llc.ShortcutsEnabled = false;
-            this.txt_way_llc.Size = new System.Drawing.Size(100, 20);
-            this.txt_way_llc.TabIndex = 69;
-            this.txt_way_llc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_set_llc
-            // 
-            this.txt_set_llc.Enabled = false;
-            this.txt_set_llc.Location = new System.Drawing.Point(112, 321);
-            this.txt_set_llc.Name = "txt_set_llc";
-            this.txt_set_llc.Size = new System.Drawing.Size(100, 20);
-            this.txt_set_llc.TabIndex = 68;
-            // 
-            // txt_latency_l2c
-            // 
-            this.txt_latency_l2c.Location = new System.Drawing.Point(749, 275);
-            this.txt_latency_l2c.Name = "txt_latency_l2c";
-            this.txt_latency_l2c.ShortcutsEnabled = false;
-            this.txt_latency_l2c.Size = new System.Drawing.Size(100, 20);
-            this.txt_latency_l2c.TabIndex = 66;
-            this.txt_latency_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_latency_l1dc
-            // 
-            this.txt_latency_l1dc.Location = new System.Drawing.Point(749, 249);
-            this.txt_latency_l1dc.Name = "txt_latency_l1dc";
-            this.txt_latency_l1dc.ShortcutsEnabled = false;
-            this.txt_latency_l1dc.Size = new System.Drawing.Size(100, 20);
-            this.txt_latency_l1dc.TabIndex = 65;
-            this.txt_latency_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_latency_l1ic
-            // 
-            this.txt_latency_l1ic.Location = new System.Drawing.Point(749, 223);
-            this.txt_latency_l1ic.Name = "txt_latency_l1ic";
-            this.txt_latency_l1ic.ShortcutsEnabled = false;
-            this.txt_latency_l1ic.Size = new System.Drawing.Size(100, 20);
-            this.txt_latency_l1ic.TabIndex = 64;
-            this.txt_latency_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_latency_stlb
-            // 
-            this.txt_latency_stlb.Location = new System.Drawing.Point(643, 93);
-            this.txt_latency_stlb.Name = "txt_latency_stlb";
-            this.txt_latency_stlb.ShortcutsEnabled = false;
-            this.txt_latency_stlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_latency_stlb.TabIndex = 63;
-            this.txt_latency_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_latency_dtlb
-            // 
-            this.txt_latency_dtlb.Location = new System.Drawing.Point(643, 67);
-            this.txt_latency_dtlb.Name = "txt_latency_dtlb";
-            this.txt_latency_dtlb.ShortcutsEnabled = false;
-            this.txt_latency_dtlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_latency_dtlb.TabIndex = 62;
-            this.txt_latency_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_mshr_size_l2c
-            // 
-            this.txt_mshr_size_l2c.Location = new System.Drawing.Point(643, 275);
-            this.txt_mshr_size_l2c.Name = "txt_mshr_size_l2c";
-            this.txt_mshr_size_l2c.ShortcutsEnabled = false;
-            this.txt_mshr_size_l2c.Size = new System.Drawing.Size(100, 20);
-            this.txt_mshr_size_l2c.TabIndex = 60;
-            this.txt_mshr_size_l2c.TextChanged += new System.EventHandler(this.txt_mshr_size_l2c_TextChanged);
-            this.txt_mshr_size_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_mshr_size_l1dc
-            // 
-            this.txt_mshr_size_l1dc.Location = new System.Drawing.Point(643, 249);
-            this.txt_mshr_size_l1dc.Name = "txt_mshr_size_l1dc";
-            this.txt_mshr_size_l1dc.ShortcutsEnabled = false;
-            this.txt_mshr_size_l1dc.Size = new System.Drawing.Size(100, 20);
-            this.txt_mshr_size_l1dc.TabIndex = 59;
-            this.txt_mshr_size_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_mshr_size_l1ic
-            // 
-            this.txt_mshr_size_l1ic.Location = new System.Drawing.Point(643, 223);
-            this.txt_mshr_size_l1ic.Name = "txt_mshr_size_l1ic";
-            this.txt_mshr_size_l1ic.ShortcutsEnabled = false;
-            this.txt_mshr_size_l1ic.Size = new System.Drawing.Size(100, 20);
-            this.txt_mshr_size_l1ic.TabIndex = 58;
-            this.txt_mshr_size_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_mshr_size_stlb
-            // 
-            this.txt_mshr_size_stlb.Location = new System.Drawing.Point(536, 93);
-            this.txt_mshr_size_stlb.Name = "txt_mshr_size_stlb";
-            this.txt_mshr_size_stlb.ShortcutsEnabled = false;
-            this.txt_mshr_size_stlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_mshr_size_stlb.TabIndex = 57;
-            this.txt_mshr_size_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_mshr_size_dtlb
-            // 
-            this.txt_mshr_size_dtlb.Location = new System.Drawing.Point(536, 67);
-            this.txt_mshr_size_dtlb.Name = "txt_mshr_size_dtlb";
-            this.txt_mshr_size_dtlb.ShortcutsEnabled = false;
-            this.txt_mshr_size_dtlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_mshr_size_dtlb.TabIndex = 56;
-            this.txt_mshr_size_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_pq_size_l2c
-            // 
-            this.txt_pq_size_l2c.Location = new System.Drawing.Point(536, 275);
-            this.txt_pq_size_l2c.Name = "txt_pq_size_l2c";
-            this.txt_pq_size_l2c.ShortcutsEnabled = false;
-            this.txt_pq_size_l2c.Size = new System.Drawing.Size(100, 20);
-            this.txt_pq_size_l2c.TabIndex = 54;
-            this.txt_pq_size_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_pq_size_l1dc
-            // 
-            this.txt_pq_size_l1dc.Location = new System.Drawing.Point(536, 249);
-            this.txt_pq_size_l1dc.Name = "txt_pq_size_l1dc";
-            this.txt_pq_size_l1dc.ShortcutsEnabled = false;
-            this.txt_pq_size_l1dc.Size = new System.Drawing.Size(100, 20);
-            this.txt_pq_size_l1dc.TabIndex = 53;
-            this.txt_pq_size_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_pq_size_l1ic
-            // 
-            this.txt_pq_size_l1ic.Location = new System.Drawing.Point(536, 223);
-            this.txt_pq_size_l1ic.Name = "txt_pq_size_l1ic";
-            this.txt_pq_size_l1ic.ShortcutsEnabled = false;
-            this.txt_pq_size_l1ic.Size = new System.Drawing.Size(100, 20);
-            this.txt_pq_size_l1ic.TabIndex = 52;
-            this.txt_pq_size_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_wq_size_l2c
-            // 
-            this.txt_wq_size_l2c.Location = new System.Drawing.Point(430, 275);
-            this.txt_wq_size_l2c.Name = "txt_wq_size_l2c";
-            this.txt_wq_size_l2c.ShortcutsEnabled = false;
-            this.txt_wq_size_l2c.Size = new System.Drawing.Size(100, 20);
-            this.txt_wq_size_l2c.TabIndex = 48;
-            this.txt_wq_size_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_wq_size_l1dc
-            // 
-            this.txt_wq_size_l1dc.Location = new System.Drawing.Point(430, 249);
-            this.txt_wq_size_l1dc.Name = "txt_wq_size_l1dc";
-            this.txt_wq_size_l1dc.ShortcutsEnabled = false;
-            this.txt_wq_size_l1dc.Size = new System.Drawing.Size(100, 20);
-            this.txt_wq_size_l1dc.TabIndex = 47;
-            this.txt_wq_size_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_wq_size_l1ic
-            // 
-            this.txt_wq_size_l1ic.Location = new System.Drawing.Point(430, 223);
-            this.txt_wq_size_l1ic.Name = "txt_wq_size_l1ic";
-            this.txt_wq_size_l1ic.ShortcutsEnabled = false;
-            this.txt_wq_size_l1ic.Size = new System.Drawing.Size(100, 20);
-            this.txt_wq_size_l1ic.TabIndex = 46;
-            this.txt_wq_size_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_wq_size_stlb
-            // 
-            this.txt_wq_size_stlb.Location = new System.Drawing.Point(430, 93);
-            this.txt_wq_size_stlb.Name = "txt_wq_size_stlb";
-            this.txt_wq_size_stlb.ShortcutsEnabled = false;
-            this.txt_wq_size_stlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_wq_size_stlb.TabIndex = 45;
-            this.txt_wq_size_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_wq_size_dtlb
-            // 
-            this.txt_wq_size_dtlb.Location = new System.Drawing.Point(430, 67);
-            this.txt_wq_size_dtlb.Name = "txt_wq_size_dtlb";
-            this.txt_wq_size_dtlb.ShortcutsEnabled = false;
-            this.txt_wq_size_dtlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_wq_size_dtlb.TabIndex = 44;
-            this.txt_wq_size_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rq_size_l2c
-            // 
-            this.txt_rq_size_l2c.Location = new System.Drawing.Point(324, 275);
-            this.txt_rq_size_l2c.Name = "txt_rq_size_l2c";
-            this.txt_rq_size_l2c.ShortcutsEnabled = false;
-            this.txt_rq_size_l2c.Size = new System.Drawing.Size(100, 20);
-            this.txt_rq_size_l2c.TabIndex = 42;
-            this.txt_rq_size_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rq_size_l1dc
-            // 
-            this.txt_rq_size_l1dc.Location = new System.Drawing.Point(324, 249);
-            this.txt_rq_size_l1dc.Name = "txt_rq_size_l1dc";
-            this.txt_rq_size_l1dc.ShortcutsEnabled = false;
-            this.txt_rq_size_l1dc.Size = new System.Drawing.Size(100, 20);
-            this.txt_rq_size_l1dc.TabIndex = 41;
-            this.txt_rq_size_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rq_size_l1ic
-            // 
-            this.txt_rq_size_l1ic.Location = new System.Drawing.Point(324, 223);
-            this.txt_rq_size_l1ic.Name = "txt_rq_size_l1ic";
-            this.txt_rq_size_l1ic.ShortcutsEnabled = false;
-            this.txt_rq_size_l1ic.Size = new System.Drawing.Size(100, 20);
-            this.txt_rq_size_l1ic.TabIndex = 40;
-            this.txt_rq_size_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rq_size_stlb
-            // 
-            this.txt_rq_size_stlb.Location = new System.Drawing.Point(324, 93);
-            this.txt_rq_size_stlb.Name = "txt_rq_size_stlb";
-            this.txt_rq_size_stlb.ShortcutsEnabled = false;
-            this.txt_rq_size_stlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_rq_size_stlb.TabIndex = 39;
-            this.txt_rq_size_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rq_size_dtlb
-            // 
-            this.txt_rq_size_dtlb.Location = new System.Drawing.Point(324, 67);
-            this.txt_rq_size_dtlb.Name = "txt_rq_size_dtlb";
-            this.txt_rq_size_dtlb.ShortcutsEnabled = false;
-            this.txt_rq_size_dtlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_rq_size_dtlb.TabIndex = 38;
-            this.txt_rq_size_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_way_l2c
-            // 
-            this.txt_way_l2c.Location = new System.Drawing.Point(218, 275);
-            this.txt_way_l2c.Name = "txt_way_l2c";
-            this.txt_way_l2c.ShortcutsEnabled = false;
-            this.txt_way_l2c.Size = new System.Drawing.Size(100, 20);
-            this.txt_way_l2c.TabIndex = 36;
-            this.txt_way_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_way_l1dc
-            // 
-            this.txt_way_l1dc.Location = new System.Drawing.Point(218, 249);
-            this.txt_way_l1dc.Name = "txt_way_l1dc";
-            this.txt_way_l1dc.ShortcutsEnabled = false;
-            this.txt_way_l1dc.Size = new System.Drawing.Size(100, 20);
-            this.txt_way_l1dc.TabIndex = 35;
-            this.txt_way_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_way_l1ic
-            // 
-            this.txt_way_l1ic.Location = new System.Drawing.Point(218, 223);
-            this.txt_way_l1ic.Name = "txt_way_l1ic";
-            this.txt_way_l1ic.ShortcutsEnabled = false;
-            this.txt_way_l1ic.Size = new System.Drawing.Size(100, 20);
-            this.txt_way_l1ic.TabIndex = 34;
-            this.txt_way_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_way_stlb
-            // 
-            this.txt_way_stlb.Location = new System.Drawing.Point(218, 93);
-            this.txt_way_stlb.Name = "txt_way_stlb";
-            this.txt_way_stlb.ShortcutsEnabled = false;
-            this.txt_way_stlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_way_stlb.TabIndex = 33;
-            this.txt_way_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_way_dtlb
-            // 
-            this.txt_way_dtlb.Location = new System.Drawing.Point(218, 67);
-            this.txt_way_dtlb.Name = "txt_way_dtlb";
-            this.txt_way_dtlb.ShortcutsEnabled = false;
-            this.txt_way_dtlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_way_dtlb.TabIndex = 32;
-            this.txt_way_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_set_l2c
-            // 
-            this.txt_set_l2c.Location = new System.Drawing.Point(112, 275);
-            this.txt_set_l2c.Name = "txt_set_l2c";
-            this.txt_set_l2c.ShortcutsEnabled = false;
-            this.txt_set_l2c.Size = new System.Drawing.Size(100, 20);
-            this.txt_set_l2c.TabIndex = 30;
-            this.txt_set_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_set_l1dc
-            // 
-            this.txt_set_l1dc.Location = new System.Drawing.Point(112, 249);
-            this.txt_set_l1dc.Name = "txt_set_l1dc";
-            this.txt_set_l1dc.ShortcutsEnabled = false;
-            this.txt_set_l1dc.Size = new System.Drawing.Size(100, 20);
-            this.txt_set_l1dc.TabIndex = 29;
-            this.txt_set_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_set_l1ic
-            // 
-            this.txt_set_l1ic.Location = new System.Drawing.Point(112, 223);
-            this.txt_set_l1ic.Name = "txt_set_l1ic";
-            this.txt_set_l1ic.ShortcutsEnabled = false;
-            this.txt_set_l1ic.Size = new System.Drawing.Size(100, 20);
-            this.txt_set_l1ic.TabIndex = 28;
-            this.txt_set_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_set_stlb
-            // 
-            this.txt_set_stlb.Location = new System.Drawing.Point(112, 93);
-            this.txt_set_stlb.Name = "txt_set_stlb";
-            this.txt_set_stlb.ShortcutsEnabled = false;
-            this.txt_set_stlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_set_stlb.TabIndex = 27;
-            this.txt_set_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_set_dtlb
-            // 
-            this.txt_set_dtlb.Location = new System.Drawing.Point(112, 67);
-            this.txt_set_dtlb.Name = "txt_set_dtlb";
-            this.txt_set_dtlb.ShortcutsEnabled = false;
-            this.txt_set_dtlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_set_dtlb.TabIndex = 26;
-            this.txt_set_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_latency_itlb
-            // 
-            this.txt_latency_itlb.Location = new System.Drawing.Point(643, 41);
-            this.txt_latency_itlb.Name = "txt_latency_itlb";
-            this.txt_latency_itlb.ShortcutsEnabled = false;
-            this.txt_latency_itlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_latency_itlb.TabIndex = 23;
-            this.txt_latency_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_mshr_size_itlb
-            // 
-            this.txt_mshr_size_itlb.Location = new System.Drawing.Point(536, 41);
-            this.txt_mshr_size_itlb.Name = "txt_mshr_size_itlb";
-            this.txt_mshr_size_itlb.ShortcutsEnabled = false;
-            this.txt_mshr_size_itlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_mshr_size_itlb.TabIndex = 22;
-            this.txt_mshr_size_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_wq_size_itlb
-            // 
-            this.txt_wq_size_itlb.Location = new System.Drawing.Point(430, 41);
-            this.txt_wq_size_itlb.Name = "txt_wq_size_itlb";
-            this.txt_wq_size_itlb.ShortcutsEnabled = false;
-            this.txt_wq_size_itlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_wq_size_itlb.TabIndex = 20;
-            this.txt_wq_size_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rq_size_itlb
-            // 
-            this.txt_rq_size_itlb.Location = new System.Drawing.Point(324, 41);
-            this.txt_rq_size_itlb.Name = "txt_rq_size_itlb";
-            this.txt_rq_size_itlb.ShortcutsEnabled = false;
-            this.txt_rq_size_itlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_rq_size_itlb.TabIndex = 19;
-            this.txt_rq_size_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // lbl_latency
             // 
@@ -1973,7 +1286,7 @@
             // tlp_tlb_cache
             // 
             this.tlp_tlb_cache.AutoSize = true;
-            this.tlp_tlb_cache.ColumnCount = 9;
+            this.tlp_tlb_cache.ColumnCount = 10;
             this.tlp_tlb_cache.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlp_tlb_cache.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlp_tlb_cache.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -1982,7 +1295,8 @@
             this.tlp_tlb_cache.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlp_tlb_cache.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlp_tlb_cache.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlp_tlb_cache.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 496F));
+            this.tlp_tlb_cache.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlp_tlb_cache.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 595F));
             this.tlp_tlb_cache.Controls.Add(this.label5, 0, 8);
             this.tlp_tlb_cache.Controls.Add(this.txt_set_itlb, 1, 2);
             this.tlp_tlb_cache.Controls.Add(this.label1, 1, 1);
@@ -2059,6 +1373,15 @@
             this.tlp_tlb_cache.Controls.Add(this.label10, 3, 17);
             this.tlp_tlb_cache.Controls.Add(this.label11, 4, 17);
             this.tlp_tlb_cache.Controls.Add(this.label12, 5, 17);
+            this.tlp_tlb_cache.Controls.Add(this.label15, 7, 1);
+            this.tlp_tlb_cache.Controls.Add(this.label19, 8, 13);
+            this.tlp_tlb_cache.Controls.Add(this.txt_size_itlb, 7, 2);
+            this.tlp_tlb_cache.Controls.Add(this.txt_size_dtlb, 7, 3);
+            this.tlp_tlb_cache.Controls.Add(this.txt_size_stlb, 7, 4);
+            this.tlp_tlb_cache.Controls.Add(this.txt_size_l1i, 8, 14);
+            this.tlp_tlb_cache.Controls.Add(this.txt_size_l1d, 8, 15);
+            this.tlp_tlb_cache.Controls.Add(this.txt_size_l2c, 8, 16);
+            this.tlp_tlb_cache.Controls.Add(this.txt_size_llc, 8, 18);
             this.tlp_tlb_cache.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlp_tlb_cache.Location = new System.Drawing.Point(0, 389);
             this.tlp_tlb_cache.Name = "tlp_tlb_cache";
@@ -2084,7 +1407,7 @@
             this.tlp_tlb_cache.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlp_tlb_cache.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlp_tlb_cache.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp_tlb_cache.Size = new System.Drawing.Size(1298, 364);
+            this.tlp_tlb_cache.Size = new System.Drawing.Size(1553, 364);
             this.tlp_tlb_cache.TabIndex = 26;
             // 
             // label5
@@ -2099,14 +1422,6 @@
             this.label5.TabIndex = 87;
             this.label5.Text = "CACHE";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_set_itlb
-            // 
-            this.txt_set_itlb.Location = new System.Drawing.Point(112, 41);
-            this.txt_set_itlb.Name = "txt_set_itlb";
-            this.txt_set_itlb.ShortcutsEnabled = false;
-            this.txt_set_itlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_set_itlb.TabIndex = 85;
             // 
             // label1
             // 
@@ -2229,32 +1544,6 @@
             this.lbl_max_read_per_cycle.Text = "Max read per cycle:";
             this.lbl_max_read_per_cycle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txt_block_size
-            // 
-            this.txt_block_size.Location = new System.Drawing.Point(112, 164);
-            this.txt_block_size.Name = "txt_block_size";
-            this.txt_block_size.ShortcutsEnabled = false;
-            this.txt_block_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_block_size.TabIndex = 24;
-            this.txt_block_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_max_read_per_cycle
-            // 
-            this.txt_max_read_per_cycle.Location = new System.Drawing.Point(324, 164);
-            this.txt_max_read_per_cycle.Name = "txt_max_read_per_cycle";
-            this.txt_max_read_per_cycle.ShortcutsEnabled = false;
-            this.txt_max_read_per_cycle.Size = new System.Drawing.Size(50, 20);
-            this.txt_max_read_per_cycle.TabIndex = 25;
-            this.txt_max_read_per_cycle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_way_itlb
-            // 
-            this.txt_way_itlb.Location = new System.Drawing.Point(218, 41);
-            this.txt_way_itlb.Name = "txt_way_itlb";
-            this.txt_way_itlb.ShortcutsEnabled = false;
-            this.txt_way_itlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_way_itlb.TabIndex = 86;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -2299,12 +1588,981 @@
             this.label12.Text = "CPU x L2 MSHR";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label15.Location = new System.Drawing.Point(749, 25);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 13);
+            this.label15.TabIndex = 92;
+            this.label15.Text = "Total Size";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label19.Location = new System.Drawing.Point(855, 207);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(100, 13);
+            this.label19.TabIndex = 96;
+            this.label19.Text = "Total Size";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_channels
+            // 
+            this.txt_channels.BorderColor = System.Drawing.Color.Green;
+            this.txt_channels.Location = new System.Drawing.Point(530, 53);
+            this.txt_channels.Name = "txt_channels";
+            this.txt_channels.ShortcutsEnabled = false;
+            this.txt_channels.Size = new System.Drawing.Size(50, 20);
+            this.txt_channels.TabIndex = 13;
+            this.txt_channels.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_channels.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_ranks
+            // 
+            this.txt_ranks.BorderColor = System.Drawing.Color.Green;
+            this.txt_ranks.Location = new System.Drawing.Point(648, 53);
+            this.txt_ranks.Name = "txt_ranks";
+            this.txt_ranks.ShortcutsEnabled = false;
+            this.txt_ranks.Size = new System.Drawing.Size(50, 20);
+            this.txt_ranks.TabIndex = 14;
+            this.txt_ranks.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_ranks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_columns
+            // 
+            this.txt_columns.BorderColor = System.Drawing.Color.Green;
+            this.txt_columns.Location = new System.Drawing.Point(787, 53);
+            this.txt_columns.Name = "txt_columns";
+            this.txt_columns.ShortcutsEnabled = false;
+            this.txt_columns.Size = new System.Drawing.Size(50, 20);
+            this.txt_columns.TabIndex = 15;
+            this.txt_columns.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_columns.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_dram_rq_size
+            // 
+            this.txt_dram_rq_size.BorderColor = System.Drawing.Color.Green;
+            this.txt_dram_rq_size.Location = new System.Drawing.Point(939, 53);
+            this.txt_dram_rq_size.Name = "txt_dram_rq_size";
+            this.txt_dram_rq_size.ShortcutsEnabled = false;
+            this.txt_dram_rq_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_dram_rq_size.TabIndex = 16;
+            this.txt_dram_rq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_dram_rq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_trp
+            // 
+            this.txt_trp.BorderColor = System.Drawing.Color.Green;
+            this.txt_trp.Location = new System.Drawing.Point(1161, 53);
+            this.txt_trp.Name = "txt_trp";
+            this.txt_trp.ShortcutsEnabled = false;
+            this.txt_trp.Size = new System.Drawing.Size(50, 20);
+            this.txt_trp.TabIndex = 17;
+            this.txt_trp.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_trp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_trcd
+            // 
+            this.txt_trcd.BorderColor = System.Drawing.Color.Green;
+            this.txt_trcd.Location = new System.Drawing.Point(1347, 53);
+            this.txt_trcd.Name = "txt_trcd";
+            this.txt_trcd.ShortcutsEnabled = false;
+            this.txt_trcd.Size = new System.Drawing.Size(50, 20);
+            this.txt_trcd.TabIndex = 18;
+            this.txt_trcd.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_trcd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_banks
+            // 
+            this.txt_banks.BorderColor = System.Drawing.Color.Green;
+            this.txt_banks.Location = new System.Drawing.Point(530, 79);
+            this.txt_banks.Name = "txt_banks";
+            this.txt_banks.ShortcutsEnabled = false;
+            this.txt_banks.Size = new System.Drawing.Size(50, 20);
+            this.txt_banks.TabIndex = 19;
+            this.txt_banks.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_banks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_rows
+            // 
+            this.txt_rows.BorderColor = System.Drawing.Color.Green;
+            this.txt_rows.Location = new System.Drawing.Point(648, 79);
+            this.txt_rows.Name = "txt_rows";
+            this.txt_rows.ShortcutsEnabled = false;
+            this.txt_rows.Size = new System.Drawing.Size(50, 20);
+            this.txt_rows.TabIndex = 20;
+            this.txt_rows.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_rows.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_channel_width
+            // 
+            this.txt_channel_width.BorderColor = System.Drawing.Color.Green;
+            this.txt_channel_width.Location = new System.Drawing.Point(787, 79);
+            this.txt_channel_width.Name = "txt_channel_width";
+            this.txt_channel_width.ShortcutsEnabled = false;
+            this.txt_channel_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_channel_width.TabIndex = 21;
+            this.txt_channel_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_channel_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_dram_wq_size
+            // 
+            this.txt_dram_wq_size.BorderColor = System.Drawing.Color.Green;
+            this.txt_dram_wq_size.Location = new System.Drawing.Point(939, 79);
+            this.txt_dram_wq_size.Name = "txt_dram_wq_size";
+            this.txt_dram_wq_size.ShortcutsEnabled = false;
+            this.txt_dram_wq_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_dram_wq_size.TabIndex = 22;
+            this.txt_dram_wq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_dram_wq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_tcas
+            // 
+            this.txt_tcas.BorderColor = System.Drawing.Color.Green;
+            this.txt_tcas.Location = new System.Drawing.Point(1161, 79);
+            this.txt_tcas.Name = "txt_tcas";
+            this.txt_tcas.ShortcutsEnabled = false;
+            this.txt_tcas.Size = new System.Drawing.Size(50, 20);
+            this.txt_tcas.TabIndex = 23;
+            this.txt_tcas.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_tcas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_set_itlb
+            // 
+            this.txt_set_itlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_set_itlb.Location = new System.Drawing.Point(112, 41);
+            this.txt_set_itlb.Name = "txt_set_itlb";
+            this.txt_set_itlb.ShortcutsEnabled = false;
+            this.txt_set_itlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_set_itlb.TabIndex = 85;
+            this.txt_set_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_set_itlb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_block_size
+            // 
+            this.txt_block_size.BorderColor = System.Drawing.Color.Green;
+            this.txt_block_size.Location = new System.Drawing.Point(112, 164);
+            this.txt_block_size.Name = "txt_block_size";
+            this.txt_block_size.ShortcutsEnabled = false;
+            this.txt_block_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_block_size.TabIndex = 24;
+            this.txt_block_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_block_size.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_max_read_per_cycle
+            // 
+            this.txt_max_read_per_cycle.BorderColor = System.Drawing.Color.Green;
+            this.txt_max_read_per_cycle.Location = new System.Drawing.Point(324, 164);
+            this.txt_max_read_per_cycle.Name = "txt_max_read_per_cycle";
+            this.txt_max_read_per_cycle.ShortcutsEnabled = false;
+            this.txt_max_read_per_cycle.Size = new System.Drawing.Size(50, 20);
+            this.txt_max_read_per_cycle.TabIndex = 25;
+            this.txt_max_read_per_cycle.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_max_read_per_cycle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_set_l1ic
+            // 
+            this.txt_set_l1ic.BorderColor = System.Drawing.Color.Green;
+            this.txt_set_l1ic.Location = new System.Drawing.Point(112, 223);
+            this.txt_set_l1ic.Name = "txt_set_l1ic";
+            this.txt_set_l1ic.ShortcutsEnabled = false;
+            this.txt_set_l1ic.Size = new System.Drawing.Size(100, 20);
+            this.txt_set_l1ic.TabIndex = 28;
+            this.txt_set_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_set_l1ic.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_set_l1dc
+            // 
+            this.txt_set_l1dc.BorderColor = System.Drawing.Color.Green;
+            this.txt_set_l1dc.Location = new System.Drawing.Point(112, 249);
+            this.txt_set_l1dc.Name = "txt_set_l1dc";
+            this.txt_set_l1dc.ShortcutsEnabled = false;
+            this.txt_set_l1dc.Size = new System.Drawing.Size(100, 20);
+            this.txt_set_l1dc.TabIndex = 29;
+            this.txt_set_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_set_l1dc.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_set_l2c
+            // 
+            this.txt_set_l2c.BorderColor = System.Drawing.Color.Green;
+            this.txt_set_l2c.Location = new System.Drawing.Point(112, 275);
+            this.txt_set_l2c.Name = "txt_set_l2c";
+            this.txt_set_l2c.ShortcutsEnabled = false;
+            this.txt_set_l2c.Size = new System.Drawing.Size(100, 20);
+            this.txt_set_l2c.TabIndex = 30;
+            this.txt_set_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_set_l2c.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_way_l1ic
+            // 
+            this.txt_way_l1ic.BorderColor = System.Drawing.Color.Green;
+            this.txt_way_l1ic.Location = new System.Drawing.Point(218, 223);
+            this.txt_way_l1ic.Name = "txt_way_l1ic";
+            this.txt_way_l1ic.ShortcutsEnabled = false;
+            this.txt_way_l1ic.Size = new System.Drawing.Size(100, 20);
+            this.txt_way_l1ic.TabIndex = 34;
+            this.txt_way_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_way_l1ic.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_way_l1dc
+            // 
+            this.txt_way_l1dc.BorderColor = System.Drawing.Color.Green;
+            this.txt_way_l1dc.Location = new System.Drawing.Point(218, 249);
+            this.txt_way_l1dc.Name = "txt_way_l1dc";
+            this.txt_way_l1dc.ShortcutsEnabled = false;
+            this.txt_way_l1dc.Size = new System.Drawing.Size(100, 20);
+            this.txt_way_l1dc.TabIndex = 35;
+            this.txt_way_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_way_l1dc.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_way_l2c
+            // 
+            this.txt_way_l2c.BorderColor = System.Drawing.Color.Green;
+            this.txt_way_l2c.Location = new System.Drawing.Point(218, 275);
+            this.txt_way_l2c.Name = "txt_way_l2c";
+            this.txt_way_l2c.ShortcutsEnabled = false;
+            this.txt_way_l2c.Size = new System.Drawing.Size(100, 20);
+            this.txt_way_l2c.TabIndex = 36;
+            this.txt_way_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_way_l2c.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_rq_size_l1ic
+            // 
+            this.txt_rq_size_l1ic.BorderColor = System.Drawing.Color.Green;
+            this.txt_rq_size_l1ic.Location = new System.Drawing.Point(324, 223);
+            this.txt_rq_size_l1ic.Name = "txt_rq_size_l1ic";
+            this.txt_rq_size_l1ic.ShortcutsEnabled = false;
+            this.txt_rq_size_l1ic.Size = new System.Drawing.Size(100, 20);
+            this.txt_rq_size_l1ic.TabIndex = 40;
+            this.txt_rq_size_l1ic.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_rq_size_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_rq_size_l1dc
+            // 
+            this.txt_rq_size_l1dc.BorderColor = System.Drawing.Color.Green;
+            this.txt_rq_size_l1dc.Location = new System.Drawing.Point(324, 249);
+            this.txt_rq_size_l1dc.Name = "txt_rq_size_l1dc";
+            this.txt_rq_size_l1dc.ShortcutsEnabled = false;
+            this.txt_rq_size_l1dc.Size = new System.Drawing.Size(100, 20);
+            this.txt_rq_size_l1dc.TabIndex = 41;
+            this.txt_rq_size_l1dc.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_rq_size_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_rq_size_l2c
+            // 
+            this.txt_rq_size_l2c.BorderColor = System.Drawing.Color.Green;
+            this.txt_rq_size_l2c.Location = new System.Drawing.Point(324, 275);
+            this.txt_rq_size_l2c.Name = "txt_rq_size_l2c";
+            this.txt_rq_size_l2c.ShortcutsEnabled = false;
+            this.txt_rq_size_l2c.Size = new System.Drawing.Size(100, 20);
+            this.txt_rq_size_l2c.TabIndex = 42;
+            this.txt_rq_size_l2c.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_rq_size_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_wq_size_l1ic
+            // 
+            this.txt_wq_size_l1ic.BorderColor = System.Drawing.Color.Green;
+            this.txt_wq_size_l1ic.Location = new System.Drawing.Point(430, 223);
+            this.txt_wq_size_l1ic.Name = "txt_wq_size_l1ic";
+            this.txt_wq_size_l1ic.ShortcutsEnabled = false;
+            this.txt_wq_size_l1ic.Size = new System.Drawing.Size(100, 20);
+            this.txt_wq_size_l1ic.TabIndex = 46;
+            this.txt_wq_size_l1ic.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_wq_size_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_wq_size_l1dc
+            // 
+            this.txt_wq_size_l1dc.BorderColor = System.Drawing.Color.Green;
+            this.txt_wq_size_l1dc.Location = new System.Drawing.Point(430, 249);
+            this.txt_wq_size_l1dc.Name = "txt_wq_size_l1dc";
+            this.txt_wq_size_l1dc.ShortcutsEnabled = false;
+            this.txt_wq_size_l1dc.Size = new System.Drawing.Size(100, 20);
+            this.txt_wq_size_l1dc.TabIndex = 47;
+            this.txt_wq_size_l1dc.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_wq_size_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_wq_size_l2c
+            // 
+            this.txt_wq_size_l2c.BorderColor = System.Drawing.Color.Green;
+            this.txt_wq_size_l2c.Location = new System.Drawing.Point(430, 275);
+            this.txt_wq_size_l2c.Name = "txt_wq_size_l2c";
+            this.txt_wq_size_l2c.ShortcutsEnabled = false;
+            this.txt_wq_size_l2c.Size = new System.Drawing.Size(100, 20);
+            this.txt_wq_size_l2c.TabIndex = 48;
+            this.txt_wq_size_l2c.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_wq_size_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_pq_size_l1ic
+            // 
+            this.txt_pq_size_l1ic.BorderColor = System.Drawing.Color.Green;
+            this.txt_pq_size_l1ic.Location = new System.Drawing.Point(536, 223);
+            this.txt_pq_size_l1ic.Name = "txt_pq_size_l1ic";
+            this.txt_pq_size_l1ic.ShortcutsEnabled = false;
+            this.txt_pq_size_l1ic.Size = new System.Drawing.Size(100, 20);
+            this.txt_pq_size_l1ic.TabIndex = 52;
+            this.txt_pq_size_l1ic.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_pq_size_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_pq_size_l1dc
+            // 
+            this.txt_pq_size_l1dc.BorderColor = System.Drawing.Color.Green;
+            this.txt_pq_size_l1dc.Location = new System.Drawing.Point(536, 249);
+            this.txt_pq_size_l1dc.Name = "txt_pq_size_l1dc";
+            this.txt_pq_size_l1dc.ShortcutsEnabled = false;
+            this.txt_pq_size_l1dc.Size = new System.Drawing.Size(100, 20);
+            this.txt_pq_size_l1dc.TabIndex = 53;
+            this.txt_pq_size_l1dc.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_pq_size_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_pq_size_l2c
+            // 
+            this.txt_pq_size_l2c.BorderColor = System.Drawing.Color.Green;
+            this.txt_pq_size_l2c.Location = new System.Drawing.Point(536, 275);
+            this.txt_pq_size_l2c.Name = "txt_pq_size_l2c";
+            this.txt_pq_size_l2c.ShortcutsEnabled = false;
+            this.txt_pq_size_l2c.Size = new System.Drawing.Size(100, 20);
+            this.txt_pq_size_l2c.TabIndex = 54;
+            this.txt_pq_size_l2c.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_pq_size_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_mshr_size_l1ic
+            // 
+            this.txt_mshr_size_l1ic.BorderColor = System.Drawing.Color.Green;
+            this.txt_mshr_size_l1ic.Location = new System.Drawing.Point(643, 223);
+            this.txt_mshr_size_l1ic.Name = "txt_mshr_size_l1ic";
+            this.txt_mshr_size_l1ic.ShortcutsEnabled = false;
+            this.txt_mshr_size_l1ic.Size = new System.Drawing.Size(100, 20);
+            this.txt_mshr_size_l1ic.TabIndex = 58;
+            this.txt_mshr_size_l1ic.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_mshr_size_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_mshr_size_l1dc
+            // 
+            this.txt_mshr_size_l1dc.BorderColor = System.Drawing.Color.Green;
+            this.txt_mshr_size_l1dc.Location = new System.Drawing.Point(643, 249);
+            this.txt_mshr_size_l1dc.Name = "txt_mshr_size_l1dc";
+            this.txt_mshr_size_l1dc.ShortcutsEnabled = false;
+            this.txt_mshr_size_l1dc.Size = new System.Drawing.Size(100, 20);
+            this.txt_mshr_size_l1dc.TabIndex = 59;
+            this.txt_mshr_size_l1dc.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_mshr_size_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_mshr_size_l2c
+            // 
+            this.txt_mshr_size_l2c.BorderColor = System.Drawing.Color.Green;
+            this.txt_mshr_size_l2c.Location = new System.Drawing.Point(643, 275);
+            this.txt_mshr_size_l2c.Name = "txt_mshr_size_l2c";
+            this.txt_mshr_size_l2c.ShortcutsEnabled = false;
+            this.txt_mshr_size_l2c.Size = new System.Drawing.Size(100, 20);
+            this.txt_mshr_size_l2c.TabIndex = 60;
+            this.txt_mshr_size_l2c.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_mshr_size_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_latency_l1ic
+            // 
+            this.txt_latency_l1ic.BorderColor = System.Drawing.Color.Green;
+            this.txt_latency_l1ic.Location = new System.Drawing.Point(749, 223);
+            this.txt_latency_l1ic.Name = "txt_latency_l1ic";
+            this.txt_latency_l1ic.ShortcutsEnabled = false;
+            this.txt_latency_l1ic.Size = new System.Drawing.Size(100, 20);
+            this.txt_latency_l1ic.TabIndex = 64;
+            this.txt_latency_l1ic.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_latency_l1ic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_latency_l1dc
+            // 
+            this.txt_latency_l1dc.BorderColor = System.Drawing.Color.Green;
+            this.txt_latency_l1dc.Location = new System.Drawing.Point(749, 249);
+            this.txt_latency_l1dc.Name = "txt_latency_l1dc";
+            this.txt_latency_l1dc.ShortcutsEnabled = false;
+            this.txt_latency_l1dc.Size = new System.Drawing.Size(100, 20);
+            this.txt_latency_l1dc.TabIndex = 65;
+            this.txt_latency_l1dc.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_latency_l1dc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_latency_l2c
+            // 
+            this.txt_latency_l2c.BorderColor = System.Drawing.Color.Green;
+            this.txt_latency_l2c.Location = new System.Drawing.Point(749, 275);
+            this.txt_latency_l2c.Name = "txt_latency_l2c";
+            this.txt_latency_l2c.ShortcutsEnabled = false;
+            this.txt_latency_l2c.Size = new System.Drawing.Size(100, 20);
+            this.txt_latency_l2c.TabIndex = 66;
+            this.txt_latency_l2c.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_latency_l2c.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_set_llc
+            // 
+            this.txt_set_llc.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_set_llc.Enabled = false;
+            this.txt_set_llc.Location = new System.Drawing.Point(112, 321);
+            this.txt_set_llc.Name = "txt_set_llc";
+            this.txt_set_llc.Size = new System.Drawing.Size(100, 20);
+            this.txt_set_llc.TabIndex = 68;
+            // 
+            // txt_way_llc
+            // 
+            this.txt_way_llc.BorderColor = System.Drawing.Color.Green;
+            this.txt_way_llc.Location = new System.Drawing.Point(218, 321);
+            this.txt_way_llc.Name = "txt_way_llc";
+            this.txt_way_llc.ShortcutsEnabled = false;
+            this.txt_way_llc.Size = new System.Drawing.Size(100, 20);
+            this.txt_way_llc.TabIndex = 69;
+            this.txt_way_llc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_way_llc.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_rq_size_llc
+            // 
+            this.txt_rq_size_llc.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_rq_size_llc.Enabled = false;
+            this.txt_rq_size_llc.Location = new System.Drawing.Point(324, 321);
+            this.txt_rq_size_llc.Name = "txt_rq_size_llc";
+            this.txt_rq_size_llc.Size = new System.Drawing.Size(100, 20);
+            this.txt_rq_size_llc.TabIndex = 70;
+            // 
+            // txt_wq_size_llc
+            // 
+            this.txt_wq_size_llc.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_wq_size_llc.Enabled = false;
+            this.txt_wq_size_llc.Location = new System.Drawing.Point(430, 321);
+            this.txt_wq_size_llc.Name = "txt_wq_size_llc";
+            this.txt_wq_size_llc.Size = new System.Drawing.Size(100, 20);
+            this.txt_wq_size_llc.TabIndex = 71;
+            // 
+            // txt_pq_size_llc
+            // 
+            this.txt_pq_size_llc.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_pq_size_llc.Enabled = false;
+            this.txt_pq_size_llc.Location = new System.Drawing.Point(536, 321);
+            this.txt_pq_size_llc.Name = "txt_pq_size_llc";
+            this.txt_pq_size_llc.Size = new System.Drawing.Size(100, 20);
+            this.txt_pq_size_llc.TabIndex = 72;
+            // 
+            // txt_mshr_size_llc
+            // 
+            this.txt_mshr_size_llc.BorderColor = System.Drawing.Color.Green;
+            this.txt_mshr_size_llc.Location = new System.Drawing.Point(643, 321);
+            this.txt_mshr_size_llc.Name = "txt_mshr_size_llc";
+            this.txt_mshr_size_llc.ShortcutsEnabled = false;
+            this.txt_mshr_size_llc.Size = new System.Drawing.Size(100, 20);
+            this.txt_mshr_size_llc.TabIndex = 73;
+            this.txt_mshr_size_llc.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_mshr_size_llc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_latency_llc
+            // 
+            this.txt_latency_llc.BorderColor = System.Drawing.Color.Green;
+            this.txt_latency_llc.Location = new System.Drawing.Point(749, 321);
+            this.txt_latency_llc.Name = "txt_latency_llc";
+            this.txt_latency_llc.ShortcutsEnabled = false;
+            this.txt_latency_llc.Size = new System.Drawing.Size(100, 20);
+            this.txt_latency_llc.TabIndex = 74;
+            this.txt_latency_llc.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_latency_llc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_way_itlb
+            // 
+            this.txt_way_itlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_way_itlb.Location = new System.Drawing.Point(218, 41);
+            this.txt_way_itlb.Name = "txt_way_itlb";
+            this.txt_way_itlb.ShortcutsEnabled = false;
+            this.txt_way_itlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_way_itlb.TabIndex = 86;
+            this.txt_way_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_way_itlb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_rq_size_itlb
+            // 
+            this.txt_rq_size_itlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_rq_size_itlb.Location = new System.Drawing.Point(324, 41);
+            this.txt_rq_size_itlb.Name = "txt_rq_size_itlb";
+            this.txt_rq_size_itlb.ShortcutsEnabled = false;
+            this.txt_rq_size_itlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_rq_size_itlb.TabIndex = 19;
+            this.txt_rq_size_itlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_rq_size_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_wq_size_itlb
+            // 
+            this.txt_wq_size_itlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_wq_size_itlb.Location = new System.Drawing.Point(430, 41);
+            this.txt_wq_size_itlb.Name = "txt_wq_size_itlb";
+            this.txt_wq_size_itlb.ShortcutsEnabled = false;
+            this.txt_wq_size_itlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_wq_size_itlb.TabIndex = 20;
+            this.txt_wq_size_itlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_wq_size_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_mshr_size_itlb
+            // 
+            this.txt_mshr_size_itlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_mshr_size_itlb.Location = new System.Drawing.Point(536, 41);
+            this.txt_mshr_size_itlb.Name = "txt_mshr_size_itlb";
+            this.txt_mshr_size_itlb.ShortcutsEnabled = false;
+            this.txt_mshr_size_itlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_mshr_size_itlb.TabIndex = 22;
+            this.txt_mshr_size_itlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_mshr_size_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_latency_itlb
+            // 
+            this.txt_latency_itlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_latency_itlb.Location = new System.Drawing.Point(643, 41);
+            this.txt_latency_itlb.Name = "txt_latency_itlb";
+            this.txt_latency_itlb.ShortcutsEnabled = false;
+            this.txt_latency_itlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_latency_itlb.TabIndex = 23;
+            this.txt_latency_itlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_latency_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_set_dtlb
+            // 
+            this.txt_set_dtlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_set_dtlb.Location = new System.Drawing.Point(112, 67);
+            this.txt_set_dtlb.Name = "txt_set_dtlb";
+            this.txt_set_dtlb.ShortcutsEnabled = false;
+            this.txt_set_dtlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_set_dtlb.TabIndex = 26;
+            this.txt_set_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_set_dtlb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_way_dtlb
+            // 
+            this.txt_way_dtlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_way_dtlb.Location = new System.Drawing.Point(218, 67);
+            this.txt_way_dtlb.Name = "txt_way_dtlb";
+            this.txt_way_dtlb.ShortcutsEnabled = false;
+            this.txt_way_dtlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_way_dtlb.TabIndex = 32;
+            this.txt_way_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_way_dtlb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_rq_size_dtlb
+            // 
+            this.txt_rq_size_dtlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_rq_size_dtlb.Location = new System.Drawing.Point(324, 67);
+            this.txt_rq_size_dtlb.Name = "txt_rq_size_dtlb";
+            this.txt_rq_size_dtlb.ShortcutsEnabled = false;
+            this.txt_rq_size_dtlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_rq_size_dtlb.TabIndex = 38;
+            this.txt_rq_size_dtlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_rq_size_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_wq_size_dtlb
+            // 
+            this.txt_wq_size_dtlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_wq_size_dtlb.Location = new System.Drawing.Point(430, 67);
+            this.txt_wq_size_dtlb.Name = "txt_wq_size_dtlb";
+            this.txt_wq_size_dtlb.ShortcutsEnabled = false;
+            this.txt_wq_size_dtlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_wq_size_dtlb.TabIndex = 44;
+            this.txt_wq_size_dtlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_wq_size_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_mshr_size_dtlb
+            // 
+            this.txt_mshr_size_dtlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_mshr_size_dtlb.Location = new System.Drawing.Point(536, 67);
+            this.txt_mshr_size_dtlb.Name = "txt_mshr_size_dtlb";
+            this.txt_mshr_size_dtlb.ShortcutsEnabled = false;
+            this.txt_mshr_size_dtlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_mshr_size_dtlb.TabIndex = 56;
+            this.txt_mshr_size_dtlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_mshr_size_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_latency_dtlb
+            // 
+            this.txt_latency_dtlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_latency_dtlb.Location = new System.Drawing.Point(643, 67);
+            this.txt_latency_dtlb.Name = "txt_latency_dtlb";
+            this.txt_latency_dtlb.ShortcutsEnabled = false;
+            this.txt_latency_dtlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_latency_dtlb.TabIndex = 62;
+            this.txt_latency_dtlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_latency_dtlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_set_stlb
+            // 
+            this.txt_set_stlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_set_stlb.Location = new System.Drawing.Point(112, 93);
+            this.txt_set_stlb.Name = "txt_set_stlb";
+            this.txt_set_stlb.ShortcutsEnabled = false;
+            this.txt_set_stlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_set_stlb.TabIndex = 27;
+            this.txt_set_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_set_stlb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_way_stlb
+            // 
+            this.txt_way_stlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_way_stlb.Location = new System.Drawing.Point(218, 93);
+            this.txt_way_stlb.Name = "txt_way_stlb";
+            this.txt_way_stlb.ShortcutsEnabled = false;
+            this.txt_way_stlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_way_stlb.TabIndex = 33;
+            this.txt_way_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_way_stlb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_rq_size_stlb
+            // 
+            this.txt_rq_size_stlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_rq_size_stlb.Location = new System.Drawing.Point(324, 93);
+            this.txt_rq_size_stlb.Name = "txt_rq_size_stlb";
+            this.txt_rq_size_stlb.ShortcutsEnabled = false;
+            this.txt_rq_size_stlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_rq_size_stlb.TabIndex = 39;
+            this.txt_rq_size_stlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_rq_size_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_wq_size_stlb
+            // 
+            this.txt_wq_size_stlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_wq_size_stlb.Location = new System.Drawing.Point(430, 93);
+            this.txt_wq_size_stlb.Name = "txt_wq_size_stlb";
+            this.txt_wq_size_stlb.ShortcutsEnabled = false;
+            this.txt_wq_size_stlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_wq_size_stlb.TabIndex = 45;
+            this.txt_wq_size_stlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_wq_size_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_mshr_size_stlb
+            // 
+            this.txt_mshr_size_stlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_mshr_size_stlb.Location = new System.Drawing.Point(536, 93);
+            this.txt_mshr_size_stlb.Name = "txt_mshr_size_stlb";
+            this.txt_mshr_size_stlb.ShortcutsEnabled = false;
+            this.txt_mshr_size_stlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_mshr_size_stlb.TabIndex = 57;
+            this.txt_mshr_size_stlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_mshr_size_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_latency_stlb
+            // 
+            this.txt_latency_stlb.BorderColor = System.Drawing.Color.Green;
+            this.txt_latency_stlb.Location = new System.Drawing.Point(643, 93);
+            this.txt_latency_stlb.Name = "txt_latency_stlb";
+            this.txt_latency_stlb.ShortcutsEnabled = false;
+            this.txt_latency_stlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_latency_stlb.TabIndex = 63;
+            this.txt_latency_stlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_latency_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_size_itlb
+            // 
+            this.txt_size_itlb.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_size_itlb.Enabled = false;
+            this.txt_size_itlb.Location = new System.Drawing.Point(749, 41);
+            this.txt_size_itlb.Name = "txt_size_itlb";
+            this.txt_size_itlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_size_itlb.TabIndex = 97;
+            // 
+            // txt_size_dtlb
+            // 
+            this.txt_size_dtlb.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_size_dtlb.Enabled = false;
+            this.txt_size_dtlb.Location = new System.Drawing.Point(749, 67);
+            this.txt_size_dtlb.Name = "txt_size_dtlb";
+            this.txt_size_dtlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_size_dtlb.TabIndex = 98;
+            // 
+            // txt_size_stlb
+            // 
+            this.txt_size_stlb.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_size_stlb.Enabled = false;
+            this.txt_size_stlb.Location = new System.Drawing.Point(749, 93);
+            this.txt_size_stlb.Name = "txt_size_stlb";
+            this.txt_size_stlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_size_stlb.TabIndex = 99;
+            // 
+            // txt_size_l1i
+            // 
+            this.txt_size_l1i.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_size_l1i.Enabled = false;
+            this.txt_size_l1i.Location = new System.Drawing.Point(855, 223);
+            this.txt_size_l1i.Name = "txt_size_l1i";
+            this.txt_size_l1i.Size = new System.Drawing.Size(100, 20);
+            this.txt_size_l1i.TabIndex = 100;
+            // 
+            // txt_size_l1d
+            // 
+            this.txt_size_l1d.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_size_l1d.Enabled = false;
+            this.txt_size_l1d.Location = new System.Drawing.Point(855, 249);
+            this.txt_size_l1d.Name = "txt_size_l1d";
+            this.txt_size_l1d.Size = new System.Drawing.Size(100, 20);
+            this.txt_size_l1d.TabIndex = 101;
+            // 
+            // txt_size_l2c
+            // 
+            this.txt_size_l2c.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_size_l2c.Enabled = false;
+            this.txt_size_l2c.Location = new System.Drawing.Point(855, 275);
+            this.txt_size_l2c.Name = "txt_size_l2c";
+            this.txt_size_l2c.Size = new System.Drawing.Size(100, 20);
+            this.txt_size_l2c.TabIndex = 102;
+            // 
+            // txt_size_llc
+            // 
+            this.txt_size_llc.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txt_size_llc.Enabled = false;
+            this.txt_size_llc.Location = new System.Drawing.Point(855, 321);
+            this.txt_size_llc.Name = "txt_size_llc";
+            this.txt_size_llc.Size = new System.Drawing.Size(100, 20);
+            this.txt_size_llc.TabIndex = 103;
+            // 
+            // txt_retire_width
+            // 
+            this.txt_retire_width.BorderColor = System.Drawing.Color.Green;
+            this.txt_retire_width.Location = new System.Drawing.Point(994, 29);
+            this.txt_retire_width.Name = "txt_retire_width";
+            this.txt_retire_width.ShortcutsEnabled = false;
+            this.txt_retire_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_retire_width.TabIndex = 36;
+            this.txt_retire_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_retire_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_scheduler_size
+            // 
+            this.txt_scheduler_size.BorderColor = System.Drawing.Color.Green;
+            this.txt_scheduler_size.Location = new System.Drawing.Point(1155, 3);
+            this.txt_scheduler_size.Name = "txt_scheduler_size";
+            this.txt_scheduler_size.ShortcutsEnabled = false;
+            this.txt_scheduler_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_scheduler_size.TabIndex = 34;
+            this.txt_scheduler_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_scheduler_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_decode_width
+            // 
+            this.txt_decode_width.BorderColor = System.Drawing.Color.Green;
+            this.txt_decode_width.Location = new System.Drawing.Point(800, 29);
+            this.txt_decode_width.Name = "txt_decode_width";
+            this.txt_decode_width.ShortcutsEnabled = false;
+            this.txt_decode_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_decode_width.TabIndex = 33;
+            this.txt_decode_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_decode_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_sq_width
+            // 
+            this.txt_sq_width.BorderColor = System.Drawing.Color.Green;
+            this.txt_sq_width.Location = new System.Drawing.Point(610, 29);
+            this.txt_sq_width.Name = "txt_sq_width";
+            this.txt_sq_width.ShortcutsEnabled = false;
+            this.txt_sq_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_sq_width.TabIndex = 31;
+            this.txt_sq_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_sq_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_sq_size
+            // 
+            this.txt_sq_size.BorderColor = System.Drawing.Color.Green;
+            this.txt_sq_size.Location = new System.Drawing.Point(432, 29);
+            this.txt_sq_size.Name = "txt_sq_size";
+            this.txt_sq_size.ShortcutsEnabled = false;
+            this.txt_sq_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_sq_size.TabIndex = 29;
+            this.txt_sq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_sq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_page_size
+            // 
+            this.txt_page_size.BorderColor = System.Drawing.Color.Green;
+            this.txt_page_size.Location = new System.Drawing.Point(261, 29);
+            this.txt_page_size.Name = "txt_page_size";
+            this.txt_page_size.ShortcutsEnabled = false;
+            this.txt_page_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_page_size.TabIndex = 27;
+            this.txt_page_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_page_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_dram_io_frequency
+            // 
+            this.txt_dram_io_frequency.BorderColor = System.Drawing.Color.Green;
+            this.txt_dram_io_frequency.Location = new System.Drawing.Point(123, 29);
+            this.txt_dram_io_frequency.Name = "txt_dram_io_frequency";
+            this.txt_dram_io_frequency.ShortcutsEnabled = false;
+            this.txt_dram_io_frequency.Size = new System.Drawing.Size(50, 20);
+            this.txt_dram_io_frequency.TabIndex = 25;
+            this.txt_dram_io_frequency.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_dram_io_frequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_cpu_frequency
+            // 
+            this.txt_cpu_frequency.BorderColor = System.Drawing.Color.Green;
+            this.txt_cpu_frequency.Location = new System.Drawing.Point(123, 3);
+            this.txt_cpu_frequency.Name = "txt_cpu_frequency";
+            this.txt_cpu_frequency.ShortcutsEnabled = false;
+            this.txt_cpu_frequency.Size = new System.Drawing.Size(50, 20);
+            this.txt_cpu_frequency.TabIndex = 11;
+            this.txt_cpu_frequency.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_cpu_frequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_rob_size
+            // 
+            this.txt_rob_size.BorderColor = System.Drawing.Color.Green;
+            this.txt_rob_size.Location = new System.Drawing.Point(261, 3);
+            this.txt_rob_size.Name = "txt_rob_size";
+            this.txt_rob_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_rob_size.TabIndex = 12;
+            this.txt_rob_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_rob_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_lq_size
+            // 
+            this.txt_lq_size.BorderColor = System.Drawing.Color.Green;
+            this.txt_lq_size.Location = new System.Drawing.Point(432, 3);
+            this.txt_lq_size.Name = "txt_lq_size";
+            this.txt_lq_size.ShortcutsEnabled = false;
+            this.txt_lq_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_lq_size.TabIndex = 13;
+            this.txt_lq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_lq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_lq_width
+            // 
+            this.txt_lq_width.BorderColor = System.Drawing.Color.Green;
+            this.txt_lq_width.Location = new System.Drawing.Point(610, 3);
+            this.txt_lq_width.Name = "txt_lq_width";
+            this.txt_lq_width.ShortcutsEnabled = false;
+            this.txt_lq_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_lq_width.TabIndex = 14;
+            this.txt_lq_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_lq_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_fetch_width
+            // 
+            this.txt_fetch_width.BorderColor = System.Drawing.Color.Green;
+            this.txt_fetch_width.Location = new System.Drawing.Point(800, 3);
+            this.txt_fetch_width.Name = "txt_fetch_width";
+            this.txt_fetch_width.ShortcutsEnabled = false;
+            this.txt_fetch_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_fetch_width.TabIndex = 15;
+            this.txt_fetch_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_fetch_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_execude_width
+            // 
+            this.txt_execude_width.BorderColor = System.Drawing.Color.Green;
+            this.txt_execude_width.Location = new System.Drawing.Point(994, 3);
+            this.txt_execude_width.Name = "txt_execude_width";
+            this.txt_execude_width.ShortcutsEnabled = false;
+            this.txt_execude_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_execude_width.TabIndex = 16;
+            this.txt_execude_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_execude_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_cpu_4
+            // 
+            this.txt_cpu_4.BorderColor = System.Drawing.Color.Blue;
+            this.txt_cpu_4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_4.Location = new System.Drawing.Point(1243, 143);
+            this.txt_cpu_4.Name = "txt_cpu_4";
+            this.txt_cpu_4.ReadOnly = true;
+            this.txt_cpu_4.Size = new System.Drawing.Size(226, 20);
+            this.txt_cpu_4.TabIndex = 12;
+            // 
+            // txt_cpu_1
+            // 
+            this.txt_cpu_1.BorderColor = System.Drawing.Color.Blue;
+            this.txt_cpu_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_1.Location = new System.Drawing.Point(172, 143);
+            this.txt_cpu_1.Name = "txt_cpu_1";
+            this.txt_cpu_1.ReadOnly = true;
+            this.txt_cpu_1.Size = new System.Drawing.Size(226, 20);
+            this.txt_cpu_1.TabIndex = 3;
+            // 
+            // txt_cpu_3
+            // 
+            this.txt_cpu_3.BorderColor = System.Drawing.Color.Blue;
+            this.txt_cpu_3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_3.Location = new System.Drawing.Point(886, 143);
+            this.txt_cpu_3.Name = "txt_cpu_3";
+            this.txt_cpu_3.ReadOnly = true;
+            this.txt_cpu_3.Size = new System.Drawing.Size(226, 20);
+            this.txt_cpu_3.TabIndex = 9;
+            // 
+            // txt_cpu_2
+            // 
+            this.txt_cpu_2.BorderColor = System.Drawing.Color.Blue;
+            this.txt_cpu_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_2.Location = new System.Drawing.Point(529, 143);
+            this.txt_cpu_2.Name = "txt_cpu_2";
+            this.txt_cpu_2.ReadOnly = true;
+            this.txt_cpu_2.Size = new System.Drawing.Size(226, 20);
+            this.txt_cpu_2.TabIndex = 6;
+            // 
+            // txt_cpu_5
+            // 
+            this.txt_cpu_5.BorderColor = System.Drawing.Color.Blue;
+            this.txt_cpu_5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_5.Location = new System.Drawing.Point(172, 172);
+            this.txt_cpu_5.Name = "txt_cpu_5";
+            this.txt_cpu_5.ReadOnly = true;
+            this.txt_cpu_5.Size = new System.Drawing.Size(226, 20);
+            this.txt_cpu_5.TabIndex = 18;
+            // 
+            // txt_cpu_6
+            // 
+            this.txt_cpu_6.BorderColor = System.Drawing.Color.Blue;
+            this.txt_cpu_6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_6.Location = new System.Drawing.Point(529, 172);
+            this.txt_cpu_6.Name = "txt_cpu_6";
+            this.txt_cpu_6.ReadOnly = true;
+            this.txt_cpu_6.Size = new System.Drawing.Size(226, 20);
+            this.txt_cpu_6.TabIndex = 19;
+            // 
+            // txt_cpu_7
+            // 
+            this.txt_cpu_7.BorderColor = System.Drawing.Color.Blue;
+            this.txt_cpu_7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_7.Location = new System.Drawing.Point(886, 172);
+            this.txt_cpu_7.Name = "txt_cpu_7";
+            this.txt_cpu_7.ReadOnly = true;
+            this.txt_cpu_7.Size = new System.Drawing.Size(226, 20);
+            this.txt_cpu_7.TabIndex = 20;
+            // 
+            // txt_cpu_8
+            // 
+            this.txt_cpu_8.BorderColor = System.Drawing.Color.Blue;
+            this.txt_cpu_8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_8.Location = new System.Drawing.Point(1243, 172);
+            this.txt_cpu_8.Name = "txt_cpu_8";
+            this.txt_cpu_8.ReadOnly = true;
+            this.txt_cpu_8.Size = new System.Drawing.Size(226, 20);
+            this.txt_cpu_8.TabIndex = 21;
+            // 
+            // txt_warmup_instr
+            // 
+            this.txt_warmup_instr.BorderColor = System.Drawing.Color.Green;
+            this.txt_warmup_instr.Location = new System.Drawing.Point(116, 3);
+            this.txt_warmup_instr.Name = "txt_warmup_instr";
+            this.txt_warmup_instr.Size = new System.Drawing.Size(100, 20);
+            this.txt_warmup_instr.TabIndex = 2;
+            this.txt_warmup_instr.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_warmup_instr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_sim_instr
+            // 
+            this.txt_sim_instr.BorderColor = System.Drawing.Color.Green;
+            this.txt_sim_instr.Location = new System.Drawing.Point(343, 3);
+            this.txt_sim_instr.Name = "txt_sim_instr";
+            this.txt_sim_instr.Size = new System.Drawing.Size(100, 20);
+            this.txt_sim_instr.TabIndex = 3;
+            this.txt_sim_instr.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_sim_instr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
             // ChampSimBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1315, 681);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1570, 681);
             this.Controls.Add(this.tlp_actions);
             this.Controls.Add(this.tlp_dram);
             this.Controls.Add(this.tlp_tlb_cache);
@@ -2337,24 +2595,24 @@
 
         private System.Windows.Forms.Label lbl_number_cpu;
         private System.Windows.Forms.ComboBox cmb_num_cpu;
-        private System.Windows.Forms.TextBox txt_cpu_1;
+        private TextBoxBorderColor.MyTextBox txt_cpu_1;
         private System.Windows.Forms.Button btn_cpu_1;
         private System.Windows.Forms.Button btn_cpu_2;
-        private System.Windows.Forms.TextBox txt_cpu_2;
+        private TextBoxBorderColor.MyTextBox txt_cpu_2;
         private System.Windows.Forms.Button btn_cpu_3;
-        private System.Windows.Forms.TextBox txt_cpu_3;
+        private TextBoxBorderColor.MyTextBox txt_cpu_3;
         private System.Windows.Forms.Label lbl_cpu_3;
         private System.Windows.Forms.Label lbl_cpu_4;
         private System.Windows.Forms.Button btn_cpu_4;
-        private System.Windows.Forms.TextBox txt_cpu_4;
+        private TextBoxBorderColor.MyTextBox txt_cpu_4;
         private System.Windows.Forms.TableLayoutPanel tlp_cpu;
         private System.Windows.Forms.Label lbl_cpu_6;
         private System.Windows.Forms.Label lbl_cpu_7;
         private System.Windows.Forms.Label lbl_cpu_8;
-        private System.Windows.Forms.TextBox txt_cpu_5;
-        private System.Windows.Forms.TextBox txt_cpu_6;
-        private System.Windows.Forms.TextBox txt_cpu_7;
-        private System.Windows.Forms.TextBox txt_cpu_8;
+        private TextBoxBorderColor.MyTextBox txt_cpu_5;
+        private TextBoxBorderColor.MyTextBox txt_cpu_6;
+        private TextBoxBorderColor.MyTextBox txt_cpu_7;
+        private TextBoxBorderColor.MyTextBox txt_cpu_8;
         private System.Windows.Forms.Button btn_cpu_5;
         private System.Windows.Forms.Button btn_cpu_6;
         private System.Windows.Forms.Button btn_cpu_7;
@@ -2379,23 +2637,23 @@
         private System.Windows.Forms.Label lbl_fetch_width;
         private System.Windows.Forms.Label lbl_decode_width;
         private System.Windows.Forms.Label lbl_execude_width;
-        private System.Windows.Forms.TextBox txt_cpu_frequency;
-        private System.Windows.Forms.TextBox txt_rob_size;
-        private System.Windows.Forms.TextBox txt_lq_size;
-        private System.Windows.Forms.TextBox txt_lq_width;
-        private System.Windows.Forms.TextBox txt_fetch_width;
-        private System.Windows.Forms.TextBox txt_execude_width;
-        private System.Windows.Forms.TextBox txt_retire_width;
-        private System.Windows.Forms.TextBox txt_scheduler_size;
-        private System.Windows.Forms.TextBox txt_decode_width;
+        private TextBoxBorderColor.MyTextBox txt_cpu_frequency;
+        private TextBoxBorderColor.MyTextBox txt_rob_size;
+        private TextBoxBorderColor.MyTextBox txt_lq_size;
+        private TextBoxBorderColor.MyTextBox txt_lq_width;
+        private TextBoxBorderColor.MyTextBox txt_fetch_width;
+        private TextBoxBorderColor.MyTextBox txt_execude_width;
+        private TextBoxBorderColor.MyTextBox txt_retire_width;
+        private TextBoxBorderColor.MyTextBox txt_scheduler_size;
+        private TextBoxBorderColor.MyTextBox txt_decode_width;
         private System.Windows.Forms.Label lbl_lq_width;
-        private System.Windows.Forms.TextBox txt_sq_width;
+        private TextBoxBorderColor.MyTextBox txt_sq_width;
         private System.Windows.Forms.Label lbl_rob_size;
-        private System.Windows.Forms.TextBox txt_sq_size;
+        private TextBoxBorderColor.MyTextBox txt_sq_size;
         private System.Windows.Forms.Label lbl_scheduler_size;
-        private System.Windows.Forms.TextBox txt_page_size;
+        private TextBoxBorderColor.MyTextBox txt_page_size;
         private System.Windows.Forms.Label lbl_sq_size;
-        private System.Windows.Forms.TextBox txt_dram_io_frequency;
+        private TextBoxBorderColor.MyTextBox txt_dram_io_frequency;
         private System.Windows.Forms.Label lbl_lq_size;
         private System.Windows.Forms.Label lbl_retire_width;
         private System.Windows.Forms.Label lbl_sq_width;
@@ -2411,67 +2669,67 @@
         private System.Windows.Forms.Label lbl_rows;
         private System.Windows.Forms.Label lbl_channel_width;
         private System.Windows.Forms.Label lbl_dram_wq_size;
-        private System.Windows.Forms.TextBox txt_channels;
-        private System.Windows.Forms.TextBox txt_ranks;
-        private System.Windows.Forms.TextBox txt_columns;
-        private System.Windows.Forms.TextBox txt_dram_rq_size;
-        private System.Windows.Forms.TextBox txt_trp;
-        private System.Windows.Forms.TextBox txt_trcd;
-        private System.Windows.Forms.TextBox txt_banks;
-        private System.Windows.Forms.TextBox txt_rows;
-        private System.Windows.Forms.TextBox txt_channel_width;
-        private System.Windows.Forms.TextBox txt_dram_wq_size;
-        private System.Windows.Forms.TextBox txt_tcas;
+        private TextBoxBorderColor.MyTextBox txt_channels;
+        private TextBoxBorderColor.MyTextBox txt_ranks;
+        private TextBoxBorderColor.MyTextBox txt_columns;
+        private TextBoxBorderColor.MyTextBox txt_dram_rq_size;
+        private TextBoxBorderColor.MyTextBox txt_trp;
+        private TextBoxBorderColor.MyTextBox txt_trcd;
+        private TextBoxBorderColor.MyTextBox txt_banks;
+        private TextBoxBorderColor.MyTextBox txt_rows;
+        private TextBoxBorderColor.MyTextBox txt_channel_width;
+        private TextBoxBorderColor.MyTextBox txt_dram_wq_size;
+        private TextBoxBorderColor.MyTextBox txt_tcas;
         private System.Windows.Forms.Label lbl_tcas;
         private System.Windows.Forms.Button btn_defaults;
         private System.Windows.Forms.Button btn_compile;
         private System.Windows.Forms.Button btn_run;
         private System.Windows.Forms.Label lbl_cpu;
         private System.Windows.Forms.TableLayoutPanel tlp_actions;
-        private System.Windows.Forms.TextBox txt_latency_llc;
-        private System.Windows.Forms.TextBox txt_mshr_size_llc;
-        private System.Windows.Forms.TextBox txt_pq_size_llc;
-        private System.Windows.Forms.TextBox txt_wq_size_llc;
-        private System.Windows.Forms.TextBox txt_rq_size_llc;
-        private System.Windows.Forms.TextBox txt_way_llc;
-        private System.Windows.Forms.TextBox txt_set_llc;
-        private System.Windows.Forms.TextBox txt_latency_l2c;
-        private System.Windows.Forms.TextBox txt_latency_l1dc;
-        private System.Windows.Forms.TextBox txt_latency_l1ic;
-        private System.Windows.Forms.TextBox txt_latency_stlb;
-        private System.Windows.Forms.TextBox txt_latency_dtlb;
-        private System.Windows.Forms.TextBox txt_mshr_size_l2c;
-        private System.Windows.Forms.TextBox txt_mshr_size_l1dc;
-        private System.Windows.Forms.TextBox txt_mshr_size_l1ic;
-        private System.Windows.Forms.TextBox txt_mshr_size_stlb;
-        private System.Windows.Forms.TextBox txt_mshr_size_dtlb;
-        private System.Windows.Forms.TextBox txt_pq_size_l2c;
-        private System.Windows.Forms.TextBox txt_pq_size_l1dc;
-        private System.Windows.Forms.TextBox txt_pq_size_l1ic;
-        private System.Windows.Forms.TextBox txt_wq_size_l2c;
-        private System.Windows.Forms.TextBox txt_wq_size_l1dc;
-        private System.Windows.Forms.TextBox txt_wq_size_l1ic;
-        private System.Windows.Forms.TextBox txt_wq_size_stlb;
-        private System.Windows.Forms.TextBox txt_wq_size_dtlb;
-        private System.Windows.Forms.TextBox txt_rq_size_l2c;
-        private System.Windows.Forms.TextBox txt_rq_size_l1dc;
-        private System.Windows.Forms.TextBox txt_rq_size_l1ic;
-        private System.Windows.Forms.TextBox txt_rq_size_stlb;
-        private System.Windows.Forms.TextBox txt_rq_size_dtlb;
-        private System.Windows.Forms.TextBox txt_way_l2c;
-        private System.Windows.Forms.TextBox txt_way_l1dc;
-        private System.Windows.Forms.TextBox txt_way_l1ic;
-        private System.Windows.Forms.TextBox txt_way_stlb;
-        private System.Windows.Forms.TextBox txt_way_dtlb;
-        private System.Windows.Forms.TextBox txt_set_l2c;
-        private System.Windows.Forms.TextBox txt_set_l1dc;
-        private System.Windows.Forms.TextBox txt_set_l1ic;
-        private System.Windows.Forms.TextBox txt_set_stlb;
-        private System.Windows.Forms.TextBox txt_set_dtlb;
-        private System.Windows.Forms.TextBox txt_latency_itlb;
-        private System.Windows.Forms.TextBox txt_mshr_size_itlb;
-        private System.Windows.Forms.TextBox txt_wq_size_itlb;
-        private System.Windows.Forms.TextBox txt_rq_size_itlb;
+        private TextBoxBorderColor.MyTextBox txt_latency_llc;
+        private TextBoxBorderColor.MyTextBox txt_mshr_size_llc;
+        private TextBoxBorderColor.MyTextBox txt_pq_size_llc;
+        private TextBoxBorderColor.MyTextBox txt_wq_size_llc;
+        private TextBoxBorderColor.MyTextBox txt_rq_size_llc;
+        private TextBoxBorderColor.MyTextBox txt_way_llc;
+        private TextBoxBorderColor.MyTextBox txt_set_llc;
+        private TextBoxBorderColor.MyTextBox txt_latency_l2c;
+        private TextBoxBorderColor.MyTextBox txt_latency_l1dc;
+        private TextBoxBorderColor.MyTextBox txt_latency_l1ic;
+        private TextBoxBorderColor.MyTextBox txt_latency_stlb;
+        private TextBoxBorderColor.MyTextBox txt_latency_dtlb;
+        private TextBoxBorderColor.MyTextBox txt_mshr_size_l2c;
+        private TextBoxBorderColor.MyTextBox txt_mshr_size_l1dc;
+        private TextBoxBorderColor.MyTextBox txt_mshr_size_l1ic;
+        private TextBoxBorderColor.MyTextBox txt_mshr_size_stlb;
+        private TextBoxBorderColor.MyTextBox txt_mshr_size_dtlb;
+        private TextBoxBorderColor.MyTextBox txt_pq_size_l2c;
+        private TextBoxBorderColor.MyTextBox txt_pq_size_l1dc;
+        private TextBoxBorderColor.MyTextBox txt_pq_size_l1ic;
+        private TextBoxBorderColor.MyTextBox txt_wq_size_l2c;
+        private TextBoxBorderColor.MyTextBox txt_wq_size_l1dc;
+        private TextBoxBorderColor.MyTextBox txt_wq_size_l1ic;
+        private TextBoxBorderColor.MyTextBox txt_wq_size_stlb;
+        private TextBoxBorderColor.MyTextBox txt_wq_size_dtlb;
+        private TextBoxBorderColor.MyTextBox txt_rq_size_l2c;
+        private TextBoxBorderColor.MyTextBox txt_rq_size_l1dc;
+        private TextBoxBorderColor.MyTextBox txt_rq_size_l1ic;
+        private TextBoxBorderColor.MyTextBox txt_rq_size_stlb;
+        private TextBoxBorderColor.MyTextBox txt_rq_size_dtlb;
+        private TextBoxBorderColor.MyTextBox txt_way_l2c;
+        private TextBoxBorderColor.MyTextBox txt_way_l1dc;
+        private TextBoxBorderColor.MyTextBox txt_way_l1ic;
+        private TextBoxBorderColor.MyTextBox txt_way_stlb;
+        private TextBoxBorderColor.MyTextBox txt_way_dtlb;
+        private TextBoxBorderColor.MyTextBox txt_set_l2c;
+        private TextBoxBorderColor.MyTextBox txt_set_l1dc;
+        private TextBoxBorderColor.MyTextBox txt_set_l1ic;
+        private TextBoxBorderColor.MyTextBox txt_set_stlb;
+        private TextBoxBorderColor.MyTextBox txt_set_dtlb;
+        private TextBoxBorderColor.MyTextBox txt_latency_itlb;
+        private TextBoxBorderColor.MyTextBox txt_mshr_size_itlb;
+        private TextBoxBorderColor.MyTextBox txt_wq_size_itlb;
+        private TextBoxBorderColor.MyTextBox txt_rq_size_itlb;
         private System.Windows.Forms.Label lbl_latency;
         private System.Windows.Forms.Label lbl_mshr_size;
         private System.Windows.Forms.Label lbl_pq_size;
@@ -2487,20 +2745,20 @@
         private System.Windows.Forms.Label lbl_llc;
         private System.Windows.Forms.Label lbl_block_size;
         private System.Windows.Forms.Label lbl_max_read_per_cycle;
-        private System.Windows.Forms.TextBox txt_block_size;
-        private System.Windows.Forms.TextBox txt_max_read_per_cycle;
+        private TextBoxBorderColor.MyTextBox txt_block_size;
+        private TextBoxBorderColor.MyTextBox txt_max_read_per_cycle;
         private System.Windows.Forms.Label lbl_itlb;
         private System.Windows.Forms.Label lbl_dtlb;
         private System.Windows.Forms.Label lbl_stlb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_set_itlb;
+        private TextBoxBorderColor.MyTextBox txt_set_itlb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_way_itlb;
+        private TextBoxBorderColor.MyTextBox txt_way_itlb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -2511,6 +2769,15 @@
         private System.Windows.Forms.Label label14;
         private TextBoxBorderColor.MyTextBox txt_warmup_instr;
         private TextBoxBorderColor.MyTextBox txt_sim_instr;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label19;
+        private TextBoxBorderColor.MyTextBox txt_size_itlb;
+        private TextBoxBorderColor.MyTextBox txt_size_dtlb;
+        private TextBoxBorderColor.MyTextBox txt_size_stlb;
+        private TextBoxBorderColor.MyTextBox txt_size_l1i;
+        private TextBoxBorderColor.MyTextBox txt_size_l1d;
+        private TextBoxBorderColor.MyTextBox txt_size_l2c;
+        private TextBoxBorderColor.MyTextBox txt_size_llc;
     }
 }
 

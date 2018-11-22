@@ -133,7 +133,18 @@ namespace ChampSimBuilder
 
             defaults.WARMUP_INST = 1000000;
             defaults.SIM_INST = 10000000;
-    }
+
+            defaults.SIZE_ITLB = 4096;
+            defaults.SIZE_DTLB = 4096;
+            defaults.SIZE_STLB = 98304;
+
+            defaults.SIZE_L1IC = 32768;
+            defaults.SIZE_L1DC = 32768;
+
+            defaults.SIZE_L2C = 262144;
+            defaults.SIZE_LLC = 2097152;
+
+        }
 
         private void cmb_num_cpu_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -176,12 +187,22 @@ namespace ChampSimBuilder
                 txt_cpu_7.Text = "Choose trace file";
                 txt_cpu_8.Text = "Choose trace file";
 
+                txt_cpu_1.BorderColor = Color.Red;
+                txt_cpu_2.BorderColor = Color.Red;
+                txt_cpu_3.BorderColor = Color.Red;
+                txt_cpu_4.BorderColor = Color.Red;
+                txt_cpu_5.BorderColor = Color.Red;
+                txt_cpu_6.BorderColor = Color.Red;
+                txt_cpu_7.BorderColor = Color.Red;
+                txt_cpu_8.BorderColor = Color.Red;
+
                 txt_set_llc.Text = (2048 * 1).ToString();
                 if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
                 {
                     txt_rq_size_llc.Text = (1 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_wq_size_llc.Text = (1 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_pq_size_llc.Text = (1 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    txt_size_llc.Text = (1 * (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text))).ToString();
                 }
                 else
                 {
@@ -229,12 +250,22 @@ namespace ChampSimBuilder
                 txt_cpu_7.Text = "Choose trace file";
                 txt_cpu_8.Text = "Choose trace file";
 
+                txt_cpu_1.BorderColor = Color.Red;
+                txt_cpu_2.BorderColor = Color.Red;
+                txt_cpu_3.BorderColor = Color.Red;
+                txt_cpu_4.BorderColor = Color.Red;
+                txt_cpu_5.BorderColor = Color.Red;
+                txt_cpu_6.BorderColor = Color.Red;
+                txt_cpu_7.BorderColor = Color.Red;
+                txt_cpu_8.BorderColor = Color.Red;
+
                 txt_set_llc.Text = (2048 * 4).ToString();
                 if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
                 {
                     txt_rq_size_llc.Text = (4 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_wq_size_llc.Text = (4 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_pq_size_llc.Text = (4 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    txt_size_llc.Text = (4 * (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text))).ToString();
                 }
                 else
                 {
@@ -282,12 +313,22 @@ namespace ChampSimBuilder
                 txt_cpu_7.Text = "Choose trace file";
                 txt_cpu_8.Text = "Choose trace file";
 
+                txt_cpu_1.BorderColor = Color.Red;
+                txt_cpu_2.BorderColor = Color.Red;
+                txt_cpu_3.BorderColor = Color.Red;
+                txt_cpu_4.BorderColor = Color.Red;
+                txt_cpu_5.BorderColor = Color.Red;
+                txt_cpu_6.BorderColor = Color.Red;
+                txt_cpu_7.BorderColor = Color.Red;
+                txt_cpu_8.BorderColor = Color.Red;
+
                 txt_set_llc.Text = (2048 * 8).ToString();
                 if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
                 {
                     txt_rq_size_llc.Text = (8 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_wq_size_llc.Text = (8 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_pq_size_llc.Text = (8 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    txt_size_llc.Text = (8 * (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text))).ToString();
                 }
                 else
                 {
@@ -301,6 +342,108 @@ namespace ChampSimBuilder
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            var textBox = sender as TextBoxBorderColor.MyTextBox;
+
+            if (String.IsNullOrEmpty(textBox.Text) || int.Parse(textBox.Text) <= 0 || String.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.BorderColor = Color.Red;
+            }
+            else
+            {
+                if (textBox.Name.Equals("txt_mshr_size_l2c"))
+                {
+                    int cpu = 1;
+                    switch (cmb_num_cpu.SelectedIndex)
+                    {
+                        case 1:
+                            cpu = 4;
+                            break;
+                        case 2:
+                            cpu = 8;
+                            break;
+                    }
+
+                    if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
+                    {
+                        txt_rq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                        txt_wq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                        txt_pq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                    }
+                    else
+                    {
+                        txt_rq_size_llc.Text = "0";
+                        txt_wq_size_llc.Text = "0";
+                        txt_pq_size_llc.Text = "0";
+                    }
+                }
+                else if (textBox.Name.Equals("txt_set_itlb"))
+                {
+                    txt_size_itlb.Text = (int.Parse(txt_set_itlb.Text) * int.Parse(txt_way_itlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_way_itlb"))
+                {
+                    txt_size_itlb.Text = (int.Parse(txt_set_itlb.Text) * int.Parse(txt_way_itlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_set_dtlb"))
+                {
+                    txt_size_dtlb.Text = (int.Parse(txt_set_dtlb.Text) * int.Parse(txt_way_dtlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_way_dtlb"))
+                {
+                    txt_size_dtlb.Text = (int.Parse(txt_set_dtlb.Text) * int.Parse(txt_way_dtlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_set_stlb"))
+                {
+                    txt_size_stlb.Text = (int.Parse(txt_set_stlb.Text) * int.Parse(txt_way_stlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_way_stlb"))
+                {
+                    txt_size_stlb.Text = (int.Parse(txt_set_stlb.Text) * int.Parse(txt_way_stlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_set_l1ic"))
+                {
+                    txt_size_l1i.Text = (int.Parse(txt_set_l1ic.Text) * int.Parse(txt_way_l1ic.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_way_l1ic"))
+                {
+                    txt_size_l1i.Text = (int.Parse(txt_set_l1ic.Text) * int.Parse(txt_way_l1ic.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_set_l1dc"))
+                {
+                    txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_way_l1dc"))
+                {
+                    txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_set_l2c"))
+                {
+                    txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_way_l2c"))
+                {
+                    txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_way_llc"))
+                {
+                    txt_size_llc.Text = (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_block_size"))
+                {
+                    txt_size_itlb.Text = (int.Parse(txt_set_itlb.Text) * int.Parse(txt_way_itlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                    txt_size_dtlb.Text = (int.Parse(txt_set_dtlb.Text) * int.Parse(txt_way_dtlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                    txt_size_stlb.Text = (int.Parse(txt_set_stlb.Text) * int.Parse(txt_way_stlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                    txt_size_l1i.Text = (int.Parse(txt_set_l1ic.Text) * int.Parse(txt_way_l1ic.Text) * int.Parse(txt_block_size.Text)).ToString();
+                    txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString();
+                    txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString();
+                    txt_size_llc.Text = (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text)).ToString();
+                }
+                textBox.BorderColor = Color.Green;
+            }
         }
 
         private void btn_defaults_Click(object sender, EventArgs e)
@@ -348,6 +491,15 @@ namespace ChampSimBuilder
             txt_cpu_6.Text = "Choose trace file";
             txt_cpu_7.Text = "Choose trace file";
             txt_cpu_8.Text = "Choose trace file";
+
+            txt_cpu_1.BorderColor = Color.Red;
+            txt_cpu_2.BorderColor = Color.Red;
+            txt_cpu_3.BorderColor = Color.Red;
+            txt_cpu_4.BorderColor = Color.Red;
+            txt_cpu_5.BorderColor = Color.Red;
+            txt_cpu_6.BorderColor = Color.Red;
+            txt_cpu_7.BorderColor = Color.Red;
+            txt_cpu_8.BorderColor = Color.Red;
 
             cmb_branch_predictor.SelectedIndex = 0;
             cmb_l1d_prefetcher.SelectedIndex = 0;
@@ -448,6 +600,15 @@ namespace ChampSimBuilder
 
             txt_warmup_instr.Text = defaults.WARMUP_INST.ToString();
             txt_sim_instr.Text = defaults.SIM_INST.ToString();
+
+            txt_size_itlb.Text = defaults.SIZE_ITLB.ToString();
+            txt_size_dtlb.Text = defaults.SIZE_DTLB.ToString();
+            txt_size_stlb.Text = defaults.SIZE_STLB.ToString();
+
+            txt_size_l1i.Text = defaults.SIZE_L1IC.ToString();
+            txt_size_l1d.Text = defaults.SIZE_L1DC.ToString();
+            txt_size_l2c.Text = defaults.SIZE_L2C.ToString();
+            txt_size_llc.Text = defaults.SIZE_LLC.ToString();
         }
 
         private void btn_cpu_Click(object sender, EventArgs e)
@@ -469,27 +630,35 @@ namespace ChampSimBuilder
                     {
                         case "btn_cpu_1":
                             txt_cpu_1.Text = filePath;
+                            txt_cpu_1.BorderColor = Color.Green;
                             break;
                         case "btn_cpu_2":
                             txt_cpu_2.Text = filePath;
+                            txt_cpu_2.BorderColor = Color.Green;
                             break;
                         case "btn_cpu_3":
                             txt_cpu_3.Text = filePath;
+                            txt_cpu_3.BorderColor = Color.Green;
                             break;
                         case "btn_cpu_4":
                             txt_cpu_4.Text = filePath;
+                            txt_cpu_4.BorderColor = Color.Green;
                             break;
                         case "btn_cpu_5":
                             txt_cpu_5.Text = filePath;
+                            txt_cpu_5.BorderColor = Color.Green;
                             break;
                         case "btn_cpu_6":
                             txt_cpu_6.Text = filePath;
+                            txt_cpu_6.BorderColor = Color.Green;
                             break;
                         case "btn_cpu_7":
                             txt_cpu_7.Text = filePath;
+                            txt_cpu_7.BorderColor = Color.Green;
                             break;
                         case "btn_cpu_8":
                             txt_cpu_8.Text = filePath;
+                            txt_cpu_8.BorderColor = Color.Green;
                             break;
                     }
                 }
@@ -577,7 +746,7 @@ namespace ChampSimBuilder
         {
             if (cmb_num_cpu.SelectedIndex == 0)
             {
-                if (txt_cpu_1.Text.Equals("Choose trace file"))
+                if (txt_cpu_1.BorderColor == Color.Red)
                 {
                     MessageBox.Show("Please select a trace file!", "Error");
                     return;
@@ -585,7 +754,7 @@ namespace ChampSimBuilder
             }
             else if (cmb_num_cpu.SelectedIndex == 1)
             {
-                if (txt_cpu_1.Text.Equals("Choose trace file") || txt_cpu_2.Text.Equals("Choose trace file") || txt_cpu_3.Text.Equals("Choose trace file") || txt_cpu_4.Text.Equals("Choose trace file"))
+                if (txt_cpu_1.BorderColor == Color.Red || txt_cpu_2.BorderColor == Color.Red || txt_cpu_3.BorderColor == Color.Red || txt_cpu_4.BorderColor == Color.Red)
                 {
                     MessageBox.Show("Please select a trace file!", "Error");
                     return;
@@ -593,37 +762,61 @@ namespace ChampSimBuilder
             }
             else if (cmb_num_cpu.SelectedIndex == 2)
             {
-                if (txt_cpu_1.Text.Equals("Choose trace file") || txt_cpu_2.Text.Equals("Choose trace file") || txt_cpu_3.Text.Equals("Choose trace file") || txt_cpu_4.Text.Equals("Choose trace file") || txt_cpu_5.Text.Equals("Choose trace file") || txt_cpu_6.Text.Equals("Choose trace file") || txt_cpu_7.Text.Equals("Choose trace file") || txt_cpu_8.Text.Equals("Choose trace file"))
+                if (txt_cpu_1.BorderColor == Color.Red || txt_cpu_2.BorderColor == Color.Red || txt_cpu_3.BorderColor == Color.Red || txt_cpu_4.BorderColor == Color.Red || txt_cpu_5.BorderColor == Color.Red || txt_cpu_6.BorderColor == Color.Red || txt_cpu_7.BorderColor == Color.Red || txt_cpu_8.BorderColor == Color.Red)
                 {
                     MessageBox.Show("Please select a trace file!", "Error");
                     return;
                 }
             }
 
+            if (txt_warmup_instr.BorderColor == Color.Red)
+            {
+                MessageBox.Show("Please fill all parameters!", "Error");
+                return;
+            }
+
+            if (txt_sim_instr.BorderColor == Color.Red)
+            {
+                MessageBox.Show("Please fill all parameters!", "Error");
+                return;
+            }
+
             foreach (Control x in tlp_cpu2.Controls)
             {
-                if (x is TextBox & String.IsNullOrEmpty(x.Text))
+                if (x is TextBoxBorderColor.MyTextBox)
                 {
-                    MessageBox.Show("Please fill all parameters!", "Error");
-                    return;
+                    var textBox = x as TextBoxBorderColor.MyTextBox;
+                    if (textBox.BorderColor == Color.Red)
+                    {
+                        MessageBox.Show("Please fill all parameters!", "Error");
+                        return;
+                    }
                 }
             }
 
             foreach (Control x in tlp_tlb_cache.Controls)
             {
-                if (x is TextBox & String.IsNullOrEmpty(x.Text))
+                if (x is TextBoxBorderColor.MyTextBox)
                 {
-                    MessageBox.Show("Please fill all parameters!", "Error");
-                    return;
+                    var textBox = x as TextBoxBorderColor.MyTextBox;
+                    if (textBox.BorderColor == Color.Red)
+                    {
+                        MessageBox.Show("Please fill all parameters!", "Error");
+                        return;
+                    }
                 }
             }
 
             foreach (Control x in tlp_dram.Controls)
             {
-                if (x is TextBox & String.IsNullOrEmpty(x.Text))
+                if (x is TextBoxBorderColor.MyTextBox)
                 {
-                    MessageBox.Show("Please fill all parameters!", "Error");
-                    return;
+                    var textBox = x as TextBoxBorderColor.MyTextBox;
+                    if (textBox.BorderColor == Color.Red)
+                    {
+                        MessageBox.Show("Please fill all parameters!", "Error");
+                        return;
+                    }
                 }
             }
 
@@ -878,7 +1071,29 @@ namespace ChampSimBuilder
 
         private void ChampSimBuilder_Load(object sender, EventArgs e)
         {
-          reset_to_defaults();
+            reset_to_defaults();
+
+            txt_set_itlb.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_way_itlb.TextChanged += new EventHandler(textBox_TextChanged);
+
+            txt_set_dtlb.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_way_dtlb.TextChanged += new EventHandler(textBox_TextChanged);
+
+            txt_set_stlb.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_way_stlb.TextChanged += new EventHandler(textBox_TextChanged);
+
+            txt_set_l1ic.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_way_l1ic.TextChanged += new EventHandler(textBox_TextChanged);
+
+            txt_set_l1dc.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_way_l1dc.TextChanged += new EventHandler(textBox_TextChanged);
+
+            txt_set_l2c.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_way_l2c.TextChanged += new EventHandler(textBox_TextChanged);
+            
+            txt_way_llc.TextChanged += new EventHandler(textBox_TextChanged);
+
+            txt_block_size.TextChanged += new EventHandler(textBox_TextChanged);
         }
 
         private void btn_run_Click(object sender, EventArgs e)
@@ -886,30 +1101,63 @@ namespace ChampSimBuilder
             Process.Start(solution + @"\bin\Release\" + name + ".exe");
         }
 
-        private void txt_mshr_size_l2c_TextChanged(object sender, EventArgs e)
+        private void textBox_Leave(object sender, EventArgs e)
         {
-            int cpu = 1;
-            switch (cmb_num_cpu.SelectedIndex)
+            if (String.IsNullOrWhiteSpace(txt_set_itlb.Text))
             {
-                case 1:
-                    cpu = 4;
-                    break;
-                case 2:
-                    cpu = 8;
-                    break;
+                txt_set_itlb.Text = defaults.ITLB_SET.ToString();
             }
-
-            if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
+            else if (String.IsNullOrWhiteSpace(txt_way_itlb.Text))
             {
-                txt_rq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
-                txt_wq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
-                txt_pq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                txt_way_itlb.Text = defaults.ITLB_WAY.ToString();
             }
-            else
+            else if (String.IsNullOrWhiteSpace(txt_set_dtlb.Text))
             {
-                txt_rq_size_llc.Text = "0";
-                txt_wq_size_llc.Text = "0";
-                txt_pq_size_llc.Text = "0";
+                txt_set_dtlb.Text = defaults.DTLB_SET.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_way_dtlb.Text))
+            {
+                txt_way_dtlb.Text = defaults.DTLB_WAY.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_set_stlb.Text))
+            {
+                txt_set_stlb.Text = defaults.STLB_SET.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_way_stlb.Text))
+            {
+                txt_way_stlb.Text = defaults.STLB_WAY.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_set_l1ic.Text))
+            {
+                txt_set_l1ic.Text = defaults.L1I_SET.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_way_l1ic.Text))
+            {
+                txt_way_l1ic.Text = defaults.L1I_WAY.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_set_l1dc.Text))
+            {
+                txt_set_l1dc.Text = defaults.L1D_SET.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_way_l1dc.Text))
+            {
+                txt_way_l1dc.Text = defaults.L1D_WAY.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_set_l2c.Text))
+            {
+                txt_set_l2c.Text = defaults.L2C_SET.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_way_l2c.Text))
+            {
+                txt_way_l2c.Text = defaults.L2C_WAY.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_way_llc.Text))
+            {
+                txt_way_llc.Text = defaults.LLC_WAY.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_block_size.Text))
+            {
+                txt_block_size.Text = defaults.BLOCK_SIZE.ToString();
             }
         }
     }
