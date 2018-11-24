@@ -116,10 +116,10 @@ namespace ChampSimBuilder
         public int tRCD_DRAM_CYCLE;
 
         //Warmpup Instructions
-        public int WARMUP_INST;
+        public ulong WARMUP_INST;
 
         //Simulation Instructions
-        public int SIM_INST;
+        public ulong SIM_INST;
 
         //Total sizes
         public int SIZE_ITLB;
@@ -129,5 +129,6 @@ namespace ChampSimBuilder
         public int SIZE_L1DC;
         public int SIZE_L2C;
         public int SIZE_LLC;
+        public long SIZE_DRAM;
     }
 }

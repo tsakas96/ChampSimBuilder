@@ -144,6 +144,8 @@ namespace ChampSimBuilder
             defaults.SIZE_L2C = 262144;
             defaults.SIZE_LLC = 2097152;
 
+            defaults.SIZE_DRAM = 4294967296;
+
         }
 
         private void cmb_num_cpu_SelectionChangeCommitted(object sender, EventArgs e)
@@ -174,7 +176,7 @@ namespace ChampSimBuilder
                 txt_cpu_7.Hide();
                 btn_cpu_7.Hide();
 
-                lbl_cpu_8.Hide(); 
+                lbl_cpu_8.Hide();
                 txt_cpu_8.Hide();
                 btn_cpu_8.Hide();
 
@@ -211,7 +213,7 @@ namespace ChampSimBuilder
                     txt_pq_size_llc.Text = "0";
                 }
             }
-            else if(cmb_num_cpu.SelectedIndex == 1)
+            else if (cmb_num_cpu.SelectedIndex == 1)
             {
                 lbl_cpu_2.Show();
                 txt_cpu_2.Show();
@@ -348,7 +350,7 @@ namespace ChampSimBuilder
         {
             var textBox = sender as TextBoxBorderColor.MyTextBox;
 
-            if (String.IsNullOrEmpty(textBox.Text) || int.Parse(textBox.Text) <= 0 || String.IsNullOrWhiteSpace(textBox.Text))
+            if (String.IsNullOrEmpty(textBox.Text) || long.Parse(textBox.Text) <= 0 || String.IsNullOrWhiteSpace(textBox.Text))
             {
                 textBox.BorderColor = Color.Red;
             }
@@ -441,8 +443,29 @@ namespace ChampSimBuilder
                     txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString();
                     txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString();
                     txt_size_llc.Text = (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text)).ToString();
+                    txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
                 }
-                textBox.BorderColor = Color.Green;
+                else if (textBox.Name.Equals("txt_channels"))
+                {
+                    txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_columns"))
+                {
+                    txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_ranks"))
+                {
+                    txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_banks"))
+                {
+                    txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                }
+                else if (textBox.Name.Equals("txt_rows"))
+                {
+                    txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                }
+                textBox.BorderColor = Color.FromArgb(31, 31, 31);
             }
         }
 
@@ -504,7 +527,7 @@ namespace ChampSimBuilder
             cmb_branch_predictor.SelectedIndex = 0;
             cmb_l1d_prefetcher.SelectedIndex = 0;
             cmb_l2c_prefetcher.SelectedIndex = 0;
-            cmb_llc_replacement.SelectedIndex = 2;
+            cmb_llc_replacement.SelectedIndex = 1;
 
             txt_cpu_frequency.Text = defaults.CPU_FREQ.ToString();
             txt_dram_io_frequency.Text = defaults.DRAM_IO_FREQ.ToString();
@@ -609,6 +632,8 @@ namespace ChampSimBuilder
             txt_size_l1d.Text = defaults.SIZE_L1DC.ToString();
             txt_size_l2c.Text = defaults.SIZE_L2C.ToString();
             txt_size_llc.Text = defaults.SIZE_LLC.ToString();
+
+            txt_size_dram.Text = defaults.SIZE_DRAM.ToString();
         }
 
         private void btn_cpu_Click(object sender, EventArgs e)
@@ -683,6 +708,10 @@ namespace ChampSimBuilder
                                 new_branch_predictor = openFileDialog.FileName;
                                 cmb_branch_predictor.Items[3] = new_branch_predictor.Substring(new_branch_predictor.LastIndexOf('\\') + 1, new_branch_predictor.IndexOf(".") - new_branch_predictor.LastIndexOf("\\") - 1);
                             }
+                            else
+                            {
+                                cmb_branch_predictor.SelectedIndex = 0;
+                            }
                         }
                     }
                     break;
@@ -697,6 +726,10 @@ namespace ChampSimBuilder
                             {
                                 new_l1d_prefetcher = openFileDialog.FileName;
                                 cmb_l1d_prefetcher.Items[2] = new_l1d_prefetcher.Substring(new_l1d_prefetcher.LastIndexOf('\\') + 1, new_l1d_prefetcher.IndexOf(".") - new_l1d_prefetcher.LastIndexOf("\\") - 1);
+                            }
+                            else
+                            {
+                                cmb_l1d_prefetcher.SelectedIndex = 0;
                             }
                         }
                     }
@@ -713,6 +746,10 @@ namespace ChampSimBuilder
                                 new_l2c_prefetcher = openFileDialog.FileName;
                                 cmb_l2c_prefetcher.Items[5] = new_l2c_prefetcher.Substring(new_l2c_prefetcher.LastIndexOf('\\') + 1, new_l2c_prefetcher.IndexOf(".") - new_l2c_prefetcher.LastIndexOf("\\") - 1);
                             }
+                            else
+                            {
+                                cmb_l2c_prefetcher.SelectedIndex = 0;
+                            }
                         }
                     }
                     break;
@@ -727,6 +764,10 @@ namespace ChampSimBuilder
                             {
                                 new_llc_replacement = openFileDialog.FileName;
                                 cmb_llc_replacement.Items[5] = new_llc_replacement.Substring(new_llc_replacement.LastIndexOf('\\') + 1, new_llc_replacement.IndexOf(".") - new_llc_replacement.LastIndexOf("\\") - 1);
+                            }
+                            else
+                            {
+                                cmb_llc_replacement.SelectedIndex = 1;
                             }
                         }
                     }
@@ -885,13 +926,13 @@ namespace ChampSimBuilder
                     llc_replacement += "Ship.cs";
                     break;
                 case 3:
-                    l2c_prefetcher += "Srrip.cs";
+                    llc_replacement += "Srrip.cs";
                     break;
                 case 4:
-                    l2c_prefetcher = new_l2c_prefetcher;
+                    llc_replacement = new_l2c_prefetcher;
                     break;
                 default:
-                    l2c_prefetcher += "Lru.cs";
+                    llc_replacement += "Lru.cs";
                     break;
             }
 
@@ -951,7 +992,18 @@ namespace ChampSimBuilder
                 File.Copy(OriginalGlobals, BacGlobals, true);
                 text = File.ReadAllText(OriginalGlobals);
 
-                text = text.Replace("public const int NUM_CPUS = 1;", "public const int NUM_CPUS = " + cmb_num_cpu.SelectedValue + ";");
+                if (cmb_num_cpu.SelectedIndex == 0)
+                {
+                    text = text.Replace("public const int NUM_CPUS = 1;", "public const int NUM_CPUS = 1" + ";");
+                }
+                else if (cmb_num_cpu.SelectedIndex == 1)
+                {
+                    text = text.Replace("public const int NUM_CPUS = 1;", "public const int NUM_CPUS = 4" + ";");
+                }
+                else if (cmb_num_cpu.SelectedIndex == 8)
+                {
+                    text = text.Replace("public const int NUM_CPUS = 1;", "public const int NUM_CPUS = 8" + ";");
+                }
 
                 text = text.Replace("public static ulong warmup_instructions = 1000000, simulation_instructions = 10000000;", "public static ulong warmup_instructions = " + txt_warmup_instr.Text + ", simulation_instructions = " + txt_sim_instr.Text + ";");
 
@@ -1090,10 +1142,15 @@ namespace ChampSimBuilder
 
             txt_set_l2c.TextChanged += new EventHandler(textBox_TextChanged);
             txt_way_l2c.TextChanged += new EventHandler(textBox_TextChanged);
-            
+
             txt_way_llc.TextChanged += new EventHandler(textBox_TextChanged);
 
             txt_block_size.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_channels.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_columns.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_rows.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_ranks.TextChanged += new EventHandler(textBox_TextChanged);
+            txt_banks.TextChanged += new EventHandler(textBox_TextChanged);
         }
 
         private void btn_run_Click(object sender, EventArgs e)
@@ -1159,6 +1216,27 @@ namespace ChampSimBuilder
             {
                 txt_block_size.Text = defaults.BLOCK_SIZE.ToString();
             }
+            else if (String.IsNullOrWhiteSpace(txt_columns.Text))
+            {
+                txt_columns.Text = defaults.DRAM_COLUMNS.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_rows.Text))
+            {
+                txt_rows.Text = defaults.DRAM_ROWS.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_ranks.Text))
+            {
+                txt_ranks.Text = defaults.DRAM_RANKS.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_channels.Text))
+            {
+                txt_channels.Text = defaults.DRAM_CHANNELS.ToString();
+            }
+            else if (String.IsNullOrWhiteSpace(txt_banks.Text))
+            {
+                txt_banks.Text = defaults.DRAM_BANKS.ToString();
+            }
         }
+
     }
 }

@@ -31,8 +31,7 @@ namespace TextBoxBorderColor
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
-            if (m.Msg == WM_NCPAINT && BorderColor != Color.Transparent &&
-                BorderStyle == System.Windows.Forms.BorderStyle.Fixed3D)
+            if (BorderStyle == BorderStyle.FixedSingle)
             {
                 var hdc = GetWindowDC(this.Handle);
                 using (var g = Graphics.FromHdcInternal(hdc))
