@@ -791,9 +791,7 @@
             this.cmb_l2c_prefetcher.Items.AddRange(new object[] {
             "None",
             "Ip stride",
-            "Kpcp",
             "Next line",
-            "Spp dev",
             "Custom"});
             this.cmb_l2c_prefetcher.Location = new System.Drawing.Point(527, 3);
             this.cmb_l2c_prefetcher.Name = "cmb_l2c_prefetcher";
@@ -802,6 +800,8 @@
             this.cmb_l2c_prefetcher.TabIndex = 106;
             this.cmb_l2c_prefetcher.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.cmb_l2c_prefetcher.UseSelectable = true;
+            this.cmb_l2c_prefetcher.DropDown += new System.EventHandler(this.cmb_DropDown);
+            this.cmb_l2c_prefetcher.SelectionChangeCommitted += new System.EventHandler(this.cmb_SelectionChangeCommitted);
             // 
             // cmb_l1d_prefetcher
             // 
@@ -819,6 +819,8 @@
             this.cmb_l1d_prefetcher.TabIndex = 105;
             this.cmb_l1d_prefetcher.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.cmb_l1d_prefetcher.UseSelectable = true;
+            this.cmb_l1d_prefetcher.DropDown += new System.EventHandler(this.cmb_DropDown);
+            this.cmb_l1d_prefetcher.SelectionChangeCommitted += new System.EventHandler(this.cmb_SelectionChangeCommitted);
             // 
             // cmb_branch_predictor
             // 
@@ -848,7 +850,6 @@
             this.cmb_llc_replacement.Items.AddRange(new object[] {
             "Drrip",
             "Lru",
-            "Ship",
             "Srrip",
             "Custom"});
             this.cmb_llc_replacement.Location = new System.Drawing.Point(755, 3);

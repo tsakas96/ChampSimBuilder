@@ -742,7 +742,7 @@ namespace ChampSimBuilder
                     }
                     break;
                 case "cmb_l2c_prefetcher":
-                    if (cmb_l2c_prefetcher.SelectedIndex == 5)
+                    if (cmb_l2c_prefetcher.SelectedIndex == 3)
                     {
                         using (OpenFileDialog openFileDialog = new OpenFileDialog())
                         {
@@ -751,7 +751,7 @@ namespace ChampSimBuilder
                             if (openFileDialog.ShowDialog() == DialogResult.OK)
                             {
                                 new_l2c_prefetcher = openFileDialog.FileName;
-                                cmb_l2c_prefetcher.Items[5] = new_l2c_prefetcher.Substring(new_l2c_prefetcher.LastIndexOf('\\') + 1, new_l2c_prefetcher.IndexOf(".") - new_l2c_prefetcher.LastIndexOf("\\") - 1);
+                                cmb_l2c_prefetcher.Items[3] = new_l2c_prefetcher.Substring(new_l2c_prefetcher.LastIndexOf('\\') + 1, new_l2c_prefetcher.IndexOf(".") - new_l2c_prefetcher.LastIndexOf("\\") - 1);
                             }
                             else
                             {
@@ -761,7 +761,7 @@ namespace ChampSimBuilder
                     }
                     break;
                 case "cmb_llc_replacement":
-                    if (cmb_llc_replacement.SelectedIndex == 4)
+                    if (cmb_llc_replacement.SelectedIndex == 3)
                     {
                         using (OpenFileDialog openFileDialog = new OpenFileDialog())
                         {
@@ -770,7 +770,7 @@ namespace ChampSimBuilder
                             if (openFileDialog.ShowDialog() == DialogResult.OK)
                             {
                                 new_llc_replacement = openFileDialog.FileName;
-                                cmb_llc_replacement.Items[5] = new_llc_replacement.Substring(new_llc_replacement.LastIndexOf('\\') + 1, new_llc_replacement.IndexOf(".") - new_llc_replacement.LastIndexOf("\\") - 1);
+                                cmb_llc_replacement.Items[3] = new_llc_replacement.Substring(new_llc_replacement.LastIndexOf('\\') + 1, new_llc_replacement.IndexOf(".") - new_llc_replacement.LastIndexOf("\\") - 1);
                             }
                             else
                             {
@@ -784,10 +784,28 @@ namespace ChampSimBuilder
 
         private void cmb_DropDown(object sender, EventArgs e)
         {
-            cmb_branch_predictor.Items[3] = "Custom";
-            cmb_l1d_prefetcher.Items[2] = "Custom";
-            cmb_l2c_prefetcher.Items[5] = "Custom";
-            cmb_llc_replacement.Items[4] = "Custom";
+            var comboBox = sender as ComboBox;
+
+            if (comboBox.Name.Equals("cmb_branch_predictor"))
+            {
+                cmb_branch_predictor.Items[3] = "Custom";
+                cmb_branch_predictor.SelectedIndex = 0;
+            }
+            else if (comboBox.Name.Equals("cmb_l1d_prefetcher"))
+            {
+                cmb_l1d_prefetcher.Items[2] = "Custom";
+                cmb_l1d_prefetcher.SelectedIndex = 0;
+            }
+            else if (comboBox.Name.Equals("cmb_l2c_prefetcher"))
+            {
+                cmb_l2c_prefetcher.Items[3] = "Custom";
+                cmb_l2c_prefetcher.SelectedIndex = 0;
+            }
+            else if(comboBox.Name.Equals("cmb_llc_replacement"))
+            {
+                cmb_llc_replacement.Items[3] = "Custom";
+                cmb_llc_replacement.SelectedIndex = 1;
+            }
         }
 
         private void btn_compile_Click(object sender, EventArgs e)
@@ -908,15 +926,9 @@ namespace ChampSimBuilder
                     l2c_prefetcher += "Ip stride.cs";
                     break;
                 case 2:
-                    l2c_prefetcher += "Kpcp.cs";
-                    break;
-                case 3:
                     l2c_prefetcher += "Next line.cs";
                     break;
-                case 4:
-                    l2c_prefetcher += "Spp dev.cs";
-                    break;
-                case 5:
+                case 3:
                     l2c_prefetcher = new_l2c_prefetcher;
                     break;
                 default:
@@ -930,12 +942,9 @@ namespace ChampSimBuilder
                     llc_replacement += "Drrip.cs";
                     break;
                 case 2:
-                    llc_replacement += "Ship.cs";
-                    break;
-                case 3:
                     llc_replacement += "Srrip.cs";
                     break;
-                case 4:
+                case 3:
                     llc_replacement = new_l2c_prefetcher;
                     break;
                 default:
