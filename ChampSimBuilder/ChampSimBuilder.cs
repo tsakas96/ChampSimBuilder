@@ -1122,7 +1122,7 @@ namespace ChampSimBuilder
                 if (p.ExitCode == 0)
                 {
                     btn_run.Enabled = true;
-                    MessageBox.Show("Compile is succesfully completed!", "Error");
+                    MessageBox.Show("Compile is succesfully completed!");
                 }
                 else
                 {
