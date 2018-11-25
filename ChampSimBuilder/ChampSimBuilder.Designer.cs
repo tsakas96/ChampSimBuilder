@@ -648,6 +648,7 @@
             this.btn_cpu_5.Text = "Browse..";
             this.btn_cpu_5.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_cpu_5.UseSelectable = true;
+            this.btn_cpu_5.Click += new System.EventHandler(this.btn_cpu_Click);
             // 
             // btn_cpu_2
             // 
@@ -658,6 +659,7 @@
             this.btn_cpu_2.Text = "Browse..";
             this.btn_cpu_2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_cpu_2.UseSelectable = true;
+            this.btn_cpu_2.Click += new System.EventHandler(this.btn_cpu_Click);
             // 
             // btn_cpu_6
             // 
@@ -668,6 +670,7 @@
             this.btn_cpu_6.Text = "Browse..";
             this.btn_cpu_6.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_cpu_6.UseSelectable = true;
+            this.btn_cpu_6.Click += new System.EventHandler(this.btn_cpu_Click);
             // 
             // btn_cpu_3
             // 
@@ -678,6 +681,7 @@
             this.btn_cpu_3.Text = "Browse..";
             this.btn_cpu_3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_cpu_3.UseSelectable = true;
+            this.btn_cpu_3.Click += new System.EventHandler(this.btn_cpu_Click);
             // 
             // btn_cpu_4
             // 
@@ -688,6 +692,7 @@
             this.btn_cpu_4.Text = "Browse..";
             this.btn_cpu_4.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_cpu_4.UseSelectable = true;
+            this.btn_cpu_4.Click += new System.EventHandler(this.btn_cpu_Click);
             // 
             // btn_cpu_7
             // 
@@ -698,6 +703,7 @@
             this.btn_cpu_7.Text = "Browse..";
             this.btn_cpu_7.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_cpu_7.UseSelectable = true;
+            this.btn_cpu_7.Click += new System.EventHandler(this.btn_cpu_Click);
             // 
             // btn_cpu_8
             // 
@@ -708,6 +714,7 @@
             this.btn_cpu_8.Text = "Browse..";
             this.btn_cpu_8.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btn_cpu_8.UseSelectable = true;
+            this.btn_cpu_8.Click += new System.EventHandler(this.btn_cpu_Click);
             // 
             // lbl_branch_predictor
             // 
