@@ -33,10 +33,18 @@
             this.lbl_cpu_4 = new System.Windows.Forms.Label();
             this.tlp_cpu = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_cpu = new System.Windows.Forms.Label();
+            this.txt_cpu_4 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_1 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_3 = new TextBoxBorderColor.MyTextBox();
             this.lbl_cpu_2 = new System.Windows.Forms.Label();
+            this.txt_cpu_2 = new TextBoxBorderColor.MyTextBox();
             this.lbl_cpu_6 = new System.Windows.Forms.Label();
             this.lbl_cpu_7 = new System.Windows.Forms.Label();
             this.lbl_cpu_8 = new System.Windows.Forms.Label();
+            this.txt_cpu_5 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_6 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_7 = new TextBoxBorderColor.MyTextBox();
+            this.txt_cpu_8 = new TextBoxBorderColor.MyTextBox();
             this.lbl_cpu_1 = new System.Windows.Forms.Label();
             this.lbl_cpu_5 = new System.Windows.Forms.Label();
             this.lbl_title = new System.Windows.Forms.Label();
@@ -44,6 +52,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.txt_warmup_instr = new TextBoxBorderColor.MyTextBox();
+            this.txt_sim_instr = new TextBoxBorderColor.MyTextBox();
             this.cmb_num_cpu = new MetroFramework.Controls.MetroComboBox();
             this.btn_cpu_1 = new MetroFramework.Controls.MetroButton();
             this.btn_cpu_5 = new MetroFramework.Controls.MetroButton();
@@ -63,13 +73,26 @@
             this.cmb_branch_predictor = new MetroFramework.Controls.MetroComboBox();
             this.cmb_llc_replacement = new MetroFramework.Controls.MetroComboBox();
             this.tlp_cpu2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_retire_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_scheduler_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_decode_width = new TextBoxBorderColor.MyTextBox();
             this.lbl_scheduler_size = new System.Windows.Forms.Label();
             this.lbl_page_size = new System.Windows.Forms.Label();
             this.lbl_fetch_width = new System.Windows.Forms.Label();
             this.lbl_sq_size = new System.Windows.Forms.Label();
             this.lbl_lq_size = new System.Windows.Forms.Label();
             this.lbl_cpu_frequency = new System.Windows.Forms.Label();
+            this.txt_sq_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_sq_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_page_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_dram_io_frequency = new TextBoxBorderColor.MyTextBox();
             this.lbl_execude_width = new System.Windows.Forms.Label();
+            this.txt_cpu_frequency = new TextBoxBorderColor.MyTextBox();
+            this.txt_rob_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_lq_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_lq_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_fetch_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_execude_width = new TextBoxBorderColor.MyTextBox();
             this.lbl_dram_io_frequency = new System.Windows.Forms.Label();
             this.lbl_rob_size = new System.Windows.Forms.Label();
             this.lbl_lq_width = new System.Windows.Forms.Label();
@@ -85,11 +108,23 @@
             this.lbl_rows = new System.Windows.Forms.Label();
             this.lbl_dram_wq_size = new System.Windows.Forms.Label();
             this.lbl_tcas = new System.Windows.Forms.Label();
+            this.txt_channels = new TextBoxBorderColor.MyTextBox();
+            this.txt_dram_rq_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_trp = new TextBoxBorderColor.MyTextBox();
+            this.txt_trcd = new TextBoxBorderColor.MyTextBox();
+            this.txt_rows = new TextBoxBorderColor.MyTextBox();
+            this.txt_dram_wq_size = new TextBoxBorderColor.MyTextBox();
+            this.txt_tcas = new TextBoxBorderColor.MyTextBox();
             this.lbl_channel_width = new System.Windows.Forms.Label();
+            this.txt_channel_width = new TextBoxBorderColor.MyTextBox();
+            this.txt_ranks = new TextBoxBorderColor.MyTextBox();
             this.lbl_ranks = new System.Windows.Forms.Label();
             this.lbl_columns = new System.Windows.Forms.Label();
+            this.txt_columns = new TextBoxBorderColor.MyTextBox();
             this.lbl_banks = new System.Windows.Forms.Label();
+            this.txt_banks = new TextBoxBorderColor.MyTextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.txt_size_dram = new TextBoxBorderColor.MyTextBox();
             this.tlp_actions = new System.Windows.Forms.TableLayoutPanel();
             this.btn_defaults = new MetroFramework.Controls.MetroButton();
             this.btn_compile = new MetroFramework.Controls.MetroButton();
@@ -108,6 +143,7 @@
             this.lbl_llc = new System.Windows.Forms.Label();
             this.tlp_tlb_cache = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
+            this.txt_set_itlb = new TextBoxBorderColor.MyTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -116,28 +152,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_itlb = new System.Windows.Forms.Label();
             this.lbl_dtlb = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.lbl_max_read_per_cycle = new System.Windows.Forms.Label();
-            this.lbl_block_size = new System.Windows.Forms.Label();
             this.lbl_stlb = new System.Windows.Forms.Label();
-            this.txt_channels = new TextBoxBorderColor.MyTextBox();
-            this.txt_dram_rq_size = new TextBoxBorderColor.MyTextBox();
-            this.txt_trp = new TextBoxBorderColor.MyTextBox();
-            this.txt_trcd = new TextBoxBorderColor.MyTextBox();
-            this.txt_rows = new TextBoxBorderColor.MyTextBox();
-            this.txt_dram_wq_size = new TextBoxBorderColor.MyTextBox();
-            this.txt_tcas = new TextBoxBorderColor.MyTextBox();
-            this.txt_channel_width = new TextBoxBorderColor.MyTextBox();
-            this.txt_ranks = new TextBoxBorderColor.MyTextBox();
-            this.txt_columns = new TextBoxBorderColor.MyTextBox();
-            this.txt_banks = new TextBoxBorderColor.MyTextBox();
-            this.txt_size_dram = new TextBoxBorderColor.MyTextBox();
-            this.txt_set_itlb = new TextBoxBorderColor.MyTextBox();
             this.txt_set_l1ic = new TextBoxBorderColor.MyTextBox();
             this.txt_set_l1dc = new TextBoxBorderColor.MyTextBox();
             this.txt_set_l2c = new TextBoxBorderColor.MyTextBox();
@@ -183,6 +198,12 @@
             this.txt_wq_size_stlb = new TextBoxBorderColor.MyTextBox();
             this.txt_mshr_size_stlb = new TextBoxBorderColor.MyTextBox();
             this.txt_latency_stlb = new TextBoxBorderColor.MyTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.txt_size_itlb = new TextBoxBorderColor.MyTextBox();
             this.txt_size_dtlb = new TextBoxBorderColor.MyTextBox();
             this.txt_size_stlb = new TextBoxBorderColor.MyTextBox();
@@ -192,29 +213,8 @@
             this.txt_size_llc = new TextBoxBorderColor.MyTextBox();
             this.txt_block_size = new TextBoxBorderColor.MyTextBox();
             this.txt_max_read_per_cycle = new TextBoxBorderColor.MyTextBox();
-            this.txt_retire_width = new TextBoxBorderColor.MyTextBox();
-            this.txt_scheduler_size = new TextBoxBorderColor.MyTextBox();
-            this.txt_decode_width = new TextBoxBorderColor.MyTextBox();
-            this.txt_sq_width = new TextBoxBorderColor.MyTextBox();
-            this.txt_sq_size = new TextBoxBorderColor.MyTextBox();
-            this.txt_page_size = new TextBoxBorderColor.MyTextBox();
-            this.txt_dram_io_frequency = new TextBoxBorderColor.MyTextBox();
-            this.txt_cpu_frequency = new TextBoxBorderColor.MyTextBox();
-            this.txt_rob_size = new TextBoxBorderColor.MyTextBox();
-            this.txt_lq_size = new TextBoxBorderColor.MyTextBox();
-            this.txt_lq_width = new TextBoxBorderColor.MyTextBox();
-            this.txt_fetch_width = new TextBoxBorderColor.MyTextBox();
-            this.txt_execude_width = new TextBoxBorderColor.MyTextBox();
-            this.txt_cpu_4 = new TextBoxBorderColor.MyTextBox();
-            this.txt_cpu_1 = new TextBoxBorderColor.MyTextBox();
-            this.txt_cpu_3 = new TextBoxBorderColor.MyTextBox();
-            this.txt_cpu_2 = new TextBoxBorderColor.MyTextBox();
-            this.txt_cpu_5 = new TextBoxBorderColor.MyTextBox();
-            this.txt_cpu_6 = new TextBoxBorderColor.MyTextBox();
-            this.txt_cpu_7 = new TextBoxBorderColor.MyTextBox();
-            this.txt_cpu_8 = new TextBoxBorderColor.MyTextBox();
-            this.txt_warmup_instr = new TextBoxBorderColor.MyTextBox();
-            this.txt_sim_instr = new TextBoxBorderColor.MyTextBox();
+            this.lbl_max_read_per_cycle = new System.Windows.Forms.Label();
+            this.lbl_block_size = new System.Windows.Forms.Label();
             this.tlp_cpu.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tlp_replacement.SuspendLayout();
@@ -339,6 +339,45 @@
             this.lbl_cpu.Text = "CPU";
             this.lbl_cpu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txt_cpu_4
+            // 
+            this.txt_cpu_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cpu_4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_4.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_cpu_4.Location = new System.Drawing.Point(1330, 163);
+            this.txt_cpu_4.Name = "txt_cpu_4";
+            this.txt_cpu_4.ReadOnly = true;
+            this.txt_cpu_4.Size = new System.Drawing.Size(255, 20);
+            this.txt_cpu_4.TabIndex = 12;
+            // 
+            // txt_cpu_1
+            // 
+            this.txt_cpu_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cpu_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_1.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.txt_cpu_1.Location = new System.Drawing.Point(172, 163);
+            this.txt_cpu_1.Name = "txt_cpu_1";
+            this.txt_cpu_1.ReadOnly = true;
+            this.txt_cpu_1.Size = new System.Drawing.Size(255, 20);
+            this.txt_cpu_1.TabIndex = 3;
+            // 
+            // txt_cpu_3
+            // 
+            this.txt_cpu_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cpu_3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_3.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_cpu_3.Location = new System.Drawing.Point(944, 163);
+            this.txt_cpu_3.Name = "txt_cpu_3";
+            this.txt_cpu_3.ReadOnly = true;
+            this.txt_cpu_3.Size = new System.Drawing.Size(255, 20);
+            this.txt_cpu_3.TabIndex = 9;
+            // 
             // lbl_cpu_2
             // 
             this.lbl_cpu_2.AutoSize = true;
@@ -349,6 +388,19 @@
             this.lbl_cpu_2.TabIndex = 5;
             this.lbl_cpu_2.Text = "CPU2:";
             this.lbl_cpu_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_cpu_2
+            // 
+            this.txt_cpu_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cpu_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_2.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_cpu_2.Location = new System.Drawing.Point(558, 163);
+            this.txt_cpu_2.Name = "txt_cpu_2";
+            this.txt_cpu_2.ReadOnly = true;
+            this.txt_cpu_2.Size = new System.Drawing.Size(255, 20);
+            this.txt_cpu_2.TabIndex = 6;
             // 
             // lbl_cpu_6
             // 
@@ -382,6 +434,58 @@
             this.lbl_cpu_8.TabIndex = 17;
             this.lbl_cpu_8.Text = "CPU8:";
             this.lbl_cpu_8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_cpu_5
+            // 
+            this.txt_cpu_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cpu_5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_5.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_cpu_5.Location = new System.Drawing.Point(172, 194);
+            this.txt_cpu_5.Name = "txt_cpu_5";
+            this.txt_cpu_5.ReadOnly = true;
+            this.txt_cpu_5.Size = new System.Drawing.Size(255, 20);
+            this.txt_cpu_5.TabIndex = 18;
+            // 
+            // txt_cpu_6
+            // 
+            this.txt_cpu_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cpu_6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_6.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_cpu_6.Location = new System.Drawing.Point(558, 194);
+            this.txt_cpu_6.Name = "txt_cpu_6";
+            this.txt_cpu_6.ReadOnly = true;
+            this.txt_cpu_6.Size = new System.Drawing.Size(255, 20);
+            this.txt_cpu_6.TabIndex = 19;
+            // 
+            // txt_cpu_7
+            // 
+            this.txt_cpu_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cpu_7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_7.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_cpu_7.Location = new System.Drawing.Point(944, 194);
+            this.txt_cpu_7.Name = "txt_cpu_7";
+            this.txt_cpu_7.ReadOnly = true;
+            this.txt_cpu_7.Size = new System.Drawing.Size(255, 20);
+            this.txt_cpu_7.TabIndex = 20;
+            // 
+            // txt_cpu_8
+            // 
+            this.txt_cpu_8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cpu_8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_cpu_8.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_cpu_8.Location = new System.Drawing.Point(1330, 194);
+            this.txt_cpu_8.Name = "txt_cpu_8";
+            this.txt_cpu_8.ReadOnly = true;
+            this.txt_cpu_8.Size = new System.Drawing.Size(255, 20);
+            this.txt_cpu_8.TabIndex = 21;
             // 
             // lbl_cpu_1
             // 
@@ -479,6 +583,32 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Simulation Instructions:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_warmup_instr
+            // 
+            this.txt_warmup_instr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_warmup_instr.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_warmup_instr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_warmup_instr.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_warmup_instr.Location = new System.Drawing.Point(116, 3);
+            this.txt_warmup_instr.Name = "txt_warmup_instr";
+            this.txt_warmup_instr.Size = new System.Drawing.Size(100, 20);
+            this.txt_warmup_instr.TabIndex = 2;
+            this.txt_warmup_instr.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_warmup_instr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_sim_instr
+            // 
+            this.txt_sim_instr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_sim_instr.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_sim_instr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_sim_instr.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_sim_instr.Location = new System.Drawing.Point(343, 3);
+            this.txt_sim_instr.Name = "txt_sim_instr";
+            this.txt_sim_instr.Size = new System.Drawing.Size(100, 20);
+            this.txt_sim_instr.TabIndex = 3;
+            this.txt_sim_instr.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_sim_instr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // cmb_num_cpu
             // 
@@ -792,6 +922,48 @@
             this.tlp_cpu2.Size = new System.Drawing.Size(1672, 72);
             this.tlp_cpu2.TabIndex = 25;
             // 
+            // txt_retire_width
+            // 
+            this.txt_retire_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_retire_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_retire_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_retire_width.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_retire_width.Location = new System.Drawing.Point(994, 29);
+            this.txt_retire_width.Name = "txt_retire_width";
+            this.txt_retire_width.ShortcutsEnabled = false;
+            this.txt_retire_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_retire_width.TabIndex = 36;
+            this.txt_retire_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_retire_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_scheduler_size
+            // 
+            this.txt_scheduler_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_scheduler_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_scheduler_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_scheduler_size.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_scheduler_size.Location = new System.Drawing.Point(1187, 3);
+            this.txt_scheduler_size.Name = "txt_scheduler_size";
+            this.txt_scheduler_size.ShortcutsEnabled = false;
+            this.txt_scheduler_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_scheduler_size.TabIndex = 34;
+            this.txt_scheduler_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_scheduler_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_decode_width
+            // 
+            this.txt_decode_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_decode_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_decode_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_decode_width.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_decode_width.Location = new System.Drawing.Point(800, 29);
+            this.txt_decode_width.Name = "txt_decode_width";
+            this.txt_decode_width.ShortcutsEnabled = false;
+            this.txt_decode_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_decode_width.TabIndex = 33;
+            this.txt_decode_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_decode_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
             // lbl_scheduler_size
             // 
             this.lbl_scheduler_size.AutoSize = true;
@@ -858,6 +1030,62 @@
             this.lbl_cpu_frequency.Text = "CPU Frequency:";
             this.lbl_cpu_frequency.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txt_sq_width
+            // 
+            this.txt_sq_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_sq_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_sq_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_sq_width.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_sq_width.Location = new System.Drawing.Point(610, 29);
+            this.txt_sq_width.Name = "txt_sq_width";
+            this.txt_sq_width.ShortcutsEnabled = false;
+            this.txt_sq_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_sq_width.TabIndex = 31;
+            this.txt_sq_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_sq_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_sq_size
+            // 
+            this.txt_sq_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_sq_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_sq_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_sq_size.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_sq_size.Location = new System.Drawing.Point(432, 29);
+            this.txt_sq_size.Name = "txt_sq_size";
+            this.txt_sq_size.ShortcutsEnabled = false;
+            this.txt_sq_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_sq_size.TabIndex = 29;
+            this.txt_sq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_sq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_page_size
+            // 
+            this.txt_page_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_page_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_page_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_page_size.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_page_size.Location = new System.Drawing.Point(261, 29);
+            this.txt_page_size.Name = "txt_page_size";
+            this.txt_page_size.ShortcutsEnabled = false;
+            this.txt_page_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_page_size.TabIndex = 27;
+            this.txt_page_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_page_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_dram_io_frequency
+            // 
+            this.txt_dram_io_frequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_dram_io_frequency.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_dram_io_frequency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_dram_io_frequency.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_dram_io_frequency.Location = new System.Drawing.Point(123, 29);
+            this.txt_dram_io_frequency.Name = "txt_dram_io_frequency";
+            this.txt_dram_io_frequency.ShortcutsEnabled = false;
+            this.txt_dram_io_frequency.Size = new System.Drawing.Size(50, 20);
+            this.txt_dram_io_frequency.TabIndex = 25;
+            this.txt_dram_io_frequency.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_dram_io_frequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
             // lbl_execude_width
             // 
             this.lbl_execude_width.AutoSize = true;
@@ -868,6 +1096,89 @@
             this.lbl_execude_width.TabIndex = 5;
             this.lbl_execude_width.Text = "Execude width (Instr.):";
             this.lbl_execude_width.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_cpu_frequency
+            // 
+            this.txt_cpu_frequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_frequency.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_cpu_frequency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cpu_frequency.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_cpu_frequency.Location = new System.Drawing.Point(123, 3);
+            this.txt_cpu_frequency.Name = "txt_cpu_frequency";
+            this.txt_cpu_frequency.ShortcutsEnabled = false;
+            this.txt_cpu_frequency.Size = new System.Drawing.Size(50, 20);
+            this.txt_cpu_frequency.TabIndex = 11;
+            this.txt_cpu_frequency.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_cpu_frequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_rob_size
+            // 
+            this.txt_rob_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_rob_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_rob_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_rob_size.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_rob_size.Location = new System.Drawing.Point(261, 3);
+            this.txt_rob_size.Name = "txt_rob_size";
+            this.txt_rob_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_rob_size.TabIndex = 12;
+            this.txt_rob_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_rob_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_lq_size
+            // 
+            this.txt_lq_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_lq_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_lq_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_lq_size.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_lq_size.Location = new System.Drawing.Point(432, 3);
+            this.txt_lq_size.Name = "txt_lq_size";
+            this.txt_lq_size.ShortcutsEnabled = false;
+            this.txt_lq_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_lq_size.TabIndex = 13;
+            this.txt_lq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_lq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_lq_width
+            // 
+            this.txt_lq_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_lq_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_lq_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_lq_width.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_lq_width.Location = new System.Drawing.Point(610, 3);
+            this.txt_lq_width.Name = "txt_lq_width";
+            this.txt_lq_width.ShortcutsEnabled = false;
+            this.txt_lq_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_lq_width.TabIndex = 14;
+            this.txt_lq_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_lq_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_fetch_width
+            // 
+            this.txt_fetch_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_fetch_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_fetch_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_fetch_width.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_fetch_width.Location = new System.Drawing.Point(800, 3);
+            this.txt_fetch_width.Name = "txt_fetch_width";
+            this.txt_fetch_width.ShortcutsEnabled = false;
+            this.txt_fetch_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_fetch_width.TabIndex = 15;
+            this.txt_fetch_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_fetch_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_execude_width
+            // 
+            this.txt_execude_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_execude_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_execude_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_execude_width.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_execude_width.Location = new System.Drawing.Point(994, 3);
+            this.txt_execude_width.Name = "txt_execude_width";
+            this.txt_execude_width.ShortcutsEnabled = false;
+            this.txt_execude_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_execude_width.TabIndex = 16;
+            this.txt_execude_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_execude_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // lbl_dram_io_frequency
             // 
@@ -1079,6 +1390,106 @@
             this.lbl_tcas.Text = "Column address\r\nstrobe latency (Cycles):";
             this.lbl_tcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txt_channels
+            // 
+            this.txt_channels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_channels.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_channels.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_channels.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_channels.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_channels.Location = new System.Drawing.Point(87, 28);
+            this.txt_channels.Name = "txt_channels";
+            this.txt_channels.ShortcutsEnabled = false;
+            this.txt_channels.Size = new System.Drawing.Size(50, 20);
+            this.txt_channels.TabIndex = 13;
+            this.txt_channels.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_channels.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_dram_rq_size
+            // 
+            this.txt_dram_rq_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_dram_rq_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_dram_rq_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_dram_rq_size.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_dram_rq_size.Location = new System.Drawing.Point(491, 28);
+            this.txt_dram_rq_size.Name = "txt_dram_rq_size";
+            this.txt_dram_rq_size.ShortcutsEnabled = false;
+            this.txt_dram_rq_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_dram_rq_size.TabIndex = 16;
+            this.txt_dram_rq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_dram_rq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_trp
+            // 
+            this.txt_trp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_trp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_trp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_trp.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_trp.Location = new System.Drawing.Point(713, 28);
+            this.txt_trp.Name = "txt_trp";
+            this.txt_trp.ShortcutsEnabled = false;
+            this.txt_trp.Size = new System.Drawing.Size(50, 20);
+            this.txt_trp.TabIndex = 17;
+            this.txt_trp.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_trp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_trcd
+            // 
+            this.txt_trcd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_trcd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_trcd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_trcd.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_trcd.Location = new System.Drawing.Point(899, 28);
+            this.txt_trcd.Name = "txt_trcd";
+            this.txt_trcd.ShortcutsEnabled = false;
+            this.txt_trcd.Size = new System.Drawing.Size(50, 20);
+            this.txt_trcd.TabIndex = 18;
+            this.txt_trcd.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_trcd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_rows
+            // 
+            this.txt_rows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_rows.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_rows.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_rows.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_rows.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_rows.Location = new System.Drawing.Point(218, 54);
+            this.txt_rows.Name = "txt_rows";
+            this.txt_rows.ShortcutsEnabled = false;
+            this.txt_rows.Size = new System.Drawing.Size(50, 20);
+            this.txt_rows.TabIndex = 20;
+            this.txt_rows.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_rows.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // txt_dram_wq_size
+            // 
+            this.txt_dram_wq_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_dram_wq_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_dram_wq_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_dram_wq_size.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_dram_wq_size.Location = new System.Drawing.Point(491, 54);
+            this.txt_dram_wq_size.Name = "txt_dram_wq_size";
+            this.txt_dram_wq_size.ShortcutsEnabled = false;
+            this.txt_dram_wq_size.Size = new System.Drawing.Size(50, 20);
+            this.txt_dram_wq_size.TabIndex = 22;
+            this.txt_dram_wq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_dram_wq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_tcas
+            // 
+            this.txt_tcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_tcas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_tcas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_tcas.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_tcas.Location = new System.Drawing.Point(713, 54);
+            this.txt_tcas.Name = "txt_tcas";
+            this.txt_tcas.ShortcutsEnabled = false;
+            this.txt_tcas.Size = new System.Drawing.Size(50, 20);
+            this.txt_tcas.TabIndex = 23;
+            this.txt_tcas.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_tcas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
             // lbl_channel_width
             // 
             this.lbl_channel_width.AutoSize = true;
@@ -1089,6 +1500,36 @@
             this.lbl_channel_width.TabIndex = 10;
             this.lbl_channel_width.Text = "Channel width:";
             this.lbl_channel_width.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_channel_width
+            // 
+            this.txt_channel_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_channel_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_channel_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_channel_width.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_channel_width.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_channel_width.Location = new System.Drawing.Point(87, 54);
+            this.txt_channel_width.Name = "txt_channel_width";
+            this.txt_channel_width.ShortcutsEnabled = false;
+            this.txt_channel_width.Size = new System.Drawing.Size(50, 20);
+            this.txt_channel_width.TabIndex = 21;
+            this.txt_channel_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.txt_channel_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            // 
+            // txt_ranks
+            // 
+            this.txt_ranks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_ranks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_ranks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ranks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_ranks.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_ranks.Location = new System.Drawing.Point(339, 54);
+            this.txt_ranks.Name = "txt_ranks";
+            this.txt_ranks.ShortcutsEnabled = false;
+            this.txt_ranks.Size = new System.Drawing.Size(50, 20);
+            this.txt_ranks.TabIndex = 14;
+            this.txt_ranks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_ranks.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // lbl_ranks
             // 
@@ -1112,6 +1553,21 @@
             this.lbl_columns.Text = "No. columns:";
             this.lbl_columns.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txt_columns
+            // 
+            this.txt_columns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_columns.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_columns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_columns.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_columns.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_columns.Location = new System.Drawing.Point(218, 28);
+            this.txt_columns.Name = "txt_columns";
+            this.txt_columns.ShortcutsEnabled = false;
+            this.txt_columns.Size = new System.Drawing.Size(50, 20);
+            this.txt_columns.TabIndex = 15;
+            this.txt_columns.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_columns.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
             // lbl_banks
             // 
             this.lbl_banks.AutoSize = true;
@@ -1123,6 +1579,21 @@
             this.lbl_banks.Text = "No. banks:";
             this.lbl_banks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txt_banks
+            // 
+            this.txt_banks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_banks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_banks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_banks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_banks.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_banks.Location = new System.Drawing.Point(339, 28);
+            this.txt_banks.Name = "txt_banks";
+            this.txt_banks.ShortcutsEnabled = false;
+            this.txt_banks.Size = new System.Drawing.Size(50, 20);
+            this.txt_banks.TabIndex = 19;
+            this.txt_banks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_banks.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -1133,6 +1604,18 @@
             this.label16.TabIndex = 24;
             this.label16.Text = "Total Size (B)";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_size_dram
+            // 
+            this.txt_size_dram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_size_dram.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_size_dram.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_size_dram.Enabled = false;
+            this.txt_size_dram.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_size_dram.Location = new System.Drawing.Point(955, 28);
+            this.txt_size_dram.Name = "txt_size_dram";
+            this.txt_size_dram.Size = new System.Drawing.Size(100, 20);
+            this.txt_size_dram.TabIndex = 25;
             // 
             // tlp_actions
             // 
@@ -1467,6 +1950,20 @@
             this.label5.Text = "CACHE";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txt_set_itlb
+            // 
+            this.txt_set_itlb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_set_itlb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txt_set_itlb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_set_itlb.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txt_set_itlb.Location = new System.Drawing.Point(112, 87);
+            this.txt_set_itlb.Name = "txt_set_itlb";
+            this.txt_set_itlb.ShortcutsEnabled = false;
+            this.txt_set_itlb.Size = new System.Drawing.Size(100, 20);
+            this.txt_set_itlb.TabIndex = 85;
+            this.txt_set_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.txt_set_itlb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1555,94 +2052,6 @@
             this.lbl_dtlb.Text = "Data TLB";
             this.lbl_dtlb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(112, 298);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 13);
-            this.label9.TabIndex = 88;
-            this.label9.Text = "CPU x 2048";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(324, 298);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 13);
-            this.label10.TabIndex = 89;
-            this.label10.Text = "CPU x L2 MSHR";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(430, 298);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 13);
-            this.label11.TabIndex = 90;
-            this.label11.Text = "CPU x L2 MSHR";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(536, 298);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 13);
-            this.label12.TabIndex = 91;
-            this.label12.Text = "CPU x L2 MSHR";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(749, 71);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 13);
-            this.label15.TabIndex = 92;
-            this.label15.Text = "Total Size (B)";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Location = new System.Drawing.Point(855, 207);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(100, 13);
-            this.label19.TabIndex = 96;
-            this.label19.Text = "Total Size (B)";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_max_read_per_cycle
-            // 
-            this.lbl_max_read_per_cycle.AutoSize = true;
-            this.lbl_max_read_per_cycle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_max_read_per_cycle.Location = new System.Drawing.Point(218, 25);
-            this.lbl_max_read_per_cycle.Name = "lbl_max_read_per_cycle";
-            this.lbl_max_read_per_cycle.Size = new System.Drawing.Size(100, 26);
-            this.lbl_max_read_per_cycle.TabIndex = 2;
-            this.lbl_max_read_per_cycle.Text = "Max read per cycle:";
-            this.lbl_max_read_per_cycle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_block_size
-            // 
-            this.lbl_block_size.AutoSize = true;
-            this.lbl_block_size.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_block_size.Location = new System.Drawing.Point(3, 25);
-            this.lbl_block_size.Name = "lbl_block_size";
-            this.lbl_block_size.Size = new System.Drawing.Size(103, 26);
-            this.lbl_block_size.TabIndex = 1;
-            this.lbl_block_size.Text = "Block size (B):";
-            this.lbl_block_size.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lbl_stlb
             // 
             this.lbl_stlb.AutoSize = true;
@@ -1653,192 +2062,6 @@
             this.lbl_stlb.TabIndex = 77;
             this.lbl_stlb.Text = "Second level TLB";
             this.lbl_stlb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_channels
-            // 
-            this.txt_channels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_channels.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_channels.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_channels.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_channels.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_channels.Location = new System.Drawing.Point(87, 28);
-            this.txt_channels.Name = "txt_channels";
-            this.txt_channels.ShortcutsEnabled = false;
-            this.txt_channels.Size = new System.Drawing.Size(50, 20);
-            this.txt_channels.TabIndex = 13;
-            this.txt_channels.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            this.txt_channels.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_dram_rq_size
-            // 
-            this.txt_dram_rq_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_dram_rq_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_dram_rq_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_dram_rq_size.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_dram_rq_size.Location = new System.Drawing.Point(491, 28);
-            this.txt_dram_rq_size.Name = "txt_dram_rq_size";
-            this.txt_dram_rq_size.ShortcutsEnabled = false;
-            this.txt_dram_rq_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_dram_rq_size.TabIndex = 16;
-            this.txt_dram_rq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_dram_rq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_trp
-            // 
-            this.txt_trp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_trp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_trp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_trp.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_trp.Location = new System.Drawing.Point(713, 28);
-            this.txt_trp.Name = "txt_trp";
-            this.txt_trp.ShortcutsEnabled = false;
-            this.txt_trp.Size = new System.Drawing.Size(50, 20);
-            this.txt_trp.TabIndex = 17;
-            this.txt_trp.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_trp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_trcd
-            // 
-            this.txt_trcd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_trcd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_trcd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_trcd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_trcd.Location = new System.Drawing.Point(899, 28);
-            this.txt_trcd.Name = "txt_trcd";
-            this.txt_trcd.ShortcutsEnabled = false;
-            this.txt_trcd.Size = new System.Drawing.Size(50, 20);
-            this.txt_trcd.TabIndex = 18;
-            this.txt_trcd.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_trcd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rows
-            // 
-            this.txt_rows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_rows.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_rows.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_rows.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_rows.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_rows.Location = new System.Drawing.Point(218, 54);
-            this.txt_rows.Name = "txt_rows";
-            this.txt_rows.ShortcutsEnabled = false;
-            this.txt_rows.Size = new System.Drawing.Size(50, 20);
-            this.txt_rows.TabIndex = 20;
-            this.txt_rows.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            this.txt_rows.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_dram_wq_size
-            // 
-            this.txt_dram_wq_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_dram_wq_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_dram_wq_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_dram_wq_size.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_dram_wq_size.Location = new System.Drawing.Point(491, 54);
-            this.txt_dram_wq_size.Name = "txt_dram_wq_size";
-            this.txt_dram_wq_size.ShortcutsEnabled = false;
-            this.txt_dram_wq_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_dram_wq_size.TabIndex = 22;
-            this.txt_dram_wq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_dram_wq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_tcas
-            // 
-            this.txt_tcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_tcas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_tcas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_tcas.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_tcas.Location = new System.Drawing.Point(713, 54);
-            this.txt_tcas.Name = "txt_tcas";
-            this.txt_tcas.ShortcutsEnabled = false;
-            this.txt_tcas.Size = new System.Drawing.Size(50, 20);
-            this.txt_tcas.TabIndex = 23;
-            this.txt_tcas.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_tcas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_channel_width
-            // 
-            this.txt_channel_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_channel_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_channel_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_channel_width.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_channel_width.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_channel_width.Location = new System.Drawing.Point(87, 54);
-            this.txt_channel_width.Name = "txt_channel_width";
-            this.txt_channel_width.ShortcutsEnabled = false;
-            this.txt_channel_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_channel_width.TabIndex = 21;
-            this.txt_channel_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_channel_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_ranks
-            // 
-            this.txt_ranks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_ranks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_ranks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_ranks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_ranks.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_ranks.Location = new System.Drawing.Point(339, 54);
-            this.txt_ranks.Name = "txt_ranks";
-            this.txt_ranks.ShortcutsEnabled = false;
-            this.txt_ranks.Size = new System.Drawing.Size(50, 20);
-            this.txt_ranks.TabIndex = 14;
-            this.txt_ranks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            this.txt_ranks.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_columns
-            // 
-            this.txt_columns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_columns.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_columns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_columns.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_columns.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_columns.Location = new System.Drawing.Point(218, 28);
-            this.txt_columns.Name = "txt_columns";
-            this.txt_columns.ShortcutsEnabled = false;
-            this.txt_columns.Size = new System.Drawing.Size(50, 20);
-            this.txt_columns.TabIndex = 15;
-            this.txt_columns.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            this.txt_columns.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_banks
-            // 
-            this.txt_banks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_banks.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_banks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_banks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_banks.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_banks.Location = new System.Drawing.Point(339, 28);
-            this.txt_banks.Name = "txt_banks";
-            this.txt_banks.ShortcutsEnabled = false;
-            this.txt_banks.Size = new System.Drawing.Size(50, 20);
-            this.txt_banks.TabIndex = 19;
-            this.txt_banks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            this.txt_banks.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // txt_size_dram
-            // 
-            this.txt_size_dram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_size_dram.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_size_dram.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_size_dram.Enabled = false;
-            this.txt_size_dram.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_size_dram.Location = new System.Drawing.Point(955, 28);
-            this.txt_size_dram.Name = "txt_size_dram";
-            this.txt_size_dram.Size = new System.Drawing.Size(100, 20);
-            this.txt_size_dram.TabIndex = 25;
-            // 
-            // txt_set_itlb
-            // 
-            this.txt_set_itlb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_set_itlb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_set_itlb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_set_itlb.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_set_itlb.Location = new System.Drawing.Point(112, 87);
-            this.txt_set_itlb.Name = "txt_set_itlb";
-            this.txt_set_itlb.ShortcutsEnabled = false;
-            this.txt_set_itlb.Size = new System.Drawing.Size(100, 20);
-            this.txt_set_itlb.TabIndex = 85;
-            this.txt_set_itlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            this.txt_set_itlb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // txt_set_l1ic
             // 
@@ -2462,6 +2685,72 @@
             this.txt_latency_stlb.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.txt_latency_stlb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Location = new System.Drawing.Point(112, 298);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 13);
+            this.label9.TabIndex = 88;
+            this.label9.Text = "CPU x 2048";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Location = new System.Drawing.Point(324, 298);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 13);
+            this.label10.TabIndex = 89;
+            this.label10.Text = "CPU x L2 MSHR";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Location = new System.Drawing.Point(430, 298);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 13);
+            this.label11.TabIndex = 90;
+            this.label11.Text = "CPU x L2 MSHR";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Location = new System.Drawing.Point(536, 298);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(101, 13);
+            this.label12.TabIndex = 91;
+            this.label12.Text = "CPU x L2 MSHR";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label15.Location = new System.Drawing.Point(749, 71);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 13);
+            this.label15.TabIndex = 92;
+            this.label15.Text = "Total Size (B)";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label19.Location = new System.Drawing.Point(855, 207);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(100, 13);
+            this.label19.TabIndex = 96;
+            this.label19.Text = "Total Size (B)";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // txt_size_itlb
             // 
             this.txt_size_itlb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
@@ -2574,316 +2863,27 @@
             this.txt_max_read_per_cycle.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             this.txt_max_read_per_cycle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // txt_retire_width
+            // lbl_max_read_per_cycle
             // 
-            this.txt_retire_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_retire_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_retire_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_retire_width.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_retire_width.Location = new System.Drawing.Point(994, 29);
-            this.txt_retire_width.Name = "txt_retire_width";
-            this.txt_retire_width.ShortcutsEnabled = false;
-            this.txt_retire_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_retire_width.TabIndex = 36;
-            this.txt_retire_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_retire_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.lbl_max_read_per_cycle.AutoSize = true;
+            this.lbl_max_read_per_cycle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_max_read_per_cycle.Location = new System.Drawing.Point(218, 25);
+            this.lbl_max_read_per_cycle.Name = "lbl_max_read_per_cycle";
+            this.lbl_max_read_per_cycle.Size = new System.Drawing.Size(100, 26);
+            this.lbl_max_read_per_cycle.TabIndex = 2;
+            this.lbl_max_read_per_cycle.Text = "Max read per cycle:";
+            this.lbl_max_read_per_cycle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txt_scheduler_size
+            // lbl_block_size
             // 
-            this.txt_scheduler_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_scheduler_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_scheduler_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_scheduler_size.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_scheduler_size.Location = new System.Drawing.Point(1187, 3);
-            this.txt_scheduler_size.Name = "txt_scheduler_size";
-            this.txt_scheduler_size.ShortcutsEnabled = false;
-            this.txt_scheduler_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_scheduler_size.TabIndex = 34;
-            this.txt_scheduler_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_scheduler_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_decode_width
-            // 
-            this.txt_decode_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_decode_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_decode_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_decode_width.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_decode_width.Location = new System.Drawing.Point(800, 29);
-            this.txt_decode_width.Name = "txt_decode_width";
-            this.txt_decode_width.ShortcutsEnabled = false;
-            this.txt_decode_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_decode_width.TabIndex = 33;
-            this.txt_decode_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_decode_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_sq_width
-            // 
-            this.txt_sq_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_sq_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_sq_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_sq_width.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_sq_width.Location = new System.Drawing.Point(610, 29);
-            this.txt_sq_width.Name = "txt_sq_width";
-            this.txt_sq_width.ShortcutsEnabled = false;
-            this.txt_sq_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_sq_width.TabIndex = 31;
-            this.txt_sq_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_sq_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_sq_size
-            // 
-            this.txt_sq_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_sq_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_sq_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_sq_size.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_sq_size.Location = new System.Drawing.Point(432, 29);
-            this.txt_sq_size.Name = "txt_sq_size";
-            this.txt_sq_size.ShortcutsEnabled = false;
-            this.txt_sq_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_sq_size.TabIndex = 29;
-            this.txt_sq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_sq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_page_size
-            // 
-            this.txt_page_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_page_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_page_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_page_size.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_page_size.Location = new System.Drawing.Point(261, 29);
-            this.txt_page_size.Name = "txt_page_size";
-            this.txt_page_size.ShortcutsEnabled = false;
-            this.txt_page_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_page_size.TabIndex = 27;
-            this.txt_page_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_page_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_dram_io_frequency
-            // 
-            this.txt_dram_io_frequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_dram_io_frequency.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_dram_io_frequency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_dram_io_frequency.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_dram_io_frequency.Location = new System.Drawing.Point(123, 29);
-            this.txt_dram_io_frequency.Name = "txt_dram_io_frequency";
-            this.txt_dram_io_frequency.ShortcutsEnabled = false;
-            this.txt_dram_io_frequency.Size = new System.Drawing.Size(50, 20);
-            this.txt_dram_io_frequency.TabIndex = 25;
-            this.txt_dram_io_frequency.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_dram_io_frequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_cpu_frequency
-            // 
-            this.txt_cpu_frequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_frequency.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_frequency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cpu_frequency.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_cpu_frequency.Location = new System.Drawing.Point(123, 3);
-            this.txt_cpu_frequency.Name = "txt_cpu_frequency";
-            this.txt_cpu_frequency.ShortcutsEnabled = false;
-            this.txt_cpu_frequency.Size = new System.Drawing.Size(50, 20);
-            this.txt_cpu_frequency.TabIndex = 11;
-            this.txt_cpu_frequency.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_cpu_frequency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_rob_size
-            // 
-            this.txt_rob_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_rob_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_rob_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_rob_size.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_rob_size.Location = new System.Drawing.Point(261, 3);
-            this.txt_rob_size.Name = "txt_rob_size";
-            this.txt_rob_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_rob_size.TabIndex = 12;
-            this.txt_rob_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_rob_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_lq_size
-            // 
-            this.txt_lq_size.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_lq_size.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_lq_size.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_lq_size.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_lq_size.Location = new System.Drawing.Point(432, 3);
-            this.txt_lq_size.Name = "txt_lq_size";
-            this.txt_lq_size.ShortcutsEnabled = false;
-            this.txt_lq_size.Size = new System.Drawing.Size(50, 20);
-            this.txt_lq_size.TabIndex = 13;
-            this.txt_lq_size.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_lq_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_lq_width
-            // 
-            this.txt_lq_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_lq_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_lq_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_lq_width.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_lq_width.Location = new System.Drawing.Point(610, 3);
-            this.txt_lq_width.Name = "txt_lq_width";
-            this.txt_lq_width.ShortcutsEnabled = false;
-            this.txt_lq_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_lq_width.TabIndex = 14;
-            this.txt_lq_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_lq_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_fetch_width
-            // 
-            this.txt_fetch_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_fetch_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_fetch_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_fetch_width.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_fetch_width.Location = new System.Drawing.Point(800, 3);
-            this.txt_fetch_width.Name = "txt_fetch_width";
-            this.txt_fetch_width.ShortcutsEnabled = false;
-            this.txt_fetch_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_fetch_width.TabIndex = 15;
-            this.txt_fetch_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_fetch_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_execude_width
-            // 
-            this.txt_execude_width.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_execude_width.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_execude_width.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_execude_width.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_execude_width.Location = new System.Drawing.Point(994, 3);
-            this.txt_execude_width.Name = "txt_execude_width";
-            this.txt_execude_width.ShortcutsEnabled = false;
-            this.txt_execude_width.Size = new System.Drawing.Size(50, 20);
-            this.txt_execude_width.TabIndex = 16;
-            this.txt_execude_width.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_execude_width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_cpu_4
-            // 
-            this.txt_cpu_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cpu_4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_4.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_cpu_4.Location = new System.Drawing.Point(1330, 163);
-            this.txt_cpu_4.Name = "txt_cpu_4";
-            this.txt_cpu_4.ReadOnly = true;
-            this.txt_cpu_4.Size = new System.Drawing.Size(255, 20);
-            this.txt_cpu_4.TabIndex = 12;
-            // 
-            // txt_cpu_1
-            // 
-            this.txt_cpu_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cpu_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_1.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.txt_cpu_1.Location = new System.Drawing.Point(172, 163);
-            this.txt_cpu_1.Name = "txt_cpu_1";
-            this.txt_cpu_1.ReadOnly = true;
-            this.txt_cpu_1.Size = new System.Drawing.Size(255, 20);
-            this.txt_cpu_1.TabIndex = 3;
-            // 
-            // txt_cpu_3
-            // 
-            this.txt_cpu_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cpu_3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_3.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_cpu_3.Location = new System.Drawing.Point(944, 163);
-            this.txt_cpu_3.Name = "txt_cpu_3";
-            this.txt_cpu_3.ReadOnly = true;
-            this.txt_cpu_3.Size = new System.Drawing.Size(255, 20);
-            this.txt_cpu_3.TabIndex = 9;
-            // 
-            // txt_cpu_2
-            // 
-            this.txt_cpu_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cpu_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_cpu_2.Location = new System.Drawing.Point(558, 163);
-            this.txt_cpu_2.Name = "txt_cpu_2";
-            this.txt_cpu_2.ReadOnly = true;
-            this.txt_cpu_2.Size = new System.Drawing.Size(255, 20);
-            this.txt_cpu_2.TabIndex = 6;
-            // 
-            // txt_cpu_5
-            // 
-            this.txt_cpu_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cpu_5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_5.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_cpu_5.Location = new System.Drawing.Point(172, 194);
-            this.txt_cpu_5.Name = "txt_cpu_5";
-            this.txt_cpu_5.ReadOnly = true;
-            this.txt_cpu_5.Size = new System.Drawing.Size(255, 20);
-            this.txt_cpu_5.TabIndex = 18;
-            // 
-            // txt_cpu_6
-            // 
-            this.txt_cpu_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cpu_6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_6.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_cpu_6.Location = new System.Drawing.Point(558, 194);
-            this.txt_cpu_6.Name = "txt_cpu_6";
-            this.txt_cpu_6.ReadOnly = true;
-            this.txt_cpu_6.Size = new System.Drawing.Size(255, 20);
-            this.txt_cpu_6.TabIndex = 19;
-            // 
-            // txt_cpu_7
-            // 
-            this.txt_cpu_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cpu_7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_7.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_cpu_7.Location = new System.Drawing.Point(944, 194);
-            this.txt_cpu_7.Name = "txt_cpu_7";
-            this.txt_cpu_7.ReadOnly = true;
-            this.txt_cpu_7.Size = new System.Drawing.Size(255, 20);
-            this.txt_cpu_7.TabIndex = 20;
-            // 
-            // txt_cpu_8
-            // 
-            this.txt_cpu_8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_cpu_8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cpu_8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_cpu_8.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_cpu_8.Location = new System.Drawing.Point(1330, 194);
-            this.txt_cpu_8.Name = "txt_cpu_8";
-            this.txt_cpu_8.ReadOnly = true;
-            this.txt_cpu_8.Size = new System.Drawing.Size(255, 20);
-            this.txt_cpu_8.TabIndex = 21;
-            // 
-            // txt_warmup_instr
-            // 
-            this.txt_warmup_instr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_warmup_instr.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_warmup_instr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_warmup_instr.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_warmup_instr.Location = new System.Drawing.Point(116, 3);
-            this.txt_warmup_instr.Name = "txt_warmup_instr";
-            this.txt_warmup_instr.Size = new System.Drawing.Size(100, 20);
-            this.txt_warmup_instr.TabIndex = 2;
-            this.txt_warmup_instr.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_warmup_instr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
-            // 
-            // txt_sim_instr
-            // 
-            this.txt_sim_instr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_sim_instr.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.txt_sim_instr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_sim_instr.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txt_sim_instr.Location = new System.Drawing.Point(343, 3);
-            this.txt_sim_instr.Name = "txt_sim_instr";
-            this.txt_sim_instr.Size = new System.Drawing.Size(100, 20);
-            this.txt_sim_instr.TabIndex = 3;
-            this.txt_sim_instr.TextChanged += new System.EventHandler(this.textBox_TextChanged);
-            this.txt_sim_instr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.lbl_block_size.AutoSize = true;
+            this.lbl_block_size.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_block_size.Location = new System.Drawing.Point(3, 25);
+            this.lbl_block_size.Name = "lbl_block_size";
+            this.lbl_block_size.Size = new System.Drawing.Size(103, 26);
+            this.lbl_block_size.TabIndex = 1;
+            this.lbl_block_size.Text = "Block size (B):";
+            this.lbl_block_size.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ChampSimBuilder
             // 
