@@ -204,7 +204,7 @@ namespace ChampSimBuilder
                     txt_rq_size_llc.Text = (1 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_wq_size_llc.Text = (1 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_pq_size_llc.Text = (1 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
-                    txt_size_llc.Text = (1 * (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text))).ToString();
+                    txt_size_llc.Text = (1 * (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text))).ToString("N0");
                 }
                 else
                 {
@@ -267,7 +267,7 @@ namespace ChampSimBuilder
                     txt_rq_size_llc.Text = (4 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_wq_size_llc.Text = (4 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_pq_size_llc.Text = (4 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
-                    txt_size_llc.Text = (4 * (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text))).ToString();
+                    txt_size_llc.Text = (4 * (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text))).ToString("N0");
                 }
                 else
                 {
@@ -330,7 +330,7 @@ namespace ChampSimBuilder
                     txt_rq_size_llc.Text = (8 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_wq_size_llc.Text = (8 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
                     txt_pq_size_llc.Text = (8 * int.Parse(txt_mshr_size_l2c.Text)).ToString();
-                    txt_size_llc.Text = (8 * (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text))).ToString();
+                    txt_size_llc.Text = (8 * (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text))).ToString("N0");
                 }
                 else
                 {
@@ -373,9 +373,9 @@ namespace ChampSimBuilder
 
                         if (!(String.IsNullOrEmpty(txt_mshr_size_l2c.Text)))
                         {
-                            txt_rq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
-                            txt_wq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
-                            txt_pq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString();
+                            txt_rq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString("N0");
+                            txt_wq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString("N0");
+                            txt_pq_size_llc.Text = (cpu * int.Parse(txt_mshr_size_l2c.Text)).ToString("N0");
                         }
                         else
                         {
@@ -386,86 +386,86 @@ namespace ChampSimBuilder
                     }
                     else if (textBox.Name.Equals("txt_set_itlb"))
                     {
-                        txt_size_itlb.Text = (int.Parse(txt_set_itlb.Text) * int.Parse(txt_way_itlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_itlb.Text = (int.Parse(txt_set_itlb.Text) * int.Parse(txt_way_itlb.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_way_itlb"))
                     {
-                        txt_size_itlb.Text = (int.Parse(txt_set_itlb.Text) * int.Parse(txt_way_itlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_itlb.Text = (int.Parse(txt_set_itlb.Text) * int.Parse(txt_way_itlb.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_set_dtlb"))
                     {
-                        txt_size_dtlb.Text = (int.Parse(txt_set_dtlb.Text) * int.Parse(txt_way_dtlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_dtlb.Text = (int.Parse(txt_set_dtlb.Text) * int.Parse(txt_way_dtlb.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_way_dtlb"))
                     {
-                        txt_size_dtlb.Text = (int.Parse(txt_set_dtlb.Text) * int.Parse(txt_way_dtlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_dtlb.Text = (int.Parse(txt_set_dtlb.Text) * int.Parse(txt_way_dtlb.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_set_stlb"))
                     {
-                        txt_size_stlb.Text = (int.Parse(txt_set_stlb.Text) * int.Parse(txt_way_stlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_stlb.Text = (int.Parse(txt_set_stlb.Text) * int.Parse(txt_way_stlb.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_way_stlb"))
                     {
-                        txt_size_stlb.Text = (int.Parse(txt_set_stlb.Text) * int.Parse(txt_way_stlb.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_stlb.Text = (int.Parse(txt_set_stlb.Text) * int.Parse(txt_way_stlb.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_set_l1ic"))
                     {
-                        txt_size_l1i.Text = (int.Parse(txt_set_l1ic.Text) * int.Parse(txt_way_l1ic.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_l1i.Text = (int.Parse(txt_set_l1ic.Text) * int.Parse(txt_way_l1ic.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_way_l1ic"))
                     {
-                        txt_size_l1i.Text = (int.Parse(txt_set_l1ic.Text) * int.Parse(txt_way_l1ic.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_l1i.Text = (int.Parse(txt_set_l1ic.Text) * int.Parse(txt_way_l1ic.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_set_l1dc"))
                     {
-                        txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_way_l1dc"))
                     {
-                        txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_set_l2c"))
                     {
-                        txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_way_l2c"))
                     {
-                        txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_way_llc"))
                     {
-                        txt_size_llc.Text = (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text)).ToString();
+                        txt_size_llc.Text = (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_block_size"))
                     {
-                        txt_size_itlb.Text = (int.Parse(txt_set_itlb.Text) * int.Parse(txt_way_itlb.Text) * int.Parse(txt_block_size.Text)).ToString();
-                        txt_size_dtlb.Text = (int.Parse(txt_set_dtlb.Text) * int.Parse(txt_way_dtlb.Text) * int.Parse(txt_block_size.Text)).ToString();
-                        txt_size_stlb.Text = (int.Parse(txt_set_stlb.Text) * int.Parse(txt_way_stlb.Text) * int.Parse(txt_block_size.Text)).ToString();
-                        txt_size_l1i.Text = (int.Parse(txt_set_l1ic.Text) * int.Parse(txt_way_l1ic.Text) * int.Parse(txt_block_size.Text)).ToString();
-                        txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString();
-                        txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString();
-                        txt_size_llc.Text = (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text)).ToString();
-                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                        txt_size_itlb.Text = (int.Parse(txt_set_itlb.Text) * int.Parse(txt_way_itlb.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
+                        txt_size_dtlb.Text = (int.Parse(txt_set_dtlb.Text) * int.Parse(txt_way_dtlb.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
+                        txt_size_stlb.Text = (int.Parse(txt_set_stlb.Text) * int.Parse(txt_way_stlb.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
+                        txt_size_l1i.Text = (int.Parse(txt_set_l1ic.Text) * int.Parse(txt_way_l1ic.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
+                        txt_size_l1d.Text = (int.Parse(txt_set_l1dc.Text) * int.Parse(txt_way_l1dc.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
+                        txt_size_l2c.Text = (int.Parse(txt_set_l2c.Text) * int.Parse(txt_way_l2c.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
+                        txt_size_llc.Text = (int.Parse(txt_set_llc.Text) * int.Parse(txt_way_llc.Text) * int.Parse(txt_block_size.Text)).ToString("N0");
+                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_channels"))
                     {
-                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_columns"))
                     {
-                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_ranks"))
                     {
-                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_banks"))
                     {
-                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     else if (textBox.Name.Equals("txt_rows"))
                     {
-                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString();
+                        txt_size_dram.Text = (long.Parse(txt_channels.Text) * long.Parse(txt_columns.Text) * long.Parse(txt_ranks.Text) * long.Parse(txt_banks.Text) * long.Parse(txt_rows.Text) * long.Parse(txt_block_size.Text)).ToString("N0");
                     }
                     textBox.BorderColor = Color.FromArgb(31, 31, 31);
                 }
@@ -631,16 +631,16 @@ namespace ChampSimBuilder
             txt_warmup_instr.Text = defaults.WARMUP_INST.ToString();
             txt_sim_instr.Text = defaults.SIM_INST.ToString();
 
-            txt_size_itlb.Text = defaults.SIZE_ITLB.ToString();
-            txt_size_dtlb.Text = defaults.SIZE_DTLB.ToString();
-            txt_size_stlb.Text = defaults.SIZE_STLB.ToString();
+            txt_size_itlb.Text = defaults.SIZE_ITLB.ToString("N0");
+            txt_size_dtlb.Text = defaults.SIZE_DTLB.ToString("N0");
+            txt_size_stlb.Text = defaults.SIZE_STLB.ToString("N0");
 
-            txt_size_l1i.Text = defaults.SIZE_L1IC.ToString();
-            txt_size_l1d.Text = defaults.SIZE_L1DC.ToString();
-            txt_size_l2c.Text = defaults.SIZE_L2C.ToString();
-            txt_size_llc.Text = defaults.SIZE_LLC.ToString();
+            txt_size_l1i.Text = defaults.SIZE_L1IC.ToString("N0");
+            txt_size_l1d.Text = defaults.SIZE_L1DC.ToString("N0");
+            txt_size_l2c.Text = defaults.SIZE_L2C.ToString("N0");
+            txt_size_llc.Text = defaults.SIZE_LLC.ToString("N0");
 
-            txt_size_dram.Text = defaults.SIZE_DRAM.ToString();
+            txt_size_dram.Text = defaults.SIZE_DRAM.ToString("N0");
         }
 
         private void btn_cpu_Click(object sender, EventArgs e)
@@ -1168,10 +1168,6 @@ namespace ChampSimBuilder
             txt_rows.TextChanged += new EventHandler(textBox_TextChanged);
             txt_ranks.TextChanged += new EventHandler(textBox_TextChanged);
             txt_banks.TextChanged += new EventHandler(textBox_TextChanged);
-
-            ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(txt_columns, "if textbox is empty, reset to defult value");
-            toolTip.SetToolTip(txt_rows, "if textbox is empty, reset to defult value");
         }
 
         private void btn_run_Click(object sender, EventArgs e)
